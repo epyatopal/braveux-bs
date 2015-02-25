@@ -171,7 +171,22 @@
                 <li class="span1"><a href="#">Merch Depts</a></li>
                 <li class="span1"><a href="#">Activity</a></li>
                 <li class="span1"><a href="#">Heat Map</a></li>
-                <li class="span1"> <a href="#">Bay Layout Guide</a></li>
+                <li class="span1" >
+                    <a onclick="showMenu('#layoutGuide')">Bay Layout Guide</a>
+                    <div id="layoutGuide" class="menu-guide menu-common ">
+                        <div class="gray-block title-block">Step 01: Select data range: </div>
+                        <div>
+                            <ul class="nav nav-tabs guide-tabs">
+                                <li role="presentation" class="light-gray-block gray-border guide-tab guide-tab-active"><a href="#">Range</a></li>
+                                <li role="presentation" class="light-gray-block gray-border guide-tab "><a href="#">Last 7 Days</a></li>
+                                <li role="presentation" class="light-gray-block gray-border guide-tab"><a href="#">Last Month</a></li>
+                            </ul>
+                        </div>
+                        <div class="light-gray-block gray-border text-left">
+                            sarlkghzd
+                        </div>
+                    </div>
+                </li>
                 <li class="span1">
                     <a href="#" id="sales" class="dropdown-toggle navbar-sales" data-toggle="dropdown">Sales</a>
                     <div class="menu-common dropdown-menu menu-sales" role="menu" aria-labelledby="store">
@@ -189,7 +204,7 @@
                                 <div class="table-cell">1m</div>
                             </div>
                         </div>
-                        <div class="black-border"> </div>
+                        <div class="black-small-div"> </div>
                         <div class="table-block gray-border ">
                             <div class="table-row">
                                 <div class="table-cell text-uppercase">sales</div>
@@ -226,7 +241,7 @@
                             </div>
                         </div>
                         <div class="text-center block-with-bnt">
-                            <a class="gray-block menu-item-active">Account Settings</a>
+                            <a class="gray-block  menu-item-active">Account Settings</a>
                             <a class="gray-block">Help</a>
                             <a class="gray-block">Logout</a>
                         </div>
@@ -301,4 +316,9 @@
     $('a[name=store]').click(function(){
         $('#store').slideToggle(500);
     });
+    showMenu = function(id)
+    {
+        $(id).slideToggle();
+    }
+
 </script>

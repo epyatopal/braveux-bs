@@ -11,7 +11,7 @@
 .navbar-top-ul{
     width: 100%;
 }
-.navbar-top-ul li{
+.navbar-top-ul > li{
     height: 65px;
     width: 10%;
     border-right:2px solid #999999 ;
@@ -34,7 +34,7 @@
 .navbar-top-img-extreme{
     border-right:0px !important;
 }
-.navbar-top-ul li > a{
+.navbar-top-ul > li > a{
     color:#4d4d4d;
     padding: 10% !important;
     cursor: pointer;
@@ -254,9 +254,10 @@
 }
 
 .menu-common {
-    margin-top: 12px !important;
+    margin-top: 25px !important;
     background-color: #fff;
     border: 3px solid #4d4d4d;
+
 }
 
 .menu-common:before,.menu-store:before {
@@ -345,7 +346,7 @@
 }
 
 .medium-text{
-    font-size: 1.7em;
+    font-size: 1.6em;
 }
 
 .gray-block {
@@ -354,7 +355,7 @@
 }
 
 .block-with-bnt > a {
-    font-size: 1.7em;
+    font-size: 1.6em;
     display: block;
     padding: 0.4em;
     color: #666666;
@@ -402,7 +403,7 @@
     border-bottom: 2px #999999 solid;
 }
 
-.black-border{
+.black-small-div{
     background-color: #4d4d4d;
     height: 3px;
     width: 100%;
@@ -410,4 +411,70 @@
 
 .red-text{
     color: #fa4d4d;
+}
+
+.light-gray-block {
+    background-color: #f0f0f0;
+}
+
+.menu-guide{
+    width: 187%;
+    right: 29%;
+    left: auto;
+    padding: 0;
+    position: relative;
+    display: none;
+    background-color: #4d4d4d;
+}
+
+.menu-guide:before{
+    right: 50%;
+}
+
+.title-block {
+    padding: 0.5em 13%;
+    text-align: left;
+    margin-bottom: 3px;
+}
+
+.guide-tab{
+    width: 32%;
+    height: 38px;
+}
+
+.guide-tabs {
+    border-bottom: none;
+}
+
+.guide-tabs > .guide-tab > a{
+    border: none;
+    background: none;
+    padding: 0.5em;
+    color: #4d4d4d;
+}
+
+.guide-tabs > .guide-tab > a:hover{
+    border: none;
+    background: none;
+    border-color: #999999;
+    padding: 0.5em;
+    color: #4d4d4d;
+    text-decoration: none;
+}
+
+.guide-tab {
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+    margin-bottom: 2px;
+}
+
+.guide-tab:first-child{
+    margin-left: 0.5%;
+}
+
+.guide-tabs > .guide-tab-active {
+    margin: 0;
+    height: 42px;
+    width: 34%;
+    border-bottom: none;
 }
