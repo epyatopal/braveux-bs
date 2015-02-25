@@ -189,15 +189,15 @@
 
 }
 .menu-store{
-    margin-top: 12px !important;
+    /*margin-top: 12px !important;*/
     margin-left: -20px;
     /*position: relative;*/
     width: 200px;
     height: 100px;
     text-align: center;
     /*line-height: 100px;*/
-    background-color: #fff;
-    border: 3px solid #4d4d4d;
+    /*background-color: #fff;*/
+    /*border: 3px solid #4d4d4d;*/
     /*-webkit-border-radius: 30px;*/
     /*-moz-border-radius: 30px;*/
     /*border-radius: 30px;*/
@@ -207,12 +207,40 @@
 }
 
 .menu-store:before {
+    /*content: ' ';*/
+    /*position: absolute;*/
+    /*width: 0;*/
+    /*height: 0;*/
+    left: 20px;
+    /*top: -30px;*/
+    /*border: 15px solid;*/
+    /*border-color:transparent transparent #4d4d4d;*/
+}
+
+.menu-common {
+    margin-top: 12px !important;
+    background-color: #fff;
+    border: 3px solid #4d4d4d;
+}
+
+.menu-common:before {
     content: ' ';
     position: absolute;
     width: 0;
     height: 0;
-    left: 20px;
+    /*left: 20px;*/
     top: -30px;
     border: 15px solid;
     border-color:transparent transparent #4d4d4d;
+}
+
+
+.menu-user{
+    width: 400%;
+    right: 0;
+    left: auto;
+}
+
+.menu-user:before {
+    right: 20px;
 }
