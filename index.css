@@ -20,7 +20,7 @@
 .navbar-top-img-extreme{
     border-right:0px !important;
 }
-.navbar-top-ul li a{
+.navbar-top-ul li > a{
     color:#4d4d4d;
     padding: 10% !important;
     cursor: pointer;
@@ -239,8 +239,53 @@
     width: 400%;
     right: 0;
     left: auto;
+    font-size: 13px;
+    color: #666666;
+    padding: 0;
+}
+
+.menu-user > .thumbnail {
+    border: none;
+}
+
+.user-avatar {
+    width: 31.914893617%;
+    margin: 1.7em 0;
 }
 
 .menu-user:before {
     right: 20px;
+}
+
+.padding-bottom-min{
+    padding-bottom: 0.8em;
+}
+
+.in-it-span-block > span{
+    display: block;
+}
+
+.big-text {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.medium-text{
+    font-size: 1.7em;
+}
+
+.block-with-bnt > a {
+    font-size: 1.7em;
+    background-color: #f0f0f0;
+    border-bottom: 2px #999999 solid;
+    border-right: 2px #999999 solid;
+    border-left: 2px #999999 solid;
+    display: block;
+    padding: 0.4em;
+    color: #666666;
+    cursor: pointer;
+}
+
+.gray-border {
+    border: 2px #999999 solid;
 }
