@@ -88,26 +88,78 @@
                     </div>
                 </li>
                 <li class="span1 navbar-top-img dropdown ">
-                    <a id="store" class="dropdown-toggle navbar-store" data-toggle="dropdown" href="#" class="navbar-store"></a>
-                    <div class="dropdown-menu menu-store "   role="menu" aria-labelledby="store">
-                        <table>
+                    <!--<a id="store" class="dropdown-toggle navbar-store" data-toggle="dropdown" href="#"></a>-->
+                    <!--<div class=" menu-common dropdown-menu menu-store "   role="menu" aria-labelledby="store">-->
+
+                    <a name="store" class="navbar-store" href="javascript:void(0);" ></a>
+                    <div id="store"  class="menu-store">
+                        <table class="table-store">
                             <caption>Select a store</caption>
                             <thead>
                             <tr>
+                                <!--<th>-->
+                                    <!--<a href="#" class="thumbnail">-->
+                                        <!--<img src="assets/images/search.png">-->
+                                    <!--</a>-->
+                                <!--</th>-->
                                 <th>
-                                    <a href="#" class="thumbnail">
-                                        <img src="assets/images/search.png">
-                                    </a>
+                                    <div class="input-prepend">
+                                        <!--<button type="submit" class="btn">Найти</button>-->
+                                        <a href="#" class="thumbnail">
+                                            <img src="assets/images/search.png">
+                                        </a>
+                                        <input type="text" class="span2 search-query">
+                                    </div>
+                                    <input placeholder="Search" onfocus="placeholder=''"  onblur="placeholder='Search'">
                                 </th>
-                                <th>
-                                    <input placeholder="Search">
-                                </th>
+                            </tr>
+                            <tr>
+                                <td>ACT</td>
+                                <td>NSW</td>
+                                <td>NT</td>
+                                <td>QLD</td>
+                                <td>SA</td>
+                                <td>TAS</td>
+                                <td>VIC</td>
+                                <td>WA</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    STORE NAME <b class="caret"></b>
+                                </td>
+                                <td>
+                                    STORE SIZE <b class="caret"></b>
+                                </td>
                             </tr>
                             </thead>
                             <tbody>
                             <tr>
-                                <td>...</td>
-                                <td>...</td>
+                                <td> </td>
+                                <td> </td>
+                            </tr>
+                            <tr>
+                                <td> </td>
+                                <td> </td>
+                            </tr>
+                            <tr>
+                                <td> </td>
+                                <td> </td>
+                            </tr>
+                            <tr>
+                                <td> </td>
+                                <td> </td>
+                            </tr>
+                            <tr>
+                                <td> </td>
+                                <td> </td>
+                            </tr>
+                            <tr>
+                                <td> </td>
+                                <td> </td>
+                            </tr>
+                            <tr>
+                                <td> Reset </td>
+                                <td> Confirm </td>
                             </tr>
                             </tbody>
                         </table>
@@ -121,7 +173,12 @@
                 <li class="span1"><a href="#">Heat Map</a></li>
                 <li class="span1"> <a href="#">Bay Layout Guide</a></li>
                 <li class="span1"><a href="#">Sales</a></li>
-                <li class="span1 navbar-top-img navbar-top-img-extreme"><a href="#" class="navbar-user"> </a></li>
+                <li class="span1 navbar-top-img navbar-top-img-extreme">
+                    <a href="#" class="navbar-user" id="user" class="dropdown-toggle navbar-store" data-toggle="dropdown"> </a>
+                    <div class="menu-common dropdown-menu menu-user"   role="menu" aria-labelledby="store">
+
+                    </div>
+                </li>
             </ul>
         </nav>
         <!--<a type="button" id="big" role ="botton" class="dropdown-toggle" data-toggle="dropdown" href="#">qqqq</a>-->
@@ -187,3 +244,8 @@
 
 </body>
 </html>
+<script type="text/javascript">
+    $('a[name=store]').click(function(){
+        $('#store').slideToggle(500);
+    });
+</script>
