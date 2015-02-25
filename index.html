@@ -5,10 +5,10 @@
 
     <meta charset="UTF-8">
 
-    <link rel="stylesheet"  href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet"  href="assets/lib/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="index.css">
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="assets/lib/jquery/jquery.min.js"></script>
+    <script src="assets/lib/bootstrap/bootstrap.min.js"></script>
 
 
 </head>
@@ -95,73 +95,73 @@
                     <div id="store"  class="menu-store">
                         <table class="table-store">
                             <caption>Select a store</caption>
-                            <thead>
-                            <tr>
+                            <!--<thead>-->
+                            <!--<tr>-->
+                                <!--&lt;!&ndash;<th>&ndash;&gt;-->
+                                    <!--&lt;!&ndash;<a href="#" class="thumbnail">&ndash;&gt;-->
+                                        <!--&lt;!&ndash;<img src="assets/images/search.png">&ndash;&gt;-->
+                                    <!--&lt;!&ndash;</a>&ndash;&gt;-->
+                                <!--&lt;!&ndash;</th>&ndash;&gt;-->
                                 <!--<th>-->
-                                    <!--<a href="#" class="thumbnail">-->
-                                        <!--<img src="assets/images/search.png">-->
-                                    <!--</a>-->
+                                    <!--<div class="input-prepend">-->
+                                        <!--&lt;!&ndash;<button type="submit" class="btn">Найти</button>&ndash;&gt;-->
+                                        <!--<a href="#" class="thumbnail">-->
+                                            <!--<img src="assets/images/search.png">-->
+                                        <!--</a>-->
+                                        <!--<input type="text" class="span2 search-query">-->
+                                    <!--</div>-->
+                                    <!--<input placeholder="Search" onfocus="placeholder=''"  onblur="placeholder='Search'">-->
                                 <!--</th>-->
-                                <th>
-                                    <div class="input-prepend">
-                                        <!--<button type="submit" class="btn">Найти</button>-->
-                                        <a href="#" class="thumbnail">
-                                            <img src="assets/images/search.png">
-                                        </a>
-                                        <input type="text" class="span2 search-query">
-                                    </div>
-                                    <input placeholder="Search" onfocus="placeholder=''"  onblur="placeholder='Search'">
-                                </th>
-                            </tr>
-                            <tr>
-                                <td>ACT</td>
-                                <td>NSW</td>
-                                <td>NT</td>
-                                <td>QLD</td>
-                                <td>SA</td>
-                                <td>TAS</td>
-                                <td>VIC</td>
-                                <td>WA</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    STORE NAME <b class="caret"></b>
-                                </td>
-                                <td>
-                                    STORE SIZE <b class="caret"></b>
-                                </td>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td> </td>
-                                <td> </td>
-                            </tr>
-                            <tr>
-                                <td> </td>
-                                <td> </td>
-                            </tr>
-                            <tr>
-                                <td> </td>
-                                <td> </td>
-                            </tr>
-                            <tr>
-                                <td> </td>
-                                <td> </td>
-                            </tr>
-                            <tr>
-                                <td> </td>
-                                <td> </td>
-                            </tr>
-                            <tr>
-                                <td> </td>
-                                <td> </td>
-                            </tr>
-                            <tr>
-                                <td> Reset </td>
-                                <td> Confirm </td>
-                            </tr>
-                            </tbody>
+                            <!--</tr>-->
+                            <!--<tr>-->
+                                <!--<td>ACT</td>-->
+                                <!--<td>NSW</td>-->
+                                <!--<td>NT</td>-->
+                                <!--<td>QLD</td>-->
+                                <!--<td>SA</td>-->
+                                <!--<td>TAS</td>-->
+                                <!--<td>VIC</td>-->
+                                <!--<td>WA</td>-->
+                            <!--</tr>-->
+                            <!--<tr>-->
+                                <!--<td>-->
+                                    <!--STORE NAME <b class="caret"></b>-->
+                                <!--</td>-->
+                                <!--<td>-->
+                                    <!--STORE SIZE <b class="caret"></b>-->
+                                <!--</td>-->
+                            <!--</tr>-->
+                            <!--</thead>-->
+                            <!--<tbody>-->
+                            <!--<tr>-->
+                                <!--<td> </td>-->
+                                <!--<td> </td>-->
+                            <!--</tr>-->
+                            <!--<tr>-->
+                                <!--<td> </td>-->
+                                <!--<td> </td>-->
+                            <!--</tr>-->
+                            <!--<tr>-->
+                                <!--<td> </td>-->
+                                <!--<td> </td>-->
+                            <!--</tr>-->
+                            <!--<tr>-->
+                                <!--<td> </td>-->
+                                <!--<td> </td>-->
+                            <!--</tr>-->
+                            <!--<tr>-->
+                                <!--<td> </td>-->
+                                <!--<td> </td>-->
+                            <!--</tr>-->
+                            <!--<tr>-->
+                                <!--<td> </td>-->
+                                <!--<td> </td>-->
+                            <!--</tr>-->
+                            <!--<tr>-->
+                                <!--<td> Reset </td>-->
+                                <!--<td> Confirm </td>-->
+                            <!--</tr>-->
+                            <!--</tbody>-->
                         </table>
                     </div>
                 </li>
@@ -172,11 +172,64 @@
                 <li class="span1"><a href="#">Activity</a></li>
                 <li class="span1"><a href="#">Heat Map</a></li>
                 <li class="span1"> <a href="#">Bay Layout Guide</a></li>
-                <li class="span1"><a href="#">Sales</a></li>
+                <li class="span1">
+                    <a href="#" id="sales" class="dropdown-toggle navbar-sales" data-toggle="dropdown">Sales</a>
+                    <div class="menu-common dropdown-menu menu-sales" role="menu" aria-labelledby="store">
+                        <div class="table-block gray-border">
+                            <div class="table-row">
+                                <div class="table-cell">Bay Name</div>
+                                <div class="table-cell">Health Foods (9/20)</div>
+                            </div>
+                            <div class="table-row">
+                                <div class="table-cell">Bay No.</div>
+                                <div class="table-cell">469</div>
+                            </div>
+                            <div class="table-row">
+                                <div class="table-cell">Bay Length</div>
+                                <div class="table-cell">1m</div>
+                            </div>
+                        </div>
+                        <div class="black-border"> </div>
+                        <div class="table-block gray-border ">
+                            <div class="table-row">
+                                <div class="table-cell text-uppercase">sales</div>
+                                <div class="table-cell red-text">0</div>
+                            </div>
+                            <div class="table-row">
+                                <div class="table-cell text-uppercase">cocges</div>
+                                <div class="table-cell red-text">0</div>
+                            </div>
+                            <div class="table-row">
+                                <div class="table-cell text-uppercase">gp$</div>
+                                <div class="table-cell red-text">$0.00</div>
+                            </div>
+                            <div class="table-row">
+                                <div class="table-cell text-uppercase">gp%</div>
+                                <div class="table-cell red-text">%000</div>
+                            </div>
+                            <div class="table-row">
+                                <div class="table-cell text-uppercase">sales+gnros</div>
+                                <div class="table-cell red-text">$0.00</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
                 <li class="span1 navbar-top-img navbar-top-img-extreme">
                     <a href="#" class="navbar-user" id="user" class="dropdown-toggle navbar-store" data-toggle="dropdown"> </a>
-                    <div class="menu-common dropdown-menu menu-user"   role="menu" aria-labelledby="store">
-
+                    <div class="menu-common dropdown-menu menu-user" role="menu" aria-labelledby="store">
+                        <div class="text-center gray-border padding-bottom-min">
+                            <img src="assets/images/user.png" class="img-circle user-avatar">
+                            <div class="text-center in-it-span-block">
+                                <span class="big-text">Giuseppe Di Franco</span>
+                                <span class="medium-text">National Merchandising</span>
+                                <span class="medium-text">TM iD: <strong>646170</strong></span>
+                            </div>
+                        </div>
+                        <div class="text-center block-with-bnt">
+                            <a class="gray-block">Account Settings</a>
+                            <a class="gray-block">Help</a>
+                            <a class="gray-block">Logout</a>
+                        </div>
                     </div>
                 </li>
             </ul>
