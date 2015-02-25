@@ -5,10 +5,10 @@
 
     <meta charset="UTF-8">
 
-    <link rel="stylesheet"  href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet"  href="assets/lib/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="index.css">
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="assets/lib/jquery/jquery.min.js"></script>
+    <script src="assets/lib/bootstrap/bootstrap.min.js"></script>
 
 
 </head>
@@ -25,7 +25,6 @@
                     <!--<div class="dropdown">-->
                     <a id="shortcut"  class="navbar-shortcut dropdown-toggle" data-toggle="dropdown" href="#"></a>
                     <div class="dropdown-menu menu-shortcut-conteiner"   role="menu" aria-labelledby="shortcut">
-
                         <div class="row-fluid menu-shortcut-col">
                             <div class="span4 menu-shortcut">
                                 <a href="#" class="thumbnail">
@@ -86,14 +85,84 @@
                                 </a>
                             </div>
                         </div>
-
                     </div>
-
                 </li>
                 <li class="span1 navbar-top-img dropdown ">
-                    <a id="store" class="dropdown-toggle navbar-store" data-toggle="dropdown" href="#" class="navbar-store"></a>
-                    <div class="menu-common dropdown-menu menu-store"   role="menu" aria-labelledby="store">
+                    <!--<a id="store" class="dropdown-toggle navbar-store" data-toggle="dropdown" href="#"></a>-->
+                    <!--<div class=" menu-common dropdown-menu menu-store "   role="menu" aria-labelledby="store">-->
 
+                    <a name="store" class="navbar-store" href="javascript:void(0);" ></a>
+                    <div id="store"  class="menu-store">
+                        <table class="table-store">
+                            <caption>Select a store</caption>
+                            <!--<thead>-->
+                            <!--<tr>-->
+                                <!--&lt;!&ndash;<th>&ndash;&gt;-->
+                                    <!--&lt;!&ndash;<a href="#" class="thumbnail">&ndash;&gt;-->
+                                        <!--&lt;!&ndash;<img src="assets/images/search.png">&ndash;&gt;-->
+                                    <!--&lt;!&ndash;</a>&ndash;&gt;-->
+                                <!--&lt;!&ndash;</th>&ndash;&gt;-->
+                                <!--<th>-->
+                                    <!--<div class="input-prepend">-->
+                                        <!--&lt;!&ndash;<button type="submit" class="btn">Найти</button>&ndash;&gt;-->
+                                        <!--<a href="#" class="thumbnail">-->
+                                            <!--<img src="assets/images/search.png">-->
+                                        <!--</a>-->
+                                        <!--<input type="text" class="span2 search-query">-->
+                                    <!--</div>-->
+                                    <!--<input placeholder="Search" onfocus="placeholder=''"  onblur="placeholder='Search'">-->
+                                <!--</th>-->
+                            <!--</tr>-->
+                            <!--<tr>-->
+                                <!--<td>ACT</td>-->
+                                <!--<td>NSW</td>-->
+                                <!--<td>NT</td>-->
+                                <!--<td>QLD</td>-->
+                                <!--<td>SA</td>-->
+                                <!--<td>TAS</td>-->
+                                <!--<td>VIC</td>-->
+                                <!--<td>WA</td>-->
+                            <!--</tr>-->
+                            <!--<tr>-->
+                                <!--<td>-->
+                                    <!--STORE NAME <b class="caret"></b>-->
+                                <!--</td>-->
+                                <!--<td>-->
+                                    <!--STORE SIZE <b class="caret"></b>-->
+                                <!--</td>-->
+                            <!--</tr>-->
+                            <!--</thead>-->
+                            <!--<tbody>-->
+                            <!--<tr>-->
+                                <!--<td> </td>-->
+                                <!--<td> </td>-->
+                            <!--</tr>-->
+                            <!--<tr>-->
+                                <!--<td> </td>-->
+                                <!--<td> </td>-->
+                            <!--</tr>-->
+                            <!--<tr>-->
+                                <!--<td> </td>-->
+                                <!--<td> </td>-->
+                            <!--</tr>-->
+                            <!--<tr>-->
+                                <!--<td> </td>-->
+                                <!--<td> </td>-->
+                            <!--</tr>-->
+                            <!--<tr>-->
+                                <!--<td> </td>-->
+                                <!--<td> </td>-->
+                            <!--</tr>-->
+                            <!--<tr>-->
+                                <!--<td> </td>-->
+                                <!--<td> </td>-->
+                            <!--</tr>-->
+                            <!--<tr>-->
+                                <!--<td> Reset </td>-->
+                                <!--<td> Confirm </td>-->
+                            <!--</tr>-->
+                            <!--</tbody>-->
+                        </table>
                     </div>
                 </li>
                 <li class="span1"><a href="#">Pano Node</a> </li>
@@ -228,3 +297,8 @@
 
 </body>
 </html>
+<script type="text/javascript">
+    $('a[name=store]').click(function(){
+        $('#store').slideToggle(500);
+    });
+</script>
