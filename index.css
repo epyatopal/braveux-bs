@@ -236,10 +236,10 @@
 
 
 .menu-user{
-    width: 400%;
+    width: 300%;
     right: 0;
     left: auto;
-    font-size: 13px;
+    font-size: 10px;
     color: #666666;
     padding: 0;
 }
@@ -259,6 +259,24 @@
 
 .menu-user .block-with-bnt > a {
     border-top: none;
+}
+
+.menu-user .block-with-bnt > a:hover {
+    color: red;
+    background-color: #ffffff;
+    text-decoration: none;
+}
+
+.menu-item-active {
+    color: #ffffff !important;
+    background-color: red !important;
+    text-decoration: none !important;
+}
+
+.menu-user .block-with-bnt > a:active {
+    color: #ffffff;
+    background-color: red;
+    text-decoration: none;
 }
 
 .padding-bottom-min{
