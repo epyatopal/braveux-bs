@@ -1,3 +1,7 @@
+body a:hover {
+    text-decoration: none;
+    cursor: pointer;
+}
 .main{
     overflow: hidden;
     width: 100%;
@@ -371,6 +375,11 @@
     right: 0;
     left: auto;
     padding: 0;
+    min-width: 200px;
+}
+
+.menu-sales > div{
+    overflow-x: auto;
 }
 
 .menu-sales:before{
@@ -380,6 +389,7 @@
 .table-block {
     display: table;
     width: 100%;
+    min-width: 220px;
 }
 .table-block > .table-row:last-child > .table-cell{
     border-bottom: none;
@@ -393,6 +403,7 @@
     border-right: 2px #999999 solid;
     background-color: #f0f0f0;
     text-align: right;
+    min-width: 140px;
 }
 
 .table-cell {
@@ -401,12 +412,14 @@
     padding: 0.5em 1.2em;
     font-size: 1em;
     border-bottom: 2px #999999 solid;
+    min-width: 80px;
 }
 
 .black-small-div{
     background-color: #4d4d4d;
     height: 3px;
     width: 100%;
+    min-width: 220px;
 }
 
 .red-text{
@@ -418,13 +431,15 @@
 }
 
 .menu-guide{
-    width: 187%;
+    width: 205%;
     right: 29%;
     left: auto;
     padding: 0;
     position: relative;
     display: none;
     background-color: #4d4d4d;
+    min-width: 300px;
+    z-index: 100;
 }
 
 .menu-guide:before{
@@ -458,7 +473,7 @@
     background: none;
     border-color: #999999;
     padding: 0.5em;
-    color: #4d4d4d;
+    color: #fa4d4d;
     text-decoration: none;
 }
 
@@ -520,8 +535,10 @@
 }
 
 .group-btn-block > div{
-    width: 48%;
+    width: 49%;
     display: inline-block;
+    text-align: center;
+    padding: 0.5em;
 }
 
 .group-btn-block > div:first-child {
@@ -530,4 +547,48 @@
 
 .group-btn-block > div:last-child {
     float: right;
+}
+
+.group-btn-block > div > a{
+    color: #4d4d4d;
+}
+
+.yellow-block {
+    background-color: #f5d232;
+    color: #000000;
+}
+
+.yellow-text, .hover-yellow:hover {
+    color: #f5d232;
+    text-decoration: none;
+}
+
+.orange-block {
+    background-color: #ff963c;
+    color: #000000;
+}
+
+.orange-text, .hover-orange:hover {
+    color: #ff963c;
+    text-decoration: none;
+}
+
+.green-block {
+    background-color: #78d23c;
+    color: #000000;
+    text-decoration: none;
+}
+
+.green-text, .hover-green:hover {
+    color: #78d23c;
+    text-decoration: none;
+}
+
+.red-block {
+    background-color: #fa4d4d;
+    color: #000000;
+}
+
+.red-text, .hover-red:hover {
+    color: #fa4d4d;
 }
