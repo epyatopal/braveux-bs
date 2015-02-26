@@ -350,7 +350,7 @@
 }
 
 .gray-block {
-    background-color: #f0f0f0;
+    background-color: #e0e0e0;
     border: 2px #999999 solid;
 }
 
@@ -477,4 +477,57 @@
     height: 42px;
     width: 34%;
     border-bottom: none;
+}
+
+.half-block {
+    width: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+.left-block{
+    float: left;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.in-it-some-border > div {
+    border-bottom: 2px #999999 solid;
+}
+
+.in-it-some-border > div:nth-child(odd):not(.col-md-12) {
+    border-right: 2px #999999 solid;
+}
+
+.info-block{
+    border-bottom: none;
+    margin-bottom: 3px;
+}
+
+.info-block > div{
+    padding: 0.5em;
+}
+
+.overflow-auto{
+    overflow-y: auto;
+    max-height: 10em;
+}
+
+.group-btn-block {
+    overflow: hidden;
+}
+
+.group-btn-block > div{
+    width: 48%;
+    display: inline-block;
+}
+
+.group-btn-block > div:first-child {
+    float: left;
+}
+
+.group-btn-block > div:last-child {
+    float: right;
 }
