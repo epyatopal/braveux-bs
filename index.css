@@ -473,8 +473,11 @@ body a:hover {
     background: none;
     border-color: #999999;
     padding: 0.5em;
-    color: #fa4d4d;
     text-decoration: none;
+}
+
+.guide-tabs > .guide-tab:not(.red-block) > a:hover{
+    color: #fa4d4d;
 }
 
 .guide-tab {
@@ -493,6 +496,8 @@ body a:hover {
     width: 34%;
     border-bottom: none;
 }
+
+
 
 .half-block {
     width: 50%;
@@ -573,22 +578,30 @@ body a:hover {
     text-decoration: none;
 }
 
-.green-block {
-    background-color: #78d23c;
-    color: #000000;
-    text-decoration: none;
-}
-
 .green-text, .hover-green:hover {
     color: #78d23c;
     text-decoration: none;
 }
+.green-block, .green-block:hover {
+    background-color: #78d23c;
+    color: #000000;
+}
 
-.red-block {
+.red-block, .red-block:hover {
     background-color: #fa4d4d;
     color: #000000;
 }
 
 .red-text, .hover-red:hover {
     color: #fa4d4d;
+}
+
+.group-btn-block > .orange-block:hover {
+    background-color: #ff963c;
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+.orange-block:hover > * {
+    color: #ffffff;
 }
