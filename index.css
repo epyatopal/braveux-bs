@@ -375,7 +375,7 @@ body a:hover {
     right: 0;
     left: auto;
     padding: 0;
-    min-width: 200px;
+    min-width: 300px;
 }
 
 .menu-sales > div{
@@ -389,7 +389,6 @@ body a:hover {
 .table-block {
     display: table;
     width: 100%;
-    min-width: 220px;
 }
 .table-block > .table-row:last-child > .table-cell{
     border-bottom: none;
@@ -444,6 +443,11 @@ body a:hover {
 
 .menu-guide:before{
     right: 50%;
+}
+
+.result > .title-block {
+    padding: 0.5em 0;
+    text-align: center;
 }
 
 .title-block {
@@ -521,8 +525,11 @@ body a:hover {
     border-right: 2px #999999 solid;
 }
 
-.info-block{
+.no-border-bottom {
     border-bottom: none;
+}
+
+.info-block{
     margin-bottom: 3px;
 }
 
@@ -587,6 +594,14 @@ body a:hover {
     color: #000000;
 }
 
+.green-block > * {
+    color: #000000;
+}
+
+.green-block:hover > * {
+    color: #ffffff;
+}
+
 .red-block, .red-block:hover {
     background-color: #fa4d4d;
     color: #000000;
@@ -602,6 +617,26 @@ body a:hover {
     border-color: #ffffff;
 }
 
+.group-btn-block > .green-block:hover {
+    background-color: #78d23c;
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
 .orange-block:hover > * {
     color: #ffffff;
+}
+
+
+.scale-block {
+    background-color: #ffffff;
+    margin-bottom: 3px;
+}
+
+.scale-block > img {
+    width: 55%;
+}
+
+.padding-common {
+    padding: 0.5em;
 }
