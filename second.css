@@ -1,3 +1,32 @@
+@font-face {
+    font-family: Dummy;
+    src: url(assets/font/DUMMY.TTF);
+}
+
+@media (min-width: 1205px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 1136px) {
+    body {
+        font-size: 13px;
+    }
+}
+
+@media (min-width: 796px) {
+    body {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 795px) {
+    body {
+        font-size: 11px;
+    }
+}
+
 body a:hover {
     text-decoration: none;
     cursor: pointer;
@@ -5,11 +34,13 @@ body a:hover {
 
 .main {
     min-width: 750px;
+    min-height: 405px;
 }
 .header {
     padding: 0px 35px 0px 105px;
     height: 35px;
     background-color: #ffffff;
+    z-index: 10;
 }
 
 /* gray border start*/
@@ -41,6 +72,7 @@ body a:hover {
     background-repeat: no-repeat;
     background-position: center;
     background-size: 65%;
+    z-index: 100;
  }
 
 .btn-landing {
@@ -64,13 +96,26 @@ body a:hover {
     top: 0;
     right: 0;
 }
-/*menu button finish*/
 
-/*text color start*/
-.gray-text {
-    color: #4d4d4d !important;
+.btn-big{
+    background-image: url("assets/images/big.png");
 }
-/*text color finish*/
+.btn-small{
+    background-image: url("assets/images/small.png");
+}
+.btn-stretch{
+    background-image:url("assets/images/stretch.png");
+    top:300px;
+}
+
+.btn-hand{
+    background-image:url("assets/images/hand.png");
+    top:335px;
+}
+.btn-i{
+    background-image: url("assets/images/i.png");
+    top:370px;
+}
 
 .responsible-btn{
     width: 12.5%;
@@ -80,5 +125,56 @@ body a:hover {
     height: 100%;
     line-height: 1;
     padding: 10px;
+    font-size: 1em;
+}
+/*menu button finish*/
+
+/*text color start*/
+.gray-text {
+    color: #4d4d4d !important;
+}
+/*text color finish*/
+
+.left-menu{
+    overflow: hidden;
+    width: 35px;
+    display: inline-block;
+    position: fixed;
+    left: 0;
+    height: 300px;
 }
 
+.right-menu{
+    overflow: hidden;
+    width: 35px;
+    display: inline-block;
+    position: fixed;
+    right: 0;
+    height: 370px;
+}
+
+.range-block {
+    height: 195px;
+    margin-top: 35px;
+    padding: 10px;
+}
+
+input.vertical {
+    -webkit-appearance: slider-vertical;
+    writing-mode: bt-lr;
+    height: 100%;
+}
+
+.fixed-block {
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+.body-block {
+    margin-right: 35px;
+    margin-left: 35px;
+    margin-top: 35px;
+    position: relative;
+    min-height: 100%;
+}
