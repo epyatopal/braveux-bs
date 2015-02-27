@@ -85,8 +85,6 @@ body a:hover {
 
 .header > .navbar > div {
     height: 35px;
-    min-height: 35px;
-    border: none;
 }
 
 .header > .navbar > div > .navbar-collapse{
@@ -95,12 +93,11 @@ body a:hover {
 
 .header > .navbar > div > .navbar-collapse > .navbar-nav{
     width: calc(100% - 1px);
-    /*height: 35px;*/
     overflow: hidden;
 }
 
 .header > .navbar > div > .navbar-collapse > .navbar-nav > li{
-    height: 35px;
+    height: 34px;
     padding: 0;
 }
 
@@ -209,6 +206,10 @@ body a:hover {
     line-height: 1;
     padding: 10px;
     font-size: 1em;
+}
+
+.responsible-btn:hover, .fixed-btn:hover{
+background-color: #f0f0f0;
 }
 /*menu button finish*/
 
