@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet"  href="assets/lib/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css">
+
+    <link rel="stylesheet" href="second.css">
+    <script src="assets/lib/jquery/jquery.min.js"></script>
+    <script src="//code.jquery.com/ui/1.11.3/jquery-ui.js"></script>
+    <script src="assets/lib/bootstrap/bootstrap.min.js"></script>
+    <!--<script src="bower_components/bootstrap/js/collapse.js"></script>-->
+
+    <style>
+        #resizable { width: 150px; height: 150px; padding: 0.5em; }
+        #resizable h3 { text-align: center; margin: 0; }
+    </style>
+
+    <script type="text/javascript">
+        showMenu = function(id)
+        {
+            $(id).slideToggle();
+        }
+        $(function() {
+            var minH = $( "#left-page-block").height();
+            $( window ).resize(function() {
+                minH = $( "#left-page-block").height();
+                $( "#left-page-block" ).resizable({
+                    minHeight: minH,
+                    maxHeight: minH
+                })
+
+            });
+
+            $( "#left-page-block" ).resizable({
+                resize: function( event, ui ) {
+                    console.log('dskjfhg', ui, event)
+                    var border_width = 6,
+                        w_w = $('#body-block').width(),
+                        l_w = $('#left-page-block').width(),
+                        rightWidth = w_w - l_w - border_width
+                    $('#right-page-block').width(rightWidth)
+                },
+                minHeight: minH,
+                maxHeight: minH
+            });
+        })
+
+    </script>
+
+</head>
+<body class="">
+<div class="fixed-block">
+    <a class="fixed-size fixed-btn btn-landing gray-border-right"></a>
+    <a class="fixed-size fixed-btn btn-shortcut gray-border-right"></a>
+    <a class="fixed-size fixed-btn btn-store gray-border-right"></a>
+    <a class="fixed-size fixed-btn btn-user gray-border-left"></a>
+    <div class="header gray-border-bottom">
+        <nav class="navbar navbar-default">
+            <div class="gray-border-bottom">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="responsible-btn gray-border-right "><a class="gray-text">Pano Node</a></li>
+                        <li class="responsible-btn gray-border-right"><a class="gray-text">Still</a></li>
+                        <li class="responsible-btn gray-border-right"><a class="gray-text">Event</a></li>
+                        <li class="responsible-btn gray-border-right"><a class="gray-text">Merch Depts</a></li>
+                        <li class="responsible-btn gray-border-right"><a class="gray-text">Activity</a></li>
+                        <li class="responsible-btn gray-border-right"><a class="gray-text">Heat Map</a></li>
+                        <li class="responsible-btn gray-border-right"><a class="gray-text">Bay Layout Guide</a></li>
+                        <li class="responsible-btn"><a class="gray-text">Sales</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+    </div>
+
+    <div class="gray-border-right gray-border-bottom left-menu ">
+        <a class="fixed-size fixed-btn btn-big gray-border-bottom"></a>
+        <div class="range-block gray-border-bottom">
+            <input type=range min=0 max=100 value=50 class=vertical orient=vertical>
+        </div>
+        <a class="fixed-size fixed-btn btn-small gray-border-bottom"></a>
+        <a class="fixed-size fixed-btn btn-stretch gray-border-bottom"></a>
+    </div>
+
+    <div class="gray-border-left gray-border-bottom right-menu ">
+        <a class="fixed-size fixed-btn btn-big gray-border-bottom"></a>
+        <div class="range-block gray-border-bottom">
+            <input type=range min=0 max=100 value=50 class=vertical orient=vertical>
+        </div>
+        <a class="fixed-size fixed-btn btn-small gray-border-bottom"></a>
+        <a class="fixed-size fixed-btn btn-stretch gray-border-bottom"></a>
+        <a class="fixed-size fixed-btn btn-hand gray-border-bottom"></a>
+        <a class="fixed-size fixed-btn btn-i gray-border-bottom"></a>
+    </div>
+
+</div>
+
+<div id="body-block" class="body-block">
+    <div id="left-page-block" class="left-page-block">
+        dzf;gj
+    </div>
+    <div id="right-page-block" class="right-page-block">
+        ;dlfjk
+    </div>
+</div>
+</body>
+</html>
