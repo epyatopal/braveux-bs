@@ -330,6 +330,7 @@ input.vertical {
     border: 11px solid;
     border-color: transparent transparent #4d4d4d;
 }
+
 .menu-user{
     margin-top: 45px !important;
     width: 248px;
@@ -434,6 +435,7 @@ input.vertical {
     text-decoration: none !important;
 }
 
+
 /*menu-sales*/
 .menu-sales{
     width: 268px;
@@ -486,4 +488,149 @@ input.vertical {
     height: 3px;
     width: 100%;
     min-width: 220px;
+}
+
+.menu-store{
+    left: 50px;
+    height: 363px;
+    width:358px;
+    text-align: center;
+    background-color: #fff;
+    border: 3px solid #4d4d4d;
+    display: none;
+    color:#4d4d4d;
+}
+
+.menu-store:before {
+    left: 21px;
+}
+
+.store-caption{
+    height: 12%;
+    width: 100%;
+    border-bottom: 3px solid #4d4d4d;
+}
+
+.store-frame{
+    height: 100%;
+    width: 100%;
+    border: 2px #999999 solid;
+    background-color:#e1e1e1;
+    text-align: center;
+    font-size: 18px;
+    padding: 5px;
+    color: #4d4d4d;
+}
+
+.store-search{
+    height: 8%;
+    width: 100%;
+    border: 2px #999999 solid;
+}
+.store-search>input{
+    height: 28px;
+    border: none!important;
+}
+.store-search>input:focus{
+    outline: none !important;
+}
+
+.store-search-btn{
+    height: 28px;
+    width: 48px;
+    background-color: #ffffff;
+
+}
+
+.store-search-btn:focus{
+    border: none !important;
+}
+
+.store-search-btn>span{
+    color: #fa4d4d;
+    top: -2px !important;
+}
+
+.store-name{
+    width: 100%;
+    height: 8%;
+    border-bottom: none !important;
+}
+
+.store-name,.store-table,.store-footer{
+    border: 2px #999999 solid;
+    border-top:none !important;
+}
+
+.menu-store-name{
+    height: 100%;
+    width: 12.5%;
+    border-right: 2px #999999 solid;
+    display: block;
+    float: left;
+    padding: 5px;
+}
+
+.menu-store-name-wa{
+    border-right: none !important;
+}
+
+.store-table{
+    width: 100%;
+    height: 60%;
+    overflow: auto;
+}
+
+.menu-store-table{
+    width: 100%;
+    height: 100%;
+}
+
+.menu-store-table>tbody>tr{
+    height: 30px;
+}
+
+.store-table-caption{
+    background-color: #f0f0f0;
+}
+
+.menu-storeName{
+    padding: 2px;
+    width: 70%;
+    border-right:2px #999999 solid;
+    border-top:2px #999999 solid;
+}
+
+.caret-red{
+    color: #fa4d4d;
+}
+
+.menu-storeSize{
+    padding: 2px;
+    width: 30%;
+    border-top:2px #999999 solid;
+}
+
+.store-footer{
+    width: 100%;
+    height: 11%;
+    background-color: #f0f0f0;
+}
+
+.menu-storeReset,.menu-storeConfirm{
+    height: 100%;
+    width: 50%;
+    background-color: #f0f0f0;
+    display: block;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.menu-storeReset{
+    float: left;
+    border-right:2px #999999 solid ;
+}
+
+.menu-storeConfirm{
+    float: right;
 }
