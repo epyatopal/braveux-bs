@@ -191,22 +191,19 @@ body a:hover {
 }
 .btn-stretch{
     background-image:url("assets/images/stretch.png");
-    top:300px;
+    top:304px;
 }
 
 .btn-hand{
     background-image:url("assets/images/hand.png");
-    top:335px;
+    top:339px;
 }
 .btn-i{
     background-image: url("assets/images/i.png");
-    top:370px;
+    top:374px;
 }
 
 .responsible-btn{
-    /*width: 12.5%;*/
-    /*display: inline-block;*/
-    /*float: left;*/
     text-align: center;
     height: 100%;
     line-height: 1;
@@ -241,7 +238,7 @@ body a:hover {
     display: inline-block;
     position: fixed;
     left: 0;
-    height: 300px;
+    height: 304px;
 }
 
 .right-menu{
@@ -250,11 +247,11 @@ body a:hover {
     display: inline-block;
     position: fixed;
     right: 0;
-    height: 370px;
+    height: 374px;
 }
 
 .range-block {
-    height: 195px;
+    height: 200px;
     margin-top: 35px;
     padding: 10px;
 }
