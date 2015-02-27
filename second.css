@@ -255,6 +255,7 @@ input.vertical {
     z-index: 1000;
 }
 
+/* body start*/
 .body-block {
     margin-right: 35px;
     margin-left: 35px;
@@ -296,4 +297,45 @@ input.vertical {
     min-height: 100%;
     overflow: hidden;
     right: 0;
+}
+
+/* body finish*/
+
+.menu-common {
+    margin-top: 45px !important;
+    background-color: #fff;
+    border: 3px solid #4d4d4d;
+    position: absolute;
+    z-index: 100
+}
+.menu-common:before {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: -25px;
+    border: 11px solid;
+    border-color: transparent transparent #4d4d4d;
+}
+.menu-user{
+    width: 248px;
+    right: 0;
+    left: auto;
+    font-size: 10px;
+    color: #666666;
+    padding: 0;
+    display: none;
+}
+
+.menu-user > .thumbnail {
+    border: none;
+}
+
+.user-avatar {
+    width: 31.914893617%;
+    margin: 1.7em 0;
+}
+
+.menu-user:before {
+    right: 1px;
 }
