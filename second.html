@@ -6,11 +6,50 @@
     <meta charset="UTF-8">
 
     <link rel="stylesheet"  href="assets/lib/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css">
+
     <link rel="stylesheet" href="second.css">
     <script src="assets/lib/jquery/jquery.min.js"></script>
+    <script src="//code.jquery.com/ui/1.11.3/jquery-ui.js"></script>
     <script src="assets/lib/bootstrap/bootstrap.min.js"></script>
-    <script src="bower_components/bootstrap/js/collapse.js"></script>
+    <!--<script src="bower_components/bootstrap/js/collapse.js"></script>-->
 
+    <style>
+        #resizable { width: 150px; height: 150px; padding: 0.5em; }
+        #resizable h3 { text-align: center; margin: 0; }
+    </style>
+
+    <script type="text/javascript">
+        showMenu = function(id)
+        {
+            $(id).slideToggle();
+        }
+        $(function() {
+            var minH = $( "#left-page-block").height();
+            $( window ).resize(function() {
+                minH = $( "#left-page-block").height();
+                $( "#left-page-block" ).resizable({
+                    minHeight: minH,
+                    maxHeight: minH
+                })
+
+            });
+
+            $( "#left-page-block" ).resizable({
+                resize: function( event, ui ) {
+                    console.log('dskjfhg', ui, event)
+                    var border_width = 6,
+                        w_w = $('#body-block').width(),
+                        l_w = $('#left-page-block').width(),
+                        rightWidth = w_w - l_w - border_width
+                    $('#right-page-block').width(rightWidth)
+                },
+                minHeight: minH,
+                maxHeight: minH
+            });
+        })
+
+    </script>
 
 </head>
 <body class="">
@@ -69,12 +108,13 @@
 
 </div>
 
+<div id="body-block" class="body-block">
+    <div id="left-page-block" class="left-page-block">
+        dzf;gj
+    </div>
+    <div id="right-page-block" class="right-page-block">
+        ;dlfjk
+    </div>
+</div>
 </body>
 </html>
-<script type="text/javascript">
-    showMenu = function(id)
-    {
-        $(id).slideToggle();
-    }
-
-</script>
