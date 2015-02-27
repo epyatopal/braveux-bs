@@ -6,23 +6,19 @@
     <meta charset="UTF-8">
 
     <link rel="stylesheet"  href="assets/lib/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css">
-
+    <link rel="stylesheet" href="assets/lib/jquery.ui/jquery-ui.css">
     <link rel="stylesheet" href="second.css">
-    <script src="assets/lib/jquery/jquery.min.js"></script>
-    <script src="//code.jquery.com/ui/1.11.3/jquery-ui.js"></script>
-    <script src="assets/lib/bootstrap/bootstrap.min.js"></script>
-    <!--<script src="bower_components/bootstrap/js/collapse.js"></script>-->
 
-    <style>
-        #resizable { width: 150px; height: 150px; padding: 0.5em; }
-        #resizable h3 { text-align: center; margin: 0; }
-    </style>
+    <script src="assets/lib/jquery/jquery.min.js"></script>
+    <script src="assets/lib/jquery.ui/jquery-ui.js"></script>
+    <script src="assets/lib/bootstrap/bootstrap.min.js"></script>
 
     <script type="text/javascript">
-        showMenu = function(id)
+        showMenu = function(id_menu, id_btn)
         {
-            $(id).slideToggle();
+            $(id_btn).toggleClass('active-btn')
+            $(id_menu).slideToggle();
+
         }
         $(function() {
             var minH = $( "#left-page-block").height();
@@ -55,7 +51,7 @@
 <body class="">
 <div class="fixed-block">
     <a class="fixed-size fixed-btn btn-landing gray-border-right gray-border-bottom"></a>
-    <a id="shortcut" class="fixed-size fixed-btn btn-shortcut gray-border-right dropdown-toggle gray-border-bottom" data-toggle="dropdown">
+    <a id="shortcut" class="fixed-size fixed-btn btn-shortcut gray-border-right dropdown-toggle gray-border-bottom" id="btn-shortcut" data-toggle="dropdown">
     <!---------Module Shortcut------------------------------------------------------------------------->
         <div class="dropdown-menu menu-shortcut-conteiner"   role="menu" aria-labelledby="shortcut">
             <div class="menu-shortcut-main">
@@ -123,8 +119,8 @@
         </div>
     <!------------------------------------------------------------------------------------------------->
     </a>
-    <a class="fixed-size fixed-btn btn-store gray-border-right gray-border-bottom" onclick="showMenu('#store')"></a>
-    <a class="fixed-size fixed-btn btn-user gray-border-left gray-border-bottom" onclick="showMenu('#menu-user')"></a>
+    <a class="fixed-size fixed-btn btn-store gray-border-right gray-border-bottom" id="btn-store" onclick="showMenu('#store')"></a>
+    <a class="fixed-size fixed-btn btn-user gray-border-left gray-border-bottom" id="btn-user" onclick="showMenu('#menu-user', '#btn-user')"></a>
     <!---------Store Selector-------------------------------------------------------------------------->
     <div id="store"  class="menu-common menu-store">
         <div class="store-caption">
@@ -218,14 +214,14 @@
                 </div>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li class="responsible-btn gray-border-right "><a class="gray-text">Pano Node</a></li>
-                        <li class="responsible-btn gray-border-right"><a class="gray-text">Still</a></li>
-                        <li class="responsible-btn gray-border-right"><a class="gray-text">Event</a></li>
-                        <li class="responsible-btn gray-border-right"><a class="gray-text">Merch Depts</a></li>
-                        <li class="responsible-btn gray-border-right"><a class="gray-text">Activity</a></li>
-                        <li class="responsible-btn gray-border-right"><a class="gray-text">Heat Map</a></li>
-                        <li class="responsible-btn gray-border-right"><a class="gray-text">Bay Layout Guide</a></li>
-                        <li class="responsible-btn"><a class="gray-text" onclick="showMenu('#menu-sales')">Sales</a>
+                        <li class="responsible-btn gray-border-right "><span class="gray-text">Pano Node</span></li>
+                        <li class="responsible-btn gray-border-right"><span class="gray-text">Still</span></li>
+                        <li class="responsible-btn gray-border-right"><span class="gray-text">Event</span></li>
+                        <li class="responsible-btn gray-border-right"><span class="gray-text">Merch Depts</span></li>
+                        <li class="responsible-btn gray-border-right"><span class="gray-text">Activity</span></li>
+                        <li class="responsible-btn gray-border-right"><span class="gray-text">Heat Map</span></li>
+                        <li class="responsible-btn gray-border-right"><span class="gray-text">Bay Layout Guide</span></li>
+                        <li class="responsible-btn" id="btn-sales" onclick="showMenu('#menu-sales', '#btn-sales')"><span class="gray-text" >Sales</span>
 
                         </li>
                     </ul>

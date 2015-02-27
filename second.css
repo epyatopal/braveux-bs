@@ -98,11 +98,7 @@ body a:hover {
 
 .header > .navbar > div > .navbar-collapse > .navbar-nav > li{
     height: 34px;
-    padding: 0;
-}
-
-.header > .navbar > div > .navbar-collapse > .navbar-nav > li > a{
-    padding: 0.5em 0;
+    padding: 0.9em 0;
 }
 
 .header .navbar-header{
@@ -180,6 +176,10 @@ body a:hover {
     right: 0;
 }
 
+.btn-user.active-btn{
+
+}
+
 .btn-big{
     background-image: url("assets/images/big.png");
 }
@@ -202,20 +202,34 @@ body a:hover {
 
 .responsible-btn{
     text-align: center;
-    height: 100%;
     line-height: 1;
-    padding: 10px;
     font-size: 1em;
+    cursor: pointer;
 }
 
 .responsible-btn:hover, .fixed-btn:hover{
-background-color: #f0f0f0;
+    background-color: #f0f0f0;
 }
+
+.responsible-btn.active-btn{
+    background-color: red;
+    color: #ffffff;
+}
+
+.responsible-btn.active-btn > span{
+    color: #ffffff;
+}
+
+.responsible-btn.active-btn > span:hover{
+    color: #000000;
+}
+
+
 /*menu button finish*/
 
 /*text style start*/
-.gray-text {
-    color: #4d4d4d !important;
+.gray-text{
+    color: #4d4d4d;
 }
 
 .big-text {
