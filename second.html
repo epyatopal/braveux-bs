@@ -56,7 +56,7 @@
 <div class="fixed-block">
     <a class="fixed-size fixed-btn btn-landing gray-border-right"></a>
     <a id="shortcut" class="fixed-size fixed-btn btn-shortcut gray-border-right dropdown-toggle" data-toggle="dropdown">
-        <!---------Module Shortcut------------------------------------------------------------------------->
+    <!---------Module Shortcut------------------------------------------------------------------------->
         <div class="dropdown-menu menu-shortcut-conteiner"   role="menu" aria-labelledby="shortcut">
             <div class="menu-shortcut-main">
                 <div class="row-fluid menu-shortcut-tr">
@@ -121,9 +121,74 @@
                 </div>
             </div>
         </div>
-        <!------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------->
     </a>
-    <a class="fixed-size fixed-btn btn-store gray-border-right"></a>
+    <a class="fixed-size fixed-btn btn-store gray-border-right" onclick="showMenu('#store')"></a>
+    <!---------Store Selector-------------------------------------------------------------------------->
+    <div id="store"  class="menu-common menu-store">
+        <div class="store-caption">
+            <div class="store-frame">
+                <p>Select a store</p>
+            </div>
+        </div>
+        <div class="store-search input-group row-fluid">
+            <span class="input-group-btn span2">
+                <button class="btn store-search-btn" type="button">
+                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                </button>
+            </span>
+            <input type="text" class="form-control span10" placeholder="Search" onfocus="placeholder=''"
+                   onblur="placeholder='Search'">
+        </div>
+        <div class="store-name row-fluid ">
+            <span class="span1 menu-store-name">ACT</span>
+            <span class="span1 menu-store-name">NSW</span>
+            <span class="span1 menu-store-name">NT</span>
+            <span class="span1 menu-store-name">QLD</span>
+            <span class="span1 menu-store-name">SA</span>
+            <span class="span1 menu-store-name">TAS</span>
+            <span class="span1 menu-store-name">VIC</span>
+            <span class="span1 menu-store-name menu-store-name-wa">WA</span>
+        </div>
+        <div class="store-table">
+            <table class="menu-store-table row-fluid">
+                <tr class="store-table-caption">
+                    <td class="span8 menu-storeName">STORE NAME <span class="caret caret-red"></span></td>
+                    <td class="span4 menu-storeSize">STORE SIZE <span class="caret caret-red"></span></td>
+                </tr>
+                <tr>
+                    <td class="span8 menu-storeName"></td>
+                    <td class="span4 menu-storeSize"></td>
+                </tr>
+                <tr>
+                    <td class="span8 menu-storeName"></td>
+                    <td class="span4 menu-storeSize"></td>
+                </tr>
+                <tr>
+                    <td class="span8 menu-storeName"></td>
+                    <td class="span4 menu-storeSize"></td>
+                </tr>
+                <tr>
+                    <td class="span8 menu-storeName "></td>
+                    <td class="span4 menu-storeSize"></td>
+                </tr>
+                <tr>
+                    <td class="span8 menu-storeName"></td>
+                    <td class="span4 menu-storeSize"></td>
+                </tr>
+                <tr>
+                    <td class="span8 menu-storeName"></td>
+                    <td class="span4 menu-storeSize"></td>
+                </tr>
+
+            </table>
+        </div>
+        <div class="store-footer row-fluid">
+            <span class="span6 menu-storeReset">Reset</span>
+            <span class="span6 menu-storeConfirm">Confirm</span>
+        </div>
+    </div>
+    <!------------------------------------------------------------------------------------------------->
     <a class="fixed-size fixed-btn btn-user gray-border-left" onclick="showMenu('#menu-user')">
     </a>
     <div id="menu-user" class="menu-common menu-user" >
