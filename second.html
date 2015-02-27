@@ -124,8 +124,7 @@
         <!------------------------------------------------------------------------------------------------->
     </a>
     <a class="fixed-size fixed-btn btn-store gray-border-right"></a>
-    <a class="fixed-size fixed-btn btn-user gray-border-left" onclick="showMenu('#menu-user')">
-    </a>
+    <a class="fixed-size fixed-btn btn-user gray-border-left" onclick="showMenu('#menu-user')"></a>
     <div id="menu-user" class="menu-common menu-user" >
         <div class="text-center gray-border padding-bottom-min">
             <img src="assets/images/user.png" class="img-circle user-avatar">
@@ -152,7 +151,6 @@
                         <span class="icon-bar"></span>
                     </button>
                 </div>
-
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
                         <li class="responsible-btn gray-border-right "><a class="gray-text">Pano Node</a></li>
@@ -162,11 +160,55 @@
                         <li class="responsible-btn gray-border-right"><a class="gray-text">Activity</a></li>
                         <li class="responsible-btn gray-border-right"><a class="gray-text">Heat Map</a></li>
                         <li class="responsible-btn gray-border-right"><a class="gray-text">Bay Layout Guide</a></li>
-                        <li class="responsible-btn"><a class="gray-text">Sales</a></li>
+                        <li class="responsible-btn"><a class="gray-text" onclick="showMenu('#menu-sales')">Sales</a>
+
+                        </li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
         </nav>
+    </div>
+
+    <div class="menu-common menu-sales" id="menu-sales">
+        <div class="gray-border">
+            <div class="table-block">
+                <div class="table-row">
+                    <div class="table-cell">Bay Name</div>
+                    <div class="table-cell">Health Foods (9/20)</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell">Bay No.</div>
+                    <div class="table-cell">469</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell">Bay Length</div>
+                    <div class="table-cell">1m</div>
+                </div>
+            </div>
+            <div class="black-small-div"> </div>
+            <div class="table-block ">
+                <div class="table-row">
+                    <div class="table-cell text-uppercase">sales</div>
+                    <div class="table-cell red-text">0</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell text-uppercase">cocges</div>
+                    <div class="table-cell red-text">0</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell text-uppercase">gp$</div>
+                    <div class="table-cell red-text">$0.00</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell text-uppercase">gp%</div>
+                    <div class="table-cell red-text">%000</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell text-uppercase">sales+gnros</div>
+                    <div class="table-cell red-text">$0.00</div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="gray-border-right gray-border-bottom left-menu ">
