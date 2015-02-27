@@ -142,6 +142,9 @@ body a:hover {
 .gray-border-bottom {
     border-bottom: 1px solid #999999;
 }
+.gray-border {
+    border: 1px #999999 solid;
+}
 /* gray border finish*/
 
 /*menu button start*/
@@ -212,11 +215,25 @@ body a:hover {
 }
 /*menu button finish*/
 
-/*text color start*/
+/*text style start*/
 .gray-text {
     color: #4d4d4d !important;
 }
-/*text color finish*/
+
+.big-text {
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.medium-text{
+    font-size: 1.6em;
+}
+
+
+.gray-bg {
+    background-color: #e0e0e0;
+}
+/*text style finish*/
 
 .left-menu{
     overflow: hidden;
@@ -333,9 +350,36 @@ input.vertical {
 
 .user-avatar {
     width: 31.914893617%;
-    margin: 1.7em 0;
+    margin: 1em 0;
 }
 
 .menu-user:before {
     right: 1px;
+}
+
+.in-it-span-block > span{
+    display: block;
+}
+
+.block-with-bnt > a {
+    font-size: 1.6em;
+    display: block;
+    padding: 0.4em;
+    color: #666666;
+    cursor: pointer;
+}
+
+.menu-user .block-with-bnt > a {
+    border-top: none;
+}
+
+.menu-user .block-with-bnt > a:hover {
+    color: red;
+    background-color: #ffffff;
+    text-decoration: none;
+}
+.menu-item-active {
+    color: #ffffff !important;
+    background-color: red !important;
+    text-decoration: none !important;
 }
