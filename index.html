@@ -53,74 +53,73 @@
 <body class="">
 <div class="fixed-block">
     <a class="fixed-size fixed-btn btn-landing gray-border-right gray-border-bottom"></a>
-    <a id="shortcut" class="fixed-size fixed-btn btn-shortcut gray-border-right dropdown-toggle gray-border-bottom" id="btn-shortcut" data-toggle="dropdown">
+    <a class="fixed-size fixed-btn btn-shortcut gray-border-right gray-border-bottom" onclick="showMenu('#shortcut')"></a>
     <!---------Module Shortcut------------------------------------------------------------------------->
-        <div class="dropdown-menu menu-shortcut-conteiner"   role="menu" aria-labelledby="shortcut">
-            <div class="menu-shortcut-main">
-                <div class="row-fluid menu-shortcut-tr">
-                    <div class="menu-shortcut-td">
-                        <a href="#" class="thumbnail span4 menu-shortcut">
-                            <img src="assets/images/Register.png">
-                            <span>Register</span>
-                        </a>
-                    </div>
-                    <div class="menu-shortcut-td">
-                        <a href="#" class="thumbnail span4 menu-shortcut">
-                            <img src="assets/images/Components.png">
-                            <span>Components </span>
-                        </a>
-                    </div>
-                    <div class="menu-shortcut-td">
-                        <a href="#" class="thumbnail span4 menu-shortcut">
-                            <img  src="assets/images/Marketing.png">
-                            <span>Marketing </span>
-                        </a>
-                    </div>
+    <div id="shortcut" class="dropdown-menu menu-shortcut-conteiner"   role="menu" aria-labelledby="shortcut">
+        <div class="menu-shortcut-main">
+            <div class="row-fluid menu-shortcut-tr">
+                <div class="menu-shortcut-td">
+                    <a href="#" class="thumbnail span4 menu-shortcut">
+                        <img src="assets/images/Register.png">
+                        <span>Register</span>
+                    </a>
+                </div>git
+                <div class="menu-shortcut-td">
+                    <a href="#" class="thumbnail span4 menu-shortcut">
+                        <img src="assets/images/Components.png">
+                        <span>Components </span>
+                    </a>
                 </div>
-                <div class="row-fluid menu-shortcut-tr">
-                    <div class="menu-shortcut-td">
-                        <a href="#" class="thumbnail span4 menu-shortcut">
-                            <img src="assets/images/Reporting.png">
-                            <span> Reporting</span>
-                        </a>
-                    </div>
-                    <div class="menu-shortcut-td">
-                        <a href="#" class="thumbnail span4 menu-shortcut">
-                            <img src="assets/images/Organiser.png">
-                            <span>Organiser </span>
-                        </a>
-                    </div>
-                    <div class="menu-shortcut-td">
-                        <a href="#" class="thumbnail span4 menu-shortcut">
-                            <img  src="assets/images/Map.png">
-                            <span>Map </span>
-                        </a>
-                    </div>
+                <div class="menu-shortcut-td">
+                    <a href="#" class="thumbnail span4 menu-shortcut">
+                        <img  src="assets/images/Marketing.png">
+                        <span>Marketing </span>
+                    </a>
                 </div>
-                <div class="row-fluid menu-shortcut-tr">
-                    <div class="menu-shortcut-td">
-                        <a href="#" class="thumbnail span4 menu-shortcut">
-                            <img src="assets/images/PEC.png">
-                            <span> PEC</span>
-                        </a>
-                    </div>
-                    <div class="menu-shortcut-td">
-                        <a href="#" class="thumbnail span4 menu-shortcut">
-                            <img src="assets/images/Builder.png">
-                            <span> Builder</span>
-                        </a>
-                    </div>
-                    <div class="menu-shortcut-td">
-                        <a href="#" class="thumbnail span4 menu-shortcut">
-                            <img src="assets/images/Events.png">
-                            <span>Events </span>
-                        </a>
-                    </div>
+            </div>
+            <div class="row-fluid menu-shortcut-tr">
+                <div class="menu-shortcut-td">
+                    <a href="#" class="thumbnail span4 menu-shortcut">
+                        <img src="assets/images/Reporting.png">
+                        <span> Reporting</span>
+                    </a>
+                </div>
+                <div class="menu-shortcut-td">
+                    <a href="#" class="thumbnail span4 menu-shortcut">
+                        <img src="assets/images/Organiser.png">
+                        <span>Organiser </span>
+                    </a>
+                </div>
+                <div class="menu-shortcut-td">
+                    <a href="#" class="thumbnail span4 menu-shortcut">
+                        <img  src="assets/images/Map.png">
+                        <span>Map </span>
+                    </a>
+                </div>
+            </div>
+            <div class="row-fluid menu-shortcut-tr">
+                <div class="menu-shortcut-td">
+                    <a href="#" class="thumbnail span4 menu-shortcut">
+                        <img src="assets/images/PEC.png">
+                        <span> PEC</span>
+                    </a>
+                </div>
+                <div class="menu-shortcut-td">
+                    <a href="#" class="thumbnail span4 menu-shortcut">
+                        <img src="assets/images/Builder.png">
+                        <span> Builder</span>
+                    </a>
+                </div>
+                <div class="menu-shortcut-td">
+                    <a href="#" class="thumbnail span4 menu-shortcut">
+                        <img src="assets/images/Events.png">
+                        <span>Events </span>
+                    </a>
                 </div>
             </div>
         </div>
+    </div>
     <!------------------------------------------------------------------------------------------------->
-    </a>
     <a class="fixed-size fixed-btn btn-store gray-border-right gray-border-bottom" id="btn-store" onclick="showMenu('#store')"></a>
     <a class="fixed-size fixed-btn btn-user gray-border-left gray-border-bottom" id="btn-user" onclick="showMenu('#menu-user', '#btn-user')"></a>
     <!---------Store Selector-------------------------------------------------------------------------->
@@ -231,6 +230,8 @@
             </div><!-- /.container-fluid -->
         </nav>
     </div>
+
+
 
     <div class="menu-common menu-sales" id="menu-sales">
         <div class="gray-border">
