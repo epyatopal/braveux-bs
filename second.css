@@ -783,14 +783,12 @@ input.vertical {
     border-bottom: 1px #999999 solid;
 }
 
-/*.checkbox-depts{*/
-    /*display: none;*/
-    /*border-image:url("assets/images/checkbox.png") ;*/
-/*}*/
+
+
 .checkbox-depts {
     display: none;
 }
-.checkbox-depts + label {
+.menu-depts-department  label {
     background: url("assets/images/checkbox.png") no-repeat scroll 0 0;
     background-size: contain;
     cursor: pointer;
@@ -800,21 +798,37 @@ input.vertical {
     margin-left: 15px;
     font-weight: 100 ;
 }
-.checkbox-depts:checked{
-
-}
-
-.checkbox-depts:checked + .menu-depts-department {
-    background-color: red;
-
-}
-
 .checkbox-depts+label:hover {
     background: url("assets/images/checkboxHover.png") no-repeat scroll 0 0;
     background-size: contain;
     cursor: pointer;
     padding-left: 35px;
     margin-bottom: 20px;
+}
+
+.menu-depts-color1:hover{
+        color: #fa4d4d;
+}
+.menu-depts-color2:hover{
+    color: #78d23c;
+}
+.menu-depts-color3:hover{
+    color: #32bea0;
+}
+.menu-depts-color4:hover{
+    color: #5191ff;
+}
+.menu-depts-color5:hover{
+    color: #aa6edc;
+}
+.menu-depts-color6:hover{
+    color: #fa4d4d;
+}
+.menu-depts-color7:hover{
+    color: #ff963c;
+}
+.menu-depts-color8:hover{
+    color: #f5d232;
 }
 
 
