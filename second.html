@@ -6,22 +6,23 @@
     <meta charset="UTF-8">
 
     <link rel="stylesheet"  href="assets/lib/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/lib/jquery.ui/jquery-ui.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css">
+
     <link rel="stylesheet" href="second.css">
-
     <script src="assets/lib/jquery/jquery.min.js"></script>
-    <script src="assets/lib/jquery.ui/jquery-ui.js"></script>
-
+    <script src="//code.jquery.com/ui/1.11.3/jquery-ui.js"></script>
     <script src="assets/lib/bootstrap/bootstrap.min.js"></script>
-    <script src="assets/lib/jquery.ui/jquery.ui.touch-punch.min.js"></script>
+    <!--<script src="bower_components/bootstrap/js/collapse.js"></script>-->
 
+    <style>
+        #resizable { width: 150px; height: 150px; padding: 0.5em; }
+        #resizable h3 { text-align: center; margin: 0; }
+    </style>
 
     <script type="text/javascript">
-        showMenu = function(id_menu, id_btn)
+        showMenu = function(id)
         {
-            $(id_btn).toggleClass('active-btn')
-            $(id_menu).slideToggle();
-
+            $(id).slideToggle();
         }
         $(function() {
             var minH = $( "#left-page-block").height();
@@ -36,6 +37,7 @@
 
             $( "#left-page-block" ).resizable({
                 resize: function( event, ui ) {
+                    console.log('dskjfhg', ui, event)
                     var border_width = 6,
                         w_w = $('#body-block').width(),
                         l_w = $('#left-page-block').width(),
@@ -52,8 +54,8 @@
 </head>
 <body class="">
 <div class="fixed-block">
-    <a class="fixed-size fixed-btn btn-landing gray-border-right gray-border-bottom"></a>
-    <a class="fixed-size fixed-btn btn-shortcut gray-border-right gray-border-bottom" onclick="showMenu('#shortcut')"></a>
+    <a class="fixed-size fixed-btn btn-landing gray-border-right"></a>
+    <a class="fixed-size fixed-btn btn-shortcut gray-border-right" onclick="showMenu('#shortcut')"></a>
     <!---------Module Shortcut------------------------------------------------------------------------->
     <div id="shortcut" class="dropdown-menu menu-shortcut-conteiner"   role="menu" aria-labelledby="shortcut">
         <div class="menu-shortcut-main">
@@ -63,7 +65,7 @@
                         <img src="assets/images/Register.png">
                         <span>Register</span>
                     </a>
-                </div>git
+                </div>
                 <div class="menu-shortcut-td">
                     <a href="#" class="thumbnail span4 menu-shortcut">
                         <img src="assets/images/Components.png">
@@ -120,8 +122,8 @@
         </div>
     </div>
     <!------------------------------------------------------------------------------------------------->
-    <a class="fixed-size fixed-btn btn-store gray-border-right gray-border-bottom" id="btn-store" onclick="showMenu('#store')"></a>
-    <a class="fixed-size fixed-btn btn-user gray-border-left gray-border-bottom" id="btn-user" onclick="showMenu('#menu-user', '#btn-user')"></a>
+
+    <a class="fixed-size fixed-btn btn-store gray-border-right" onclick="showMenu('#store')"></a>
     <!---------Store Selector-------------------------------------------------------------------------->
     <div id="store"  class="menu-common menu-store">
         <div class="store-caption">
@@ -187,6 +189,8 @@
         </div>
     </div>
     <!------------------------------------------------------------------------------------------------->
+    <a class="fixed-size fixed-btn btn-user gray-border-left" onclick="showMenu('#menu-user')">
+    </a>
     <div id="menu-user" class="menu-common menu-user" >
         <div class="text-center gray-border padding-bottom-min">
             <img src="assets/images/user.png" class="img-circle user-avatar">
@@ -202,7 +206,7 @@
             <a class="gray-bg gray-border">Logout</a>
         </div>
     </div>
-    <div class="header ">
+    <div class="header gray-border-bottom">
         <nav class="navbar navbar-default">
             <div class="gray-border-bottom">
                 <div class="navbar-header">
@@ -213,69 +217,84 @@
                         <span class="icon-bar"></span>
                     </button>
                 </div>
+
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li class="responsible-btn gray-border-right "><span class="gray-text">Pano Node</span></li>
-                        <li class="responsible-btn gray-border-right"><span class="gray-text">Still</span></li>
-                        <li class="responsible-btn gray-border-right"><span class="gray-text">Event</span></li>
-                        <li class="responsible-btn gray-border-right"><span class="gray-text">Merch Depts</span></li>
-                        <li class="responsible-btn gray-border-right"><span class="gray-text">Activity</span></li>
-                        <li class="responsible-btn gray-border-right"><span class="gray-text">Heat Map</span></li>
-                        <li class="responsible-btn gray-border-right"><span class="gray-text">Bay Layout Guide</span></li>
-                        <li class="responsible-btn" id="btn-sales" onclick="showMenu('#menu-sales', '#btn-sales')"><span class="gray-text" >Sales</span>
-
+                        <li class="responsible-btn gray-border-right "><a class="gray-text">Pano Node</a></li>
+                        <li class="responsible-btn gray-border-right"><a class="gray-text">Still</a></li>
+                        <li class="responsible-btn gray-border-right"><a class="gray-text">Event</a></li>
+                        <li class="responsible-btn gray-border-right">
+                            <a class="gray-text" onclick="showMenu('#menu-depts')">Merch Depts</a>
                         </li>
+                        <li class="responsible-btn gray-border-right"><a class="gray-text">Activity</a></li>
+                        <li class="responsible-btn gray-border-right"><a class="gray-text">Heat Map</a></li>
+                        <li class="responsible-btn gray-border-right"><a class="gray-text">Bay Layout Guide</a></li>
+                        <li class="responsible-btn"><a class="gray-text">Sales</a></li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
         </nav>
     </div>
 
+    <!--------------------------------Merch Depts-------------------------------------------->
+    <div id="menu-depts" class="menu-common menu-depts">
+        <div class="menu-depts-container">
+            <div class="menu-depts-department">
+                <input type="checkbox" class="checkbox-depts">
+                <label>
+                    <span>Highlight All Departments</span>
+                </label>
 
+            </div>
+            <div class="menu-depts-department">
+                <input type="checkbox" class="checkbox-depts">
+                <label>
+                    <span>Grocery / GMA Departments</span>
+                </label>
+            </div>
+            <div class="menu-depts-department">
+                <input type="checkbox" class="checkbox-depts">
+                <label>
+                    <span>Dairy Department</span>
+                </label>
+            </div>
+            <div class="menu-depts-department">
+                <input type="checkbox" class="checkbox-depts">
+                <label>
+                    <span>Fresh Produce Department</span>
+                </label>
+            </div>
+            <div class="menu-depts-department">
+                <input type="checkbox" class="checkbox-depts">
+                <label>
+                    <span>Meat Department</span>
+                </label>
+            </div>
+            <div class="menu-depts-department">
+                <input type="checkbox" class="checkbox-depts">
+                <label>
+                    <span>Deli Department</span>
+                </label>
+            </div>
+            <div class="menu-depts-department">
+                <input type="checkbox" class="checkbox-depts">
+                <label>
+                    <span>Bakery Department</span>
+                </label>
+            </div>
+            <div class="menu-depts-department">
+                <input type="checkbox" class="checkbox-depts">
+                <label>
+                    <span>Customer Service Department</span>
+                </label>
+            </div>
 
-    <div class="menu-common menu-sales" id="menu-sales">
-        <div class="gray-border">
-            <div class="table-block">
-                <div class="table-row">
-                    <div class="table-cell">Bay Name</div>
-                    <div class="table-cell">Health Foods (9/20)</div>
-                </div>
-                <div class="table-row">
-                    <div class="table-cell">Bay No.</div>
-                    <div class="table-cell">469</div>
-                </div>
-                <div class="table-row">
-                    <div class="table-cell">Bay Length</div>
-                    <div class="table-cell">1m</div>
-                </div>
-            </div>
-            <div class="black-small-div"> </div>
-            <div class="table-block ">
-                <div class="table-row">
-                    <div class="table-cell text-uppercase">sales</div>
-                    <div class="table-cell red-text">0</div>
-                </div>
-                <div class="table-row">
-                    <div class="table-cell text-uppercase">cocges</div>
-                    <div class="table-cell red-text">0</div>
-                </div>
-                <div class="table-row">
-                    <div class="table-cell text-uppercase">gp$</div>
-                    <div class="table-cell red-text">$0.00</div>
-                </div>
-                <div class="table-row">
-                    <div class="table-cell text-uppercase">gp%</div>
-                    <div class="table-cell red-text">%000</div>
-                </div>
-                <div class="table-row">
-                    <div class="table-cell text-uppercase">sales+gnros</div>
-                    <div class="table-cell red-text">$0.00</div>
-                </div>
-            </div>
         </div>
-    </div>
 
-    <div id="left-zoom" class="gray-border-right gray-border-bottom left-menu ">
+    </div>
+    <!--------------------------------------------------------------------------------------->
+
+    <div class="gray-border-right gray-border-bottom left-menu ">
         <a class="fixed-size fixed-btn btn-big gray-border-bottom"></a>
         <div class="range-block gray-border-bottom">
             <input type=range min=0 max=100 value=50 class=vertical orient=vertical>
@@ -284,7 +303,7 @@
         <a class="fixed-size fixed-btn btn-stretch gray-border-bottom"></a>
     </div>
 
-    <div id="right-zoom" class="gray-border-left gray-border-bottom right-menu ">
+    <div class="gray-border-left gray-border-bottom right-menu ">
         <a class="fixed-size fixed-btn btn-big gray-border-bottom"></a>
         <div class="range-block gray-border-bottom">
             <input type=range min=0 max=100 value=50 class=vertical orient=vertical>
@@ -300,7 +319,6 @@
 <div id="body-block" class="body-block">
     <div id="left-page-block" class="left-page-block">
         left block
-
     </div>
     <div id="right-page-block" class="right-page-block">
         right block

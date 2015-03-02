@@ -556,7 +556,7 @@ input.vertical {
 .store-frame{
     height: 100%;
     width: 100%;
-    border: 2px #999999 solid;
+    border: 1px #999999 solid;
     background-color:#e1e1e1;
     text-align: center;
     font-size: 18px;
@@ -567,7 +567,7 @@ input.vertical {
 .store-search{
     height: 8%;
     width: 100%;
-    border: 2px #999999 solid;
+    border: 1px #999999 solid;
 }
 .store-search>input{
     height: 28px;
@@ -600,14 +600,14 @@ input.vertical {
 }
 
 .store-name,.store-table,.store-footer{
-    border: 2px #999999 solid;
+    border: 1px #999999 solid;
     border-top:none !important;
 }
 
 .menu-store-name{
     height: 100%;
     width: 12.5%;
-    border-right: 2px #999999 solid;
+    border-right: 1px #999999 solid;
     display: block;
     float: left;
     padding: 5px;
@@ -639,8 +639,8 @@ input.vertical {
 .menu-storeName{
     padding: 2px;
     width: 70%;
-    border-right:2px #999999 solid;
-    border-top:2px #999999 solid;
+    border-right:1px #999999 solid;
+    border-top:1px #999999 solid;
 }
 
 .caret-red{
@@ -650,12 +650,12 @@ input.vertical {
 .menu-storeSize{
     padding: 2px;
     width: 30%;
-    border-top:2px #999999 solid;
+    border-top:1px #999999 solid;
 }
 
 .store-footer{
     width: 100%;
-    height: 11%;
+    /*height: 11%;*/
     background-color: #f0f0f0;
 }
 
@@ -670,9 +670,66 @@ input.vertical {
 
 .menu-storeReset{
     float: left;
-    border-right:2px #999999 solid ;
+    border-right:1px #999999 solid ;
 }
 
 .menu-storeConfirm{
     float: right;
+}
+
+.menu-depts{
+    width: 240px;
+    height: 240px;
+    display: none;
+    left: 450px;
+    top: 0px;
+
+}
+.menu-depts:before{
+    left: 110px;
+}
+
+.menu-depts-container{
+    border: 1px #999999 solid;
+    width: 100%;
+    height: 100%;
+}
+.menu-depts-department{
+    width: 100%;
+    height: 29px;
+    border-bottom: 1px #999999 solid;
+}
+
+/*.checkbox-depts{*/
+    /*display: none;*/
+    /*border-image:url("assets/images/checkbox.png") ;*/
+/*}*/
+.checkbox-depts {
+    display: none;
+}
+.checkbox-depts + label {
+    background: url("assets/images/checkbox.png") no-repeat scroll 0 0;
+    background-size: contain;
+    cursor: pointer;
+    padding-left: 35px;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    margin-left: 15px;
+    font-weight: 100 ;
+}
+.checkbox-depts:checked{
+
+}
+
+.checkbox-depts:checked + .menu-depts-department {
+    background-color: red;
+
+}
+
+.checkbox-depts+label:hover {
+    background: url("assets/images/checkboxHover.png") no-repeat scroll 0 0;
+    background-size: contain;
+    cursor: pointer;
+    padding-left: 35px;
+    margin-bottom: 20px;
 }
