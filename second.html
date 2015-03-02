@@ -55,74 +55,74 @@
 <body class="">
 <div class="fixed-block">
     <a class="fixed-size fixed-btn btn-landing gray-border-right"></a>
-    <a id="shortcut" class="fixed-size fixed-btn btn-shortcut gray-border-right dropdown-toggle" data-toggle="dropdown">
+    <a class="fixed-size fixed-btn btn-shortcut gray-border-right" onclick="showMenu('#shortcut')"></a>
     <!---------Module Shortcut------------------------------------------------------------------------->
-        <div class="dropdown-menu menu-shortcut-conteiner"   role="menu" aria-labelledby="shortcut">
-            <div class="menu-shortcut-main">
-                <div class="row-fluid menu-shortcut-tr">
-                    <div class="menu-shortcut-td">
-                        <a href="#" class="thumbnail span4 menu-shortcut">
-                            <img src="assets/images/Register.png">
-                            <span>Register</span>
-                        </a>
-                    </div>
-                    <div class="menu-shortcut-td">
-                        <a href="#" class="thumbnail span4 menu-shortcut">
-                            <img src="assets/images/Components.png">
-                            <span>Components </span>
-                        </a>
-                    </div>
-                    <div class="menu-shortcut-td">
-                        <a href="#" class="thumbnail span4 menu-shortcut">
-                            <img  src="assets/images/Marketing.png">
-                            <span>Marketing </span>
-                        </a>
-                    </div>
+    <div id="shortcut" class="dropdown-menu menu-shortcut-conteiner"   role="menu" aria-labelledby="shortcut">
+        <div class="menu-shortcut-main">
+            <div class="row-fluid menu-shortcut-tr">
+                <div class="menu-shortcut-td">
+                    <a href="#" class="thumbnail span4 menu-shortcut">
+                        <img src="assets/images/Register.png">
+                        <span>Register</span>
+                    </a>
                 </div>
-                <div class="row-fluid menu-shortcut-tr">
-                    <div class="menu-shortcut-td">
-                        <a href="#" class="thumbnail span4 menu-shortcut">
-                            <img src="assets/images/Reporting.png">
-                            <span> Reporting</span>
-                        </a>
-                    </div>
-                    <div class="menu-shortcut-td">
-                        <a href="#" class="thumbnail span4 menu-shortcut">
-                            <img src="assets/images/Organiser.png">
-                            <span>Organiser </span>
-                        </a>
-                    </div>
-                    <div class="menu-shortcut-td">
-                        <a href="#" class="thumbnail span4 menu-shortcut">
-                            <img  src="assets/images/Map.png">
-                            <span>Map </span>
-                        </a>
-                    </div>
+                <div class="menu-shortcut-td">
+                    <a href="#" class="thumbnail span4 menu-shortcut">
+                        <img src="assets/images/Components.png">
+                        <span>Components </span>
+                    </a>
                 </div>
-                <div class="row-fluid menu-shortcut-tr">
-                    <div class="menu-shortcut-td">
-                        <a href="#" class="thumbnail span4 menu-shortcut">
-                            <img src="assets/images/PEC.png">
-                            <span> PEC</span>
-                        </a>
-                    </div>
-                    <div class="menu-shortcut-td">
-                        <a href="#" class="thumbnail span4 menu-shortcut">
-                            <img src="assets/images/Builder.png">
-                            <span> Builder</span>
-                        </a>
-                    </div>
-                    <div class="menu-shortcut-td">
-                        <a href="#" class="thumbnail span4 menu-shortcut">
-                            <img src="assets/images/Events.png">
-                            <span>Events </span>
-                        </a>
-                    </div>
+                <div class="menu-shortcut-td">
+                    <a href="#" class="thumbnail span4 menu-shortcut">
+                        <img  src="assets/images/Marketing.png">
+                        <span>Marketing </span>
+                    </a>
+                </div>
+            </div>
+            <div class="row-fluid menu-shortcut-tr">
+                <div class="menu-shortcut-td">
+                    <a href="#" class="thumbnail span4 menu-shortcut">
+                        <img src="assets/images/Reporting.png">
+                        <span> Reporting</span>
+                    </a>
+                </div>
+                <div class="menu-shortcut-td">
+                    <a href="#" class="thumbnail span4 menu-shortcut">
+                        <img src="assets/images/Organiser.png">
+                        <span>Organiser </span>
+                    </a>
+                </div>
+                <div class="menu-shortcut-td">
+                    <a href="#" class="thumbnail span4 menu-shortcut">
+                        <img  src="assets/images/Map.png">
+                        <span>Map </span>
+                    </a>
+                </div>
+            </div>
+            <div class="row-fluid menu-shortcut-tr">
+                <div class="menu-shortcut-td">
+                    <a href="#" class="thumbnail span4 menu-shortcut">
+                        <img src="assets/images/PEC.png">
+                        <span> PEC</span>
+                    </a>
+                </div>
+                <div class="menu-shortcut-td">
+                    <a href="#" class="thumbnail span4 menu-shortcut">
+                        <img src="assets/images/Builder.png">
+                        <span> Builder</span>
+                    </a>
+                </div>
+                <div class="menu-shortcut-td">
+                    <a href="#" class="thumbnail span4 menu-shortcut">
+                        <img src="assets/images/Events.png">
+                        <span>Events </span>
+                    </a>
                 </div>
             </div>
         </div>
+    </div>
     <!------------------------------------------------------------------------------------------------->
-    </a>
+
     <a class="fixed-size fixed-btn btn-store gray-border-right" onclick="showMenu('#store')"></a>
     <!---------Store Selector-------------------------------------------------------------------------->
     <div id="store"  class="menu-common menu-store">
@@ -223,7 +223,9 @@
                         <li class="responsible-btn gray-border-right "><a class="gray-text">Pano Node</a></li>
                         <li class="responsible-btn gray-border-right"><a class="gray-text">Still</a></li>
                         <li class="responsible-btn gray-border-right"><a class="gray-text">Event</a></li>
-                        <li class="responsible-btn gray-border-right"><a class="gray-text">Merch Depts</a></li>
+                        <li class="responsible-btn gray-border-right">
+                            <a class="gray-text" onclick="showMenu('#menu-depts')">Merch Depts</a>
+                        </li>
                         <li class="responsible-btn gray-border-right"><a class="gray-text">Activity</a></li>
                         <li class="responsible-btn gray-border-right"><a class="gray-text">Heat Map</a></li>
                         <li class="responsible-btn gray-border-right"><a class="gray-text">Bay Layout Guide</a></li>
@@ -233,6 +235,64 @@
             </div><!-- /.container-fluid -->
         </nav>
     </div>
+
+    <!--------------------------------Merch Depts-------------------------------------------->
+    <div id="menu-depts" class="menu-common menu-depts">
+        <div class="menu-depts-container">
+            <div class="menu-depts-department">
+                <input type="checkbox" class="checkbox-depts">
+                <label>
+                    <span>Highlight All Departments</span>
+                </label>
+
+            </div>
+            <div class="menu-depts-department">
+                <input type="checkbox" class="checkbox-depts">
+                <label>
+                    <span>Grocery / GMA Departments</span>
+                </label>
+            </div>
+            <div class="menu-depts-department">
+                <input type="checkbox" class="checkbox-depts">
+                <label>
+                    <span>Dairy Department</span>
+                </label>
+            </div>
+            <div class="menu-depts-department">
+                <input type="checkbox" class="checkbox-depts">
+                <label>
+                    <span>Fresh Produce Department</span>
+                </label>
+            </div>
+            <div class="menu-depts-department">
+                <input type="checkbox" class="checkbox-depts">
+                <label>
+                    <span>Meat Department</span>
+                </label>
+            </div>
+            <div class="menu-depts-department">
+                <input type="checkbox" class="checkbox-depts">
+                <label>
+                    <span>Deli Department</span>
+                </label>
+            </div>
+            <div class="menu-depts-department">
+                <input type="checkbox" class="checkbox-depts">
+                <label>
+                    <span>Bakery Department</span>
+                </label>
+            </div>
+            <div class="menu-depts-department">
+                <input type="checkbox" class="checkbox-depts">
+                <label>
+                    <span>Customer Service Department</span>
+                </label>
+            </div>
+
+        </div>
+
+    </div>
+    <!--------------------------------------------------------------------------------------->
 
     <div class="gray-border-right gray-border-bottom left-menu ">
         <a class="fixed-size fixed-btn btn-big gray-border-bottom"></a>
