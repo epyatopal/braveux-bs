@@ -125,7 +125,7 @@ body a:hover {
 
 .header > .navbar > div > .navbar-collapse > .navbar-nav > li{
     height: 34px;
-    padding: 0.9em 0;
+    /*padding: 0.9em 0;*/
 }
 
 .header .navbar-header{
@@ -253,6 +253,13 @@ body a:hover {
 .responsible-btn.active-btn{
     background-color: red;
     color: #ffffff;
+}
+
+.responsible-btn > span {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  padding: 0.9em 0;
 }
 
 .responsible-btn.active-btn > span{
@@ -822,7 +829,7 @@ input.vertical {
   display: none;
   background-color: #4d4d4d;
   z-index: 100;
-  margin-top: 22px !important;
+  margin-top: 11px !important;
 }
 
 .menu-heatmap:before{
@@ -935,4 +942,17 @@ input.vertical {
 
 .group-btn-block > div > a{
   color: #4d4d4d;
+}
+
+input[type="date"]{
+  border: none;
+  background: none;
+  box-shadow: none;
+  padding: 7px 6px;
+  font-size: 12px;
+  height: 26px;
+}
+
+.date-block{
+  padding: 0 !important;
 }

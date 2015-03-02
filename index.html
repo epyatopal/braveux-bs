@@ -13,12 +13,16 @@
     <script src="assets/lib/jquery.ui/jquery-ui.js"></script>
 
     <script src="assets/lib/bootstrap/bootstrap.min.js"></script>
+    <script src="assets/lib/bootstrap/bootstrap-datepicker.js"></script>
     <script src="assets/lib/jquery.ui/jquery.ui.touch-punch.min.js"></script>
 
 
     <script type="text/javascript">
         showMenu = function(id_menu, id_btn)
         {
+            $(id_btn).click(function(e){
+                e.stopPropagation();
+            });
             $(id_btn).toggleClass('active-btn')
             $(id_menu).toggle();
 
@@ -44,6 +48,12 @@
                 },
                 minHeight: minH,
                 maxHeight: minH
+            });
+
+            $('.start-date').datepicker({
+                format: "dd-mm-yyyy",
+                startDate: "today"
+//                autoclose: true
             });
         })
 
@@ -220,7 +230,7 @@
                         <li class="responsible-btn gray-border-right"><span class="gray-text">Event</span></li>
                         <li class="responsible-btn gray-border-right" onclick="showMenu('#menu-depts')"><span class="gray-text">Merch Depts</span></li>
                         <li class="responsible-btn gray-border-right"><span class="gray-text">Activity</span></li>
-                        <li class="responsible-btn gray-border-right" id="btn-heatmap" onclick="showMenu('#menu-heatmap', '#btn-heatmap')"><span class="gray-text">Heat Map</span>
+                        <li class="responsible-btn gray-border-right" id="btn-heatmap"><span  onclick="showMenu('#menu-heatmap', '#btn-heatmap')"class="gray-text">Heat Map</span>
                             <div id="menu-heatmap" class="menu-heatmap menu-common ">
                                 <section id="question" >
                                     <div class="gray-bg title-block">Step 01: Select data range: </div>
@@ -232,17 +242,19 @@
                                         </ul>
                                     </div>
                                     <div class="gray-border light-gray-bg info-block no-border-bottom in-it-some-border overflow-hidden">
-                                        <div class="hover-yellow text-left gray-border-right gray-border-bottom col-md-6">
+                                        <div class="yellow-block text-left gray-border-right gray-border-bottom col-md-6">
+                                            <!--hover-yellow-->
                                             Started
                                         </div>
-                                        <div class=" text-left gray-border-bottom col-md-6">
-                                            00 - 00 - 0000
+                                        <div class=" text-left gray-border-bottom col-md-6 date-block">
+                                            <input type="date" type="text" class="form-control" id="start-date" placeholder="00 - 00 - 0000">
                                         </div>
-                                        <div class="text-left hover-green gray-border-right gray-border-bottom col-md-6">
+                                        <div class="text-left green-block  gray-border-right gray-border-bottom col-md-6">
+                                            <!--hover-green-->
                                             Ended
                                         </div>
-                                        <div class=" text-left gray-border-bottom col-md-6">
-                                            00 - 00 - 0000
+                                        <div class=" text-left gray-border-bottom col-md-6 date-block">
+                                            <input type="date" type="text" class="form-control" id="end-date" placeholder="00 - 00 - 0000">
                                         </div>
                                     </div>
                                     <div class="gray-bg title-block">Step 02: Select formula: </div>
