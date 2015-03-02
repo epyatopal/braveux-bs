@@ -244,11 +244,13 @@
                         <li class="responsible-btn gray-border-right"><span class="gray-text">Activity</span></li>
                         <li class="responsible-btn gray-border-right" id="btn-heatmap"><span  onclick="showMenu('#menu-heatmap', '#btn-heatmap')"class="gray-text">Heat Map</span>
                             <div id="menu-heatmap" class="menu-heatmap menu-common ">
-                                <section id="question" >
+                                <section id="question" hidden="hidden">
                                     <div class="gray-bg title-block">Step 01: Select data range: </div>
                                     <div>
                                         <ul class="nav nav-tabs guide-tabs">
-                                            <li role="presentation" class="light-gray-bg gray-border guide-tab guide-tab-active red-block"><a href="">Range</a></li>
+                                            <li role="presentation" class="light-gray-bg gray-border guide-tab guide-tab-active red-block">
+                                                <a href="">Range</a>
+                                            </li>
                                             <li role="presentation" class="light-gray-bg gray-border guide-tab "><a href="">Last 7 Days</a></li>
                                             <li role="presentation" class="light-gray-bg gray-border guide-tab"><a href="">Last Month</a></li>
                                         </ul>
@@ -296,8 +298,8 @@
                                         </div>
                                     </div>
                                 </section>
-                                <section id="result" hidden="hidden" class="result">
-                                    <div class="gray-block title-block">Legend for formula:  Average unit sale </div>
+                                <section id="result" class="result">
+                                    <div class="gray-bg title-block">Legend for formula:  Average unit sale </div>
                                     <div class="scale-block gray-border">
                                         <img src="assets/images/scale.png">
                                     </div>
@@ -325,7 +327,6 @@
                     <label for="color1">
                         <span>Highlight All Departments</span>
                     </label>
-
                 </div>
                 <div class="menu-depts-department menu-depts-color2">
                     <input id="color2" type="checkbox" class="checkbox-depts">

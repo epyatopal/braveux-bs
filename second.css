@@ -940,7 +940,7 @@ input.vertical {
 }
 
 .group-btn-block > div{
-  width: 49%;
+  width: 180px;
   display: inline-block;
   text-align: center;
   padding: 7px 6px;
@@ -969,4 +969,16 @@ input[type="date"]{
 
 .date-block{
   padding: 0 !important;
+}
+
+.scale-block {
+  background-color: #ffffff;
+  margin-bottom: 3px;
+}
+.scale-block > img {
+  width: 55%;
+}
+
+.padding-common {
+  padding: 0.5em;
 }
