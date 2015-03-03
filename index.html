@@ -252,29 +252,41 @@
                     <ul class="nav navbar-nav">
                         <li class="responsible-btn gray-border-right "><span class="gray-text">Pano Node</span></li>
                         <li class="responsible-btn gray-border-right"><span class="gray-text">Still</span></li>
-                        <li class="responsible-btn gray-border-right" id="btn-event"><span onclick="showMenu('#menu-event', '#btn-event')" class="gray-text">Event</span>
+                        <li class="responsible-btn gray-border-right" id="btn-event">
+                            <span onclick="showMenu('#menu-event', '#btn-event')" class="gray-text">Event</span>
                             <div id="menu-event" class="menu-event menu-common">
                                 <div>
                                     <ul class="nav nav-tabs guide-tabs">
-                                        <li role="presentation" class="light-gray-bg gray-border guide-tab guide-tab-active red-block">
-                                            <a href="">Event Activity</a>
+                                        <li role="presentation" class="text-left">
+                                            <input id="activity1" name="activity" type="radio" checked>
+                                            <label for="activity1" class="red-block hover-red guide-tab gray-border no-border-bottom">
+                                                <!--light-gray-bg gray-border -->
+                                                <span>Event Activity</span>
+                                            </label>
                                         </li>
-                                        <li role="presentation" class="light-gray-bg gray-border guide-tab ">
-                                            <a href="">Event Status</a>
+                                        <li role="presentation" class="text-right">
+                                            <input id="activity2" name="activity" type="radio">
+                                            <label for="activity2" class="red-block hover-red guide-tab  gray-border no-border-bottom">
+                                                <span>Event Status</span>
+                                            </label>
                                         </li>
                                     </ul>
                                 </div>
                                 <div class="gray-border light-gray-bg info-block no-border-bottom in-it-some-border overflow-hidden">
-                                    <div class="yellow-block text-left gray-border-right gray-border-bottom col-md-6">
-                                        <!--hover-yellow-->
-                                        Started
+                                    <div class="text-left gray-border-right gray-border-bottom col-md-6">
+                                        <input id="started1" type="checkbox">
+                                        <label for="started1" class="yellow-block hover-yellow">
+                                            <span>Started</span>
+                                        </label>
                                     </div>
                                     <div class=" text-left gray-border-bottom col-md-6 date-block">
                                         <input type="date" type="text" class="form-control" placeholder="00 - 00 - 0000">
                                     </div>
-                                    <div class="text-left green-block  gray-border-right gray-border-bottom col-md-6">
-                                        <!--hover-green-->
-                                        Ended
+                                    <div class="text-left gray-border-right gray-border-bottom col-md-6">
+                                        <input id="ended2" type="checkbox">
+                                        <label for="ended2" class="green-block hover-green">
+                                            <span>Ended</span>
+                                        </label>
                                     </div>
                                     <div class=" text-left gray-border-bottom col-md-6 date-block">
                                         <input type="date" type="text" class="form-control" placeholder="00 - 00 - 0000">
@@ -359,7 +371,8 @@
 
                         </li>
                         <li class="responsible-btn gray-border-right"><span class="gray-text">Activity</span></li>
-                        <li class="responsible-btn gray-border-right" id="btn-heatmap"><span onclick="showMenu('#menu-heatmap', '#btn-heatmap')"class="gray-text">Heat Map</span>
+                        <li class="responsible-btn gray-border-right" id="btn-heatmap">
+                            <span onclick="showMenu('#menu-heatmap', '#btn-heatmap')"class="gray-text">Heat Map</span>
                             <div id="menu-heatmap" class="menu-heatmap menu-common ">
                                 <section id="question" >
                                     <div class="gray-bg title-block">Step 01: Select data range: </div>

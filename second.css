@@ -1075,8 +1075,8 @@ input[type="date"] {
   display: none;
 }
 
-.menu-event .guide-tab {
-  width: 216px;
+.menu-event .guide-tabs > li{
+  width: 50%;
 }
 
 .menu-event .guide-tab {
@@ -1085,4 +1085,37 @@ input[type="date"] {
 
 .menu-event .guide-tab:first-child {
   margin-right: 4px;
+}
+
+.menu-event  input[type=radio]:checked + label.guide-tab{
+  width: 100%;
+  height: 100%;
+}
+
+.menu-event  input[type=radio] + label.guide-tab{
+  width: 99%;
+}
+
+.main-first-column{
+  display: inline-block;
+  float: left;
+  width: ;
+}
+
+.first-column{
+  width: 105px;
+  display: inline-block;
+  float: left;
+}
+
+.second-column {
+  width: 211px;
+  display: inline-block;
+  float: left;
+}
+
+.third-column{
+  width: 127px;
+  display: inline-block;
+  float: right;
 }
