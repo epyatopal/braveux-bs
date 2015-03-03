@@ -326,7 +326,7 @@ body a:hover {
   text-decoration: none;
 }
 
-.yellow-block, input[type=checkbox]:checked + .yellow-block {
+.yellow-block, input[type=checkbox]:checked + .yellow-block, input[type=radio]:checked + .yellow-block {
   background-color: #f5d232;
   color: #4d4d4d;
 }
@@ -336,7 +336,7 @@ body a:hover {
   text-decoration: none;
 }
 
-.orange-block, input[type=checkbox]:checked + .orange-block {
+.orange-block, input[type=checkbox]:checked + .orange-block, input[type=radio]:checked + .orange-block {
   background-color: #ff963c;
   color: #4d4d4d;
 }
@@ -345,7 +345,7 @@ body a:hover {
   color: #fa4d4d;
 }
 
-.red-block, input[type=checkbox]:checked + .red-block {
+.red-block, input[type=checkbox]:checked + .red-block, input[type=radio]:checked + .red-block {
   background-color: #fa4d4d;
   color: #4d4d4d;
 }
@@ -355,7 +355,7 @@ body a:hover {
   text-decoration: none;
 }
 
-.green-block, input[type=checkbox]:checked + .green-block {
+.green-block, input[type=checkbox]:checked + .green-block, input[type=radio]:checked + .green-block {
   background-color: #78d23c;
   color: #4d4d4d;
 }
@@ -365,7 +365,7 @@ body a:hover {
   text-decoration: none;
 }
 
-.mint-block, input[type=checkbox]:checked + .mint-block {
+.mint-block, input[type=checkbox]:checked + .mint-block, input[type=radio]:checked + .mint-block {
   background-color: #32bea0;
   color: #4d4d4d;
 }
@@ -375,7 +375,7 @@ body a:hover {
   text-decoration: none;
 }
 
-.blue-block, input[type=checkbox]:checked + .blue-block {
+.blue-block, input[type=checkbox]:checked + .blue-block, input[type=radio]:checked + .blue-block {
   background-color: #5191ff;
   color: #4d4d4d;
 }
@@ -385,7 +385,7 @@ body a:hover {
   text-decoration: none;
 }
 
-.lilac-block, input[type=checkbox]:checked + .lilac-block {
+.lilac-block, input[type=checkbox]:checked + .lilac-block, input[type=radio]:checked + .lilac-block {
   background-color: #aa6edc;
   color: #4d4d4d;
 }
@@ -414,37 +414,42 @@ body a:hover {
   color: #ffffff;
 }
 
-input[type=checkbox] {
+input[type=checkbox], input[type=radio] {
   display: none;
 }
 
 input[type=checkbox] + label {
   width: 100%;
   height: 100%;
+}
+
+input[type=checkbox] + label, input[type=radio] + label {
   padding: 8px 0 0 34px;
   background-image: url("assets/images/checkbox.png");
   background-repeat: no-repeat;
-  background-size: 6%;
+  background-size: 13px;
   cursor: pointer;
   font-weight: 100;
-  background-position: 10px;
-  background-color: #ffffff;
+  background-position: 10px 8px;
+  background-color: #f0f0f0;
   text-align: left;
 }
 
-input[type=checkbox] + label:hover {
-  background: url("assets/images/checkboxHover.png") no-repeat scroll 0 0;
-  background-size: 6%;
-  background-position: 10px;
+input[type=checkbox] + label:hover, input[type=radio] + label:hover {
+  background-image: url("assets/images/checkboxHover.png");
+  background-repeat: no-repeat;
+  background-size: 13px;
+  background-position: 10px 8px;
+  background-color: #ffffff;
 }
 
-input[type=checkbox]:checked + label:hover {
+input[type=checkbox]:checked + label:hover, input[type=radio]:checked + label:hover {
   color: #ffffff;
   background-image: url("assets/images/checkbox.png");
   background-repeat: no-repeat;
 }
 
-input[type=checkbox] + label {
+input[type=checkbox] + label, input[type=radio] + label {
   color: #4d4d4d;
 }
 
@@ -910,19 +915,22 @@ input.vertical {
 }
 
 .title-block {
-  padding: 0.5em 13%;
+  padding: 10px 13%;
   text-align: left;
   margin-bottom: 3px;
   color: #4d4d4d;
 }
 
-.guide-tab {
-  width: 32%;
-  height: 30px;
-}
-
 .guide-tabs {
   border-bottom: none;
+}
+
+.guide-tabs > li {
+  margin: 0;
+  height: 34px;
+  width: 33.3%;
+  background: none;
+  border: none;
 }
 
 .guide-tabs > .guide-tab > a {
@@ -948,6 +956,8 @@ input.vertical {
   margin-left: 0.5%;
   margin-right: 0.5%;
   margin-bottom: 2px;
+  width: 97%;
+  height: 92%;
 }
 
 .guide-tab:first-child {
@@ -959,6 +969,11 @@ input.vertical {
   height: 34px;
   width: 34%;
   border-bottom: none;
+}
+
+input[type=radio]:checked + label.guide-tab{
+  width: 99%;
+  height: 100%;
 }
 
 .half-block {
@@ -979,14 +994,25 @@ input.vertical {
   margin-bottom: 3px;
 }
 
-.info-block > div {
-  padding: 7px 6px;
+.info-block > div{
+  padding: 0;
+  height: 29px;
   color: #4d4d4d;
+}
+
+.info-block > div > label{
+  padding: 8px 0 8px 34px;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.info-block.overflow-auto{
+  max-height: 118px;
 }
 
 .overflow-auto {
   overflow-y: auto;
-  max-height: 10em;
 }
 
 .group-btn-block {
@@ -997,7 +1023,7 @@ input.vertical {
   width: 180px;
   display: inline-block;
   text-align: center;
-  padding: 7px 6px;
+  padding: 9px 6px;
 }
 
 .group-btn-block > div:first-child {

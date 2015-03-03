@@ -270,14 +270,14 @@
                                         Started
                                     </div>
                                     <div class=" text-left gray-border-bottom col-md-6 date-block">
-                                        <input type="date" type="text" class="form-control" id="start-date" placeholder="00 - 00 - 0000">
+                                        <input type="date" type="text" class="form-control" placeholder="00 - 00 - 0000">
                                     </div>
                                     <div class="text-left green-block  gray-border-right gray-border-bottom col-md-6">
                                         <!--hover-green-->
                                         Ended
                                     </div>
                                     <div class=" text-left gray-border-bottom col-md-6 date-block">
-                                        <input type="date" type="text" class="form-control" id="end-date" placeholder="00 - 00 - 0000">
+                                        <input type="date" type="text" class="form-control" placeholder="00 - 00 - 0000">
                                     </div>
                                 </div>
                             </div>
@@ -365,45 +365,84 @@
                                     <div class="gray-bg title-block">Step 01: Select data range: </div>
                                     <div>
                                         <ul class="nav nav-tabs guide-tabs">
-                                            <li role="presentation" class="light-gray-bg gray-border guide-tab guide-tab-active red-block">
-                                                <a href="">Range</a>
+                                            <li role="presentation" class="text-left">
+                                                <input id="range1" name="range" type="radio" checked>
+                                                <label for="range1" class="red-block hover-red guide-tab gray-border no-border-bottom">
+                                                    <!--light-gray-bg gray-border -->
+                                                    <span>Range</span>
+                                                </label>
                                             </li>
-                                            <li role="presentation" class="light-gray-bg gray-border guide-tab "><a href="">Last 7 Days</a></li>
-                                            <li role="presentation" class="light-gray-bg gray-border guide-tab"><a href="">Last Month</a></li>
+                                            <li role="presentation" class="">
+                                                <input id="range2" name="range" type="radio">
+                                                <label for="range2" class="red-block hover-red guide-tab  gray-border no-border-bottom">
+                                                    <span>Last 7 Days</span>
+                                                </label>
+                                            </li>
+                                            <li role="presentation" class="text-right">
+                                                <input id="range3" name="range" type="radio">
+                                                <label for="range3" class="red-block hover-red guide-tab  gray-border no-border-bottom">
+                                                    <span>Last Month</span>
+                                                </label>
+                                            </li>
                                         </ul>
                                     </div>
                                     <div class="gray-border light-gray-bg info-block no-border-bottom in-it-some-border overflow-hidden">
-                                        <div class="yellow-block text-left gray-border-right gray-border-bottom col-md-6">
-                                            <!--hover-yellow-->
-                                            Started
+                                        <div class="text-left gray-border-right gray-border-bottom col-md-6">
+                                            <input id="started" type="checkbox">
+                                            <label for="started" class="yellow-block hover-yellow">
+                                                <span>Started</span>
+                                            </label>
                                         </div>
                                         <div class=" text-left gray-border-bottom col-md-6 date-block">
                                             <input type="date" type="text" class="form-control" id="start-date" placeholder="00 - 00 - 0000">
                                         </div>
-                                        <div class="text-left green-block  gray-border-right gray-border-bottom col-md-6">
-                                            <!--hover-green-->
-                                            Ended
+                                        <div class="text-left gray-border-right gray-border-bottom col-md-6">
+                                            <input id="ended" type="checkbox">
+                                            <label for="ended" class="green-block hover-green">
+                                                <span>Ended</span>
+                                            </label>
                                         </div>
                                         <div class=" text-left gray-border-bottom col-md-6 date-block">
                                             <input type="date" type="text" class="form-control" id="end-date" placeholder="00 - 00 - 0000">
                                         </div>
                                     </div>
                                     <div class="gray-bg title-block">Step 02: Select formula: </div>
-                                    <div class="gray-border light-gray-bg info-block in-it-some-border overflow-auto">
-                                        <div class="hover-red text-left gray-border-bottom col-md-12">
-                                            Started
+                                    <div class="gray-border  info-block in-it-some-border overflow-auto">
+                                        <div class="text-left light-gray-bg gray-border-bottom">
+                                            <input id="row1" name="range" type="checkbox">
+                                            <label for="row1" class="red-block hover-red ">
+                                                <span>Average unit sales</span>
+                                            </label>
                                         </div>
-                                        <div class="hover-red text-left gray-border-bottom col-md-12">
-                                            Started
+                                        <div class="text-left gray-border-bottom">
+                                            <input id="row2" name="range" type="checkbox">
+                                            <label for="row2" class="red-block hover-red ">
+                                                <span>Average unit sales</span>
+                                            </label>
                                         </div>
-                                        <div class="hover-red text-left gray-border-bottom col-md-12">
-                                            Started
+                                        <div class="text-left gray-border-bottom">
+                                            <input id="row3" name="range" type="checkbox">
+                                            <label for="row3" class="red-block hover-red ">
+                                                <span>Average unit sales</span>
+                                            </label>
                                         </div>
-                                        <div class="hover-red text-left gray-border-bottom col-md-12">
-                                            Started
+                                        <div class="text-left gray-border-bottom">
+                                            <input id="row4" name="range" type="checkbox">
+                                            <label for="row4" class="red-block hover-red ">
+                                                <span>Average unit sales</span>
+                                            </label>
                                         </div>
-                                        <div class="hover-red text-left gray-border-bottom col-md-12">
-                                            Started
+                                        <div class="text-left gray-border-bottom">
+                                            <input id="row5" name="range" type="checkbox">
+                                            <label for="row5" class="red-block hover-red ">
+                                                <span>Average unit sales</span>
+                                            </label>
+                                        </div>
+                                        <div class="text-left gray-border-bottom">
+                                            <input id="row6" name="range" type="checkbox">
+                                            <label for="row6" class="red-block hover-red ">
+                                                <span>Average unit sales</span>
+                                            </label>
                                         </div>
                                     </div>
                                     <div class="group-btn-block">
