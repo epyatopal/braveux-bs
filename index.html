@@ -28,32 +28,46 @@
         }
         $(function() {
             var minH = $( "#left-page-block").height();
-            $( window ).resize(function() {
-                minH = $( "#left-page-block").height();
-                $( "#left-page-block" ).resizable({
-                    minHeight: minH,
-                    maxHeight: minH
-                })
-
+            var maxW = $('#body-block').width();
+            var l_w = $('#left-page-block').width();
+            $( window ).resize(function(element, ui) {
+                console.log('element, ui', element, ui)
+                if(!ui){
+                    minH = $( "#left-page-block").height();
+                    var left_w_proc = l_w / maxW
+                    maxW = $('#body-block').width();
+                    l_w = left_w_proc * maxW;
+                    if(l_w < 100){
+                        l_w = 100
+                    }
+                    $( "#left-page-block").width(l_w)
+                    var border_width = 6,
+                            w_w = $('#body-block').width(),
+                            rightWidth = w_w - l_w - border_width
+                    $('#right-page-block').width(rightWidth)
+                    $( "#left-page-block" ).resizable({
+                        minHeight: minH,
+                        maxHeight: minH,
+                        minWidth: 100,
+                        maxWidth: maxW - 100
+                    });
+                }
             });
 
             $( "#left-page-block" ).resizable({
                 resize: function( event, ui ) {
+                    l_w = $('#left-page-block').width();
                     var border_width = 6,
                         w_w = $('#body-block').width(),
-                        l_w = $('#left-page-block').width(),
                         rightWidth = w_w - l_w - border_width
                     $('#right-page-block').width(rightWidth)
                 },
                 minHeight: minH,
-                maxHeight: minH
+                maxHeight: minH,
+                minWidth: 100,
+                maxWidth: maxW - 100
             });
 
-            $('.start-date').datepicker({
-                format: "dd-mm-yyyy",
-                startDate: "today"
-//                autoclose: true
-            });
         })
 
         $(function(){
