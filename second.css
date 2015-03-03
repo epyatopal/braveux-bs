@@ -285,10 +285,11 @@ body a:hover {
 .light-gray-bg {
   background-color: #f0f0f0;
 }
+
 .red-text{
     color: #fa4d4d;
 }
-.yellow-block {
+.yellow-block,input[type=checkbox]:checked + .yellow-block {
   background-color: #f5d232;
   color: #000000;
 }
@@ -298,40 +299,70 @@ body a:hover {
   text-decoration: none;
 }
 
-.orange-block {
-  background-color: #ff963c;
-  color: #000000;
-}
-
 .orange-text, .hover-orange:hover {
   color: #ff963c;
   text-decoration: none;
 }
-
-.green-text, .hover-green:hover {
-  color: #78d23c;
-  text-decoration: none;
+.hover-mint:hover{
+    color: #32bea0;
+    text-decoration: none;
 }
-.green-block, .green-block:hover {
-  background-color: #78d23c;
-  color: #000000;
+.hover-blue:hover{
+    color: #5191ff;
+    text-decoration: none;
 }
-
-.green-block > * {
-  color: #000000;
-}
-
-.green-block:hover > * {
-  color: #ffffff;
+.hover-lilac:hover{
+    color: #aa6edc;
+    text-decoration: none;
 }
 
-.red-block, .red-block:hover {
-  background-color: #fa4d4d;
-  color: #000000;
+.red-block, .red-block:hover, input[type=checkbox]:checked + .red-block {
+    background-color: #fa4d4d;
+    color: #000000;
+}
+
+/*.green-block, .green-block:hover, input[type=checkbox]:checked + .green-block {*/
+.green-block, input[type=checkbox]:checked + .green-block {
+    background-color: #78d23c;
+    color: #000000;
+}
+
+.group-btn-block>.green-block > * {
+    color: #000000;
+}
+
+.group-btn-block>.green-block:hover > * {
+    color: #ffffff;
+}
+
+.group-btn-block.green-block:hover {
+    background-color: #78d23c;
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+.mint-block, input[type=checkbox]:checked + .mint-block {
+    background-color: #32bea0;
+}
+.blue-block, input[type=checkbox]:checked + .blue-block{
+    background-color: #5191ff;
+}
+.lilac-block, input[type=checkbox]:checked + .lilac-block{
+    background-color: #aa6edc;
+}
+
+/*.orange-block,.orange-block:hover,input[type=checkbox]:checked + .orange-block {*/
+.orange-block,input[type=checkbox]:checked + .orange-block {
+    background-color: #ff963c;
+    color: #000000;
 }
 
 .red-text, .hover-red:hover {
   color: #fa4d4d;
+}
+.green-text, .hover-green:hover {
+    color: #78d23c;
+    text-decoration: none;
 }
 
 .group-btn-block > .orange-block:hover {
@@ -340,17 +371,38 @@ body a:hover {
   border-color: #ffffff;
 }
 
-.group-btn-block > .green-block:hover {
-  background-color: #78d23c;
-  color: #ffffff;
-  border-color: #ffffff;
-}
-
 .orange-block:hover > * {
   color: #ffffff;
 }
-/*text style finish*/
 
+input[type=checkbox]  {
+    display: none;
+}
+input[type=checkbox] + label {
+    width: 100%;
+    height: 100%;
+    padding: 8px 34px;
+    background-image: url("assets/images/checkbox.png");
+    background-repeat: no-repeat;
+    background-size: 6%;
+    cursor: pointer;
+    font-weight: 100;
+    background-position: 10px;
+    background-color: #ffffff;
+    text-align: left;
+}
+input[type=checkbox]+label:hover {
+    background: url("assets/images/checkboxHover.png") no-repeat scroll 0 0;
+    background-size: 6%;
+    background-position: 10px;
+}
+input[type=checkbox]:checked + label:hover {
+    color: #ffffff;
+    background-image: url("assets/images/checkbox.png");
+    background-repeat: no-repeat;
+}
+
+/*text style finish*/
 .left-menu{
     overflow: hidden;
     width: 35px;
@@ -754,12 +806,16 @@ input.vertical {
 }
 
 .menu-depts{
+    margin: auto;
+    position: absolute;
+    left: 50%;
+    margin-left: -120px;
+    padding: 0;
+    display: none;
+    z-index: 100;
+    margin-top: 22px !important;
     width: 240px;
     height: 240px;
-    display: none;
-    left: 450px;
-    top: 0px;
-
 }
 .menu-depts:before{
     left: 110px;
@@ -775,59 +831,6 @@ input.vertical {
     height: 29px;
     border-bottom: 1px #999999 solid;
 }
-
-
-
-.checkbox-depts {
-    display: none;
-}
-.menu-depts-department  label {
-    background: url("assets/images/checkbox.png") no-repeat scroll 0 0;
-    background-size: contain;
-    cursor: pointer;
-    padding-left: 35px;
-    margin-bottom: 20px;
-    margin-top: 5px;
-    margin-left: 15px;
-    font-weight: 100 ;
-}
-.checkbox-depts+label:hover {
-    background: url("assets/images/checkboxHover.png") no-repeat scroll 0 0;
-    background-size: contain;
-    cursor: pointer;
-    padding-left: 35px;
-    margin-bottom: 20px;
-}
-
-<<<<<<< HEAD
-.menu-depts-color1:hover{
-        color: #fa4d4d;
-}
-.menu-depts-color2:hover{
-    color: #78d23c;
-}
-.menu-depts-color3:hover{
-    color: #32bea0;
-}
-.menu-depts-color4:hover{
-    color: #5191ff;
-}
-.menu-depts-color5:hover{
-    color: #aa6edc;
-}
-.menu-depts-color6:hover{
-    color: #fa4d4d;
-}
-.menu-depts-color7:hover{
-    color: #ff963c;
-}
-.menu-depts-color8:hover{
-    color: #f5d232;
-}
-
-
-
-=======
 
 /*heatmap*/
 .menu-heatmap{
@@ -954,4 +957,4 @@ input.vertical {
 .group-btn-block > div > a{
   color: #4d4d4d;
 }
->>>>>>> 61ce950a90d859d09520f37dd28e4a0d1f40d372
+
