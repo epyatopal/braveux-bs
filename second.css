@@ -990,3 +990,25 @@ input[type="date"]{
 .padding-common {
   padding: 0.5em;
 }
+
+/*menu-event*/
+
+.menu-event{
+  width: 443px;
+  margin-top: 12px !important;
+  left: 50%;
+  margin-left: -221px;
+  background-color: #4d4d4d;
+}
+
+.menu-event .guide-tab{
+  width: 216px;
+}
+
+.menu-event .guide-tab {
+  margin: 0;
+}
+
+.menu-event .guide-tab:first-child {
+  margin-right: 4px;
+}

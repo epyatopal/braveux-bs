@@ -253,12 +253,41 @@
                     <ul class="nav navbar-nav">
                         <li class="responsible-btn gray-border-right "><span class="gray-text">Pano Node</span></li>
                         <li class="responsible-btn gray-border-right"><span class="gray-text">Still</span></li>
-                        <li class="responsible-btn gray-border-right"><span class="gray-text">Event</span></li>
+                        <li class="responsible-btn gray-border-right" id="btn-event"><span onclick="showMenu('#menu-event', '#btn-event')" class="gray-text">Event</span>
+                            <div id="menu-event" class="menu-event menu-common">
+                                <div>
+                                    <ul class="nav nav-tabs guide-tabs">
+                                        <li role="presentation" class="light-gray-bg gray-border guide-tab guide-tab-active red-block">
+                                            <a href="">Event Activity</a>
+                                        </li>
+                                        <li role="presentation" class="light-gray-bg gray-border guide-tab ">
+                                            <a href="">Event Status</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="gray-border light-gray-bg info-block no-border-bottom in-it-some-border overflow-hidden">
+                                    <div class="yellow-block text-left gray-border-right gray-border-bottom col-md-6">
+                                        <!--hover-yellow-->
+                                        Started
+                                    </div>
+                                    <div class=" text-left gray-border-bottom col-md-6 date-block">
+                                        <input type="date" type="text" class="form-control" id="start-date" placeholder="00 - 00 - 0000">
+                                    </div>
+                                    <div class="text-left green-block  gray-border-right gray-border-bottom col-md-6">
+                                        <!--hover-green-->
+                                        Ended
+                                    </div>
+                                    <div class=" text-left gray-border-bottom col-md-6 date-block">
+                                        <input type="date" type="text" class="form-control" id="end-date" placeholder="00 - 00 - 0000">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
                         <li class="responsible-btn gray-border-right" onclick="showMenu('#menu-depts')"><span class="gray-text">Merch Depts</span></li>
                         <li class="responsible-btn gray-border-right"><span class="gray-text">Activity</span></li>
-                        <li class="responsible-btn gray-border-right" id="btn-heatmap"><span  onclick="showMenu('#menu-heatmap', '#btn-heatmap')"class="gray-text">Heat Map</span>
+                        <li class="responsible-btn gray-border-right" id="btn-heatmap"><span onclick="showMenu('#menu-heatmap', '#btn-heatmap')"class="gray-text">Heat Map</span>
                             <div id="menu-heatmap" class="menu-heatmap menu-common ">
-                                <section id="question" hidden="hidden">
+                                <section id="question" >
                                     <div class="gray-bg title-block">Step 01: Select data range: </div>
                                     <div>
                                         <ul class="nav nav-tabs guide-tabs">
@@ -312,7 +341,7 @@
                                         </div>
                                     </div>
                                 </section>
-                                <section id="result" class="result">
+                                <section id="result" class="result" hidden="hidden">
                                     <div class="gray-bg title-block">Legend for formula:  Average unit sale </div>
                                     <div class="scale-block gray-border">
                                         <img src="assets/images/scale.png">
