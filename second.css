@@ -58,6 +58,11 @@
     margin-right: 35px;
     margin-left: 35px;
   }
+  .left-page-block > .ui-icon {
+    background-image: url("assets/images/border-btn.png");
+    background-size: 91%;
+    background-position: 0 0;
+  }
 }
 
 @media (max-width: 992px){
@@ -70,6 +75,9 @@
   .body-block {
     margin-right: 0px;
     margin-left: 0px;
+  }
+  .left-page-block > .ui-icon {
+    background-image: none;
   }
 }
 
@@ -472,13 +480,13 @@ input.vertical {
 }
 
 .left-page-block > .ui-icon {
+  /*background-image: url("assets/images/border-btn.png");*/
+  /*background-size: 91%;*/
+  /*background-position: 0 0;*/
     right: -17px;
     bottom: 50%;
-    background-image: url("assets/images/border-btn.png");
-    background-size: 91%;
     width: 25px;
     height: 50px;
-    background-position: 0 0;
 }
 
 .right-page-block{
