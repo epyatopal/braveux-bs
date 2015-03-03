@@ -421,7 +421,7 @@ input[type=checkbox] {
 input[type=checkbox] + label {
   width: 100%;
   height: 100%;
-  padding: 8px 34px;
+  padding: 8px 0 0 34px;
   background-image: url("assets/images/checkbox.png");
   background-repeat: no-repeat;
   background-size: 6%;
@@ -877,6 +877,7 @@ input.vertical {
   border: 1px #999999 solid;
   width: 100%;
   height: 100%;
+  overflow-y: auto;
 }
 
 .menu-depts-department {
