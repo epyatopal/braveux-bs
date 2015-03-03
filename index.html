@@ -19,32 +19,55 @@
     <script type="text/javascript">
         showMenu = function(id_menu, id_btn)
         {
+            $(id_btn).click(function(e){
+                e.stopPropagation();
+            });
             $(id_btn).toggleClass('active-btn')
             $(id_menu).toggle();
 
         }
         $(function() {
             var minH = $( "#left-page-block").height();
-            $( window ).resize(function() {
-                minH = $( "#left-page-block").height();
-                $( "#left-page-block" ).resizable({
-                    minHeight: minH,
-                    maxHeight: minH
-                })
-
+            var maxW = $('#body-block').width();
+            var l_w = $('#left-page-block').width();
+            $( window ).resize(function(element, ui) {
+                console.log('element, ui', element, ui)
+                if(!ui){
+                    minH = $( "#left-page-block").height();
+                    var left_w_proc = l_w / maxW
+                    maxW = $('#body-block').width();
+                    l_w = left_w_proc * maxW;
+                    if(l_w < 100){
+                        l_w = 100
+                    }
+                    $( "#left-page-block").width(l_w)
+                    var border_width = 6,
+                            w_w = $('#body-block').width(),
+                            rightWidth = w_w - l_w - border_width
+                    $('#right-page-block').width(rightWidth)
+                    $( "#left-page-block" ).resizable({
+                        minHeight: minH,
+                        maxHeight: minH,
+                        minWidth: 100,
+                        maxWidth: maxW - 100
+                    });
+                }
             });
 
             $( "#left-page-block" ).resizable({
                 resize: function( event, ui ) {
+                    l_w = $('#left-page-block').width();
                     var border_width = 6,
                         w_w = $('#body-block').width(),
-                        l_w = $('#left-page-block').width(),
                         rightWidth = w_w - l_w - border_width
                     $('#right-page-block').width(rightWidth)
                 },
                 minHeight: minH,
-                maxHeight: minH
+                maxHeight: minH,
+                minWidth: 100,
+                maxWidth: maxW - 100
             });
+
         })
 
 //        $(function(){
@@ -290,29 +313,33 @@
 
                         </li>
                         <li class="responsible-btn gray-border-right"><span class="gray-text">Activity</span></li>
-                        <li class="responsible-btn gray-border-right" id="btn-heatmap" onclick="showMenu('#menu-heatmap', '#btn-heatmap')"><span class="gray-text">Heat Map</span>
+                        <li class="responsible-btn gray-border-right" id="btn-heatmap"><span  onclick="showMenu('#menu-heatmap', '#btn-heatmap')"class="gray-text">Heat Map</span>
                             <div id="menu-heatmap" class="menu-heatmap menu-common ">
-                                <section id="question" >
+                                <section id="question" hidden="hidden">
                                     <div class="gray-bg title-block">Step 01: Select data range: </div>
                                     <div>
                                         <ul class="nav nav-tabs guide-tabs">
-                                            <li role="presentation" class="light-gray-bg gray-border guide-tab guide-tab-active red-block"><a href="">Range</a></li>
+                                            <li role="presentation" class="light-gray-bg gray-border guide-tab guide-tab-active red-block">
+                                                <a href="">Range</a>
+                                            </li>
                                             <li role="presentation" class="light-gray-bg gray-border guide-tab "><a href="">Last 7 Days</a></li>
                                             <li role="presentation" class="light-gray-bg gray-border guide-tab"><a href="">Last Month</a></li>
                                         </ul>
                                     </div>
                                     <div class="gray-border light-gray-bg info-block no-border-bottom in-it-some-border overflow-hidden">
-                                        <div class="hover-yellow text-left gray-border-right gray-border-bottom col-md-6">
+                                        <div class="yellow-block text-left gray-border-right gray-border-bottom col-md-6">
+                                            <!--hover-yellow-->
                                             Started
                                         </div>
-                                        <div class=" text-left gray-border-bottom col-md-6">
-                                            00 - 00 - 0000
+                                        <div class=" text-left gray-border-bottom col-md-6 date-block">
+                                            <input type="date" type="text" class="form-control" id="start-date" placeholder="00 - 00 - 0000">
                                         </div>
-                                        <div class="text-left hover-green gray-border-right gray-border-bottom col-md-6">
+                                        <div class="text-left green-block  gray-border-right gray-border-bottom col-md-6">
+                                            <!--hover-green-->
                                             Ended
                                         </div>
-                                        <div class=" text-left gray-border-bottom col-md-6">
-                                            00 - 00 - 0000
+                                        <div class=" text-left gray-border-bottom col-md-6 date-block">
+                                            <input type="date" type="text" class="form-control" id="end-date" placeholder="00 - 00 - 0000">
                                         </div>
                                     </div>
                                     <div class="gray-bg title-block">Step 02: Select formula: </div>
@@ -342,8 +369,8 @@
                                         </div>
                                     </div>
                                 </section>
-                                <section id="result" hidden="hidden" class="result">
-                                    <div class="gray-block title-block">Legend for formula:  Average unit sale </div>
+                                <section id="result" class="result">
+                                    <div class="gray-bg title-block">Legend for formula:  Average unit sale </div>
                                     <div class="scale-block gray-border">
                                         <img src="assets/images/scale.png">
                                     </div>
@@ -361,8 +388,6 @@
             </div><!-- /.container-fluid -->
         </nav>
     </div>
-
-
 
 
     <div class="menu-common menu-sales" id="menu-sales">
