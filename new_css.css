@@ -35,7 +35,6 @@
 .menu-event {
   width: 360px;
   height: 200px;
-  display: block;
 }
 
 .menu-event .nav {
@@ -261,16 +260,16 @@
   margin-top: 21px;
 }
 
-.dotted-row {
+.dashed-row {
   width: 43%;
   position: absolute;
   top: 47px;
-  border-bottom: 1px dotted #5191ff;
+  border-bottom: 1px dashed #5191ff;
   height: 1px !important;
 }
 
-.dotted-row.gray-color {
-  border-bottom: 1px dotted #bebebe;
+.dashed-row.gray-color {
+  border-bottom: 1px dashed #bebebe;
   width: 98%;
   top: 74px;
 }
@@ -283,10 +282,13 @@
 .menu-event .second-block>div {
   height: 29px;
   line-height: 29px;
+  border-bottom: none;
 }
 
-.menu-event .second-block>div {
-  border-bottom: none;
+.menu-event .second-block>div>span {
+  color: #4d4d4d;
+  font-size: 12px;
+  font-family: HelveticaNeue-Light;
 }
 
 .menu-event .second-block>div:last-child {
@@ -326,15 +328,15 @@
   margin-bottom: auto;
 }
 
-.tab2 .dotted-row {
+.tab2 .dashed-row {
   width: 89%;
 }
 
-.dotted-row.first-dot{
+.dashed-row.first-dot{
   top: 97px;
 }
 
-.dotted-row.second-dot{
+.dashed-row.second-dot{
   top: 141px;
 }
 
