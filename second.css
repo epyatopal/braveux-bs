@@ -594,13 +594,15 @@ input.vertical {
 }
 
 .menu-common:before {
-  content: ' ';
+  content: "";
   position: absolute;
-  width: 0;
-  height: 0;
+  width: 11px;
+  height: 11px;
   top: -25px;
-  border: 11px solid;
-  border-color: transparent transparent #4d4d4d;
+  /*border: 11px solid;*/
+  /*background-color: red;*/
+  /*border-color: transparent transparent #4d4d4d;*/
+  font-family: 'Glyphicons Halflings';
 }
 
 .menu-user {
@@ -619,8 +621,8 @@ input.vertical {
 }
 
 .user-avatar {
-  width: 31.914893617%;
-  margin: 1em 0;
+  width: 39%;
+  margin: 0 0 7px 0;
 }
 
 .menu-user:before {
@@ -692,14 +694,42 @@ input.vertical {
   cursor: pointer;
 }
 
+.menu-user {
+  width: 200px;
+  height: 290px;
+}
+
+.block-with-bnt {
+  padding-top: 8px;
+  border-top: 1px dashed #bebebe;
+}
+
+.block-with-bnt > div {
+  margin-bottom: 5px;
+}
+
 .menu-user .block-with-bnt > a {
   border-top: none;
+}
+
+.menu-user .gray-color.first-dash {
+  top: 98px;
+}
+
+.menu-user span {
+  font-family: HelveticaNeue-Light;
 }
 
 .menu-user .block-with-bnt > a:hover {
   color: red;
   background-color: #ffffff;
   text-decoration: none;
+}
+
+.user-info-row {
+  padding-top: 5px;
+  border-top: 1px dashed #bebebe;
+  padding-bottom: 3px;
 }
 
 .menu-item-active {
