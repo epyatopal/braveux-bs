@@ -1,0 +1,54 @@
+.menu-common {
+  border: 1px solid #bebebe;
+  box-shadow: 0 5px 20px 1px #bebebe
+}
+
+.in-active {
+  background-color: #f5f5f5;
+  color: #000000;
+  border: 1px solid #bebebe;
+  padding: 10px;
+}
+
+.in-active > * {
+  color: #212121;
+}
+
+.active {
+  background-color: #dde9ff;
+  color: #242021;
+  border: 1px solid #77a9fe;
+  padding: 10px;
+}
+
+.active > * {
+  color: #242021;
+}
+
+.light-blue {
+  background-color: #dce9ff;
+}
+
+.light-blue:hover {
+  border: 1px solid #a8c7ff;
+}
+
+.light-blue.active {
+  border: 1px solid #5191ff;
+}
+
+.menu-event {
+  width: 360px;
+  height: 200px;
+  display: block;
+}
+
+.menu-event .nav>li {
+  width: 50%;
+}
+
+.main-first-column{
+  display: inline-block;
+  float: left;
+  width: 50%;
+}
