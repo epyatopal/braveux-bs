@@ -2,7 +2,7 @@
   border: 1px solid #bebebe;
   box-shadow: 0 5px 20px 1px #bebebe;
   background-color: #ffffff;
-  padding: 5px;
+  padding: 9px;
 }
 
 
@@ -16,7 +16,7 @@
 
 .active {
   background-color: #ffffff;
-  padding: 10px;
+  padding: 13px 10px 10px;
 }
 
 
@@ -43,7 +43,7 @@
 }
 
 .menu-event .nav>li {
-  width: 174px;
+  width: 170px;
   height: 40px;
   background-color: #ffffff;
   color: #5191ff;
@@ -63,10 +63,17 @@
   border-bottom: 1px solid #5191ff;
 }
 
+.menu-event .nav>li:not(.active):first-child>span{
+  margin: 0 2px 2px 0;
+}
+
+.menu-event .nav>li:not(.active):last-child>span{
+  margin: 0 0 2px 2px;
+}
+
 .menu-event .nav>li:not(.active)>span {
-  width: 172px;
-  margin: 0 0px 2px 2px;
-  height: 38px;
+  width: 168px;
+  height: 37px;
   display: block;
 }
 
@@ -74,6 +81,34 @@
   display: inline-block;
   float: left;
   width: 50%;
+  position: relative;
+  padding-right: 5px;
+}
+
+.main-first-column + .main-first-column {
+  padding-right: 0;
+}
+
+.menu-still-string{
+    background-color: #f5f5f5;
+    width: 200px;
+    height: 25px;
+    margin-bottom: 5px;
+}
+.line  {
+    border-top: 1px dashed  #d9dbdc;
+    width: 200px;
+    height: 18px;
+    margin-top: 3px;
+}
+
+.menu-still{
+    height: 485px;
+    width: 220px;
+    background-color: #ffffff;
+    border: 1px #e5e6e7 solid;
+    padding: 8px 8px 0px 8px;
+
 }
 
 .tab-pane.active {
@@ -85,11 +120,12 @@
 
 .menu-event .my-row{
   width: 100%;
-  margin: 0;
+  margin-bottom: 5px;
 }
 
-.menu-event .my-row{
-  margin-bottom: 3px;
+.menu-event .info-block>div {
+  height: 30px;
+  line-height: 30px;
 }
 
 .menu-event .my-row>span{
@@ -108,14 +144,12 @@
 
 
 
-
-
 .menu-still{
     height: 485px;
     width: 220px;
     background-color: #ffffff;
     border: 1px #e5e6e7 solid;
-    padding: 8px 8px 0px 8px;
+    padding: 10px 10px 0px 10px;
 
 }
 .menu-still-string{
@@ -178,6 +212,154 @@
     float: right;
     color:#629cfe !important;
 }
-.still-foter{
+.still-footer{
+    height: 30px;
     width: 200px;
+    line-height: 30px;
+    vertical-align: middle;
+    font-family: HelveticaNeue-Light;
+    font-size: 12px;
+    color: #000000;
+    /*text-align: center;*/
 }
+.menu-still-name,.menu-still-data{
+    height: 25px;
+    display: inline-block;
+    line-height: 25px;
+    vertical-align: middle;
+    font-family: HelveticaNeue-Light;
+    font-size: 12px;
+
+}
+.menu-still-name{
+    text-align: center;
+    color: #000000;
+    width: 70px;
+    border-right: 1px #c3c5c7 solid;
+    float: left;
+}
+.menu-still-data{
+    padding: 0px 0px 0px 10px;
+    width: 130px;
+    float: right;
+    color:#5191ff;
+}
+.menu-still-capture-name{
+    padding: 0px 0px 0px 10px;
+}
+.menu-still-capture-date{
+    font-family: HelveticaNeue-Medium !important;
+}
+
+
+
+
+.menu-event .action-btn {
+  width: 100%;
+  line-height: 29px;
+  color: #ffffff;
+  margin-top: 21px;
+}
+
+.dotted-row {
+  width: 43%;
+  position: absolute;
+  top: 47px;
+  border-bottom: 1px dotted #5191ff;
+  height: 1px !important;
+}
+
+.dotted-row.gray-color {
+  border-bottom: 1px dotted #bebebe;
+  width: 98%;
+  top: 74px;
+}
+
+.gray-block {
+  background-color: #f5f5f5;
+  border: 1px solid #bebebe;
+}
+
+.menu-event .second-block>div {
+  height: 29px;
+  line-height: 29px;
+}
+
+.menu-event .second-block>div {
+  border-bottom: none;
+}
+
+.menu-event .second-block>div:last-child {
+  border-bottom: 1px solid #bebebe;;
+}
+
+.dark-yellow-gb {
+  background-color: #f5d132;
+}
+
+.orange-gb {
+  background-color: #ff963b;
+}
+
+.red-gb {
+  background-color: #fb4d4e;
+}
+
+.pos-relative {
+  position: relative;
+}
+
+.no-border, .no-border>* {
+  border-top: none;
+  border-bottom: none;
+  border-right: none;
+  border-left: none;
+  border: none;
+}
+
+.tab2 .my-row {
+  border: none;
+  margin-bottom: 14px;
+}
+
+.tab2 .my-row:last-child {
+  margin-bottom: auto;
+}
+
+.tab2 .dotted-row {
+  width: 89%;
+}
+
+.dotted-row.first-dot{
+  top: 97px;
+}
+
+.dotted-row.second-dot{
+  top: 141px;
+}
+
+.tab2 .my-row>.selection-btn{
+  display: inline-block;
+  float: left;
+  width: 19%;
+  margin-right: 5px;
+}
+
+.tab2 .selection-btn.my-row:hover {
+  border: none;
+}
+
+.tab2 .my-row>.selection-btn:last-child{
+  margin-right: 0;
+}
+
+.tab2 .my-row>.selection-btn.xs-btn {
+  width: 30px;
+}
+
+.menu-event .tab2 .my-row>span{
+  width: 90px;
+  text-align: left;
+  padding-left: 10px
+}
+
