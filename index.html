@@ -252,8 +252,49 @@
                     <ul class="nav navbar-nav">
                         <li class="responsible-btn gray-border-right "><span class="gray-text">Pano Node</span></li>
                         <li class="responsible-btn gray-border-right"><span class="gray-text">Still</span></li>
-                        <li class="responsible-btn gray-border-right"><span class="gray-text">Event</span></li>
-                        <li class="responsible-btn gray-border-right" onclick="showMenu('#menu-depts')"><span class="gray-text">Merch Depts</span>
+                        <li class="responsible-btn gray-border-right" id="btn-event">
+                            <span onclick="showMenu('#menu-event', '#btn-event')" class="gray-text">Event</span>
+                            <div id="menu-event" class="menu-event menu-common">
+                                <div>
+                                    <ul class="nav nav-tabs guide-tabs">
+                                        <li role="presentation" class="text-left">
+                                            <input id="activity1" name="activity" type="radio" checked>
+                                            <label for="activity1" class="red-block hover-red guide-tab gray-border no-border-bottom">
+                                                <!--light-gray-bg gray-border -->
+                                                <span>Event Activity</span>
+                                            </label>
+                                        </li>
+                                        <li role="presentation" class="text-right">
+                                            <input id="activity2" name="activity" type="radio">
+                                            <label for="activity2" class="red-block hover-red guide-tab  gray-border no-border-bottom">
+                                                <span>Event Status</span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="gray-border light-gray-bg info-block no-border-bottom in-it-some-border overflow-hidden">
+                                    <div class="text-left gray-border-right gray-border-bottom col-md-6">
+                                        <input id="started1" type="checkbox">
+                                        <label for="started1" class="yellow-block hover-yellow">
+                                            <span>Started</span>
+                                        </label>
+                                    </div>
+                                    <div class=" text-left gray-border-bottom col-md-6 date-block">
+                                        <input type="date" type="text" class="form-control" placeholder="00 - 00 - 0000">
+                                    </div>
+                                    <div class="text-left gray-border-right gray-border-bottom col-md-6">
+                                        <input id="ended2" type="checkbox">
+                                        <label for="ended2" class="green-block hover-green">
+                                            <span>Ended</span>
+                                        </label>
+                                    </div>
+                                    <div class=" text-left gray-border-bottom col-md-6 date-block">
+                                        <input type="date" type="text" class="form-control" placeholder="00 - 00 - 0000">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="responsible-btn gray-border-right" id="btn-depts"><span  onclick="showMenu('#menu-depts', '#btn-depts')" class="gray-text">Merch Depts</span>
                             <!--------------------------------Merch Depts-------------------------------------------->
                             <div id="menu-depts" class="menu-common menu-depts">
                                 <div class="menu-depts-container">
@@ -305,9 +346,6 @@
                                             <span>Customer Service Department</span>
                                         </label>
                                     </div>
-
-
-
                                 </div>
 
                             </div>
@@ -315,51 +353,91 @@
 
                         </li>
                         <li class="responsible-btn gray-border-right"><span class="gray-text">Activity</span></li>
-                        <li class="responsible-btn gray-border-right" id="btn-heatmap"><span  onclick="showMenu('#menu-heatmap', '#btn-heatmap')"class="gray-text">Heat Map</span>
+                        <li class="responsible-btn gray-border-right" id="btn-heatmap">
+                            <span onclick="showMenu('#menu-heatmap', '#btn-heatmap')"class="gray-text">Heat Map</span>
                             <div id="menu-heatmap" class="menu-heatmap menu-common ">
-                                <section id="question" hidden="hidden">
+                                <section id="question" >
                                     <div class="gray-bg title-block">Step 01: Select data range: </div>
                                     <div>
                                         <ul class="nav nav-tabs guide-tabs">
-                                            <li role="presentation" class="light-gray-bg gray-border guide-tab guide-tab-active red-block">
-                                                <a href="">Range</a>
+                                            <li role="presentation" class="text-left">
+                                                <input id="range1" name="range" type="radio" checked>
+                                                <label for="range1" class="red-block hover-red guide-tab gray-border no-border-bottom">
+                                                    <!--light-gray-bg gray-border -->
+                                                    <span>Range</span>
+                                                </label>
                                             </li>
-                                            <li role="presentation" class="light-gray-bg gray-border guide-tab "><a href="">Last 7 Days</a></li>
-                                            <li role="presentation" class="light-gray-bg gray-border guide-tab"><a href="">Last Month</a></li>
+                                            <li role="presentation" class="">
+                                                <input id="range2" name="range" type="radio">
+                                                <label for="range2" class="red-block hover-red guide-tab  gray-border no-border-bottom">
+                                                    <span>Last 7 Days</span>
+                                                </label>
+                                            </li>
+                                            <li role="presentation" class="text-right">
+                                                <input id="range3" name="range" type="radio">
+                                                <label for="range3" class="red-block hover-red guide-tab  gray-border no-border-bottom">
+                                                    <span>Last Month</span>
+                                                </label>
+                                            </li>
                                         </ul>
                                     </div>
                                     <div class="gray-border light-gray-bg info-block no-border-bottom in-it-some-border overflow-hidden">
-                                        <div class="yellow-block text-left gray-border-right gray-border-bottom col-md-6">
-                                            <!--hover-yellow-->
-                                            Started
+                                        <div class="text-left gray-border-right gray-border-bottom col-md-6">
+                                            <input id="started" type="checkbox">
+                                            <label for="started" class="yellow-block hover-yellow">
+                                                <span>Started</span>
+                                            </label>
                                         </div>
                                         <div class=" text-left gray-border-bottom col-md-6 date-block">
                                             <input type="date" type="text" class="form-control" id="start-date" placeholder="00 - 00 - 0000">
                                         </div>
-                                        <div class="text-left green-block  gray-border-right gray-border-bottom col-md-6">
-                                            <!--hover-green-->
-                                            Ended
+                                        <div class="text-left gray-border-right gray-border-bottom col-md-6">
+                                            <input id="ended" type="checkbox">
+                                            <label for="ended" class="green-block hover-green">
+                                                <span>Ended</span>
+                                            </label>
                                         </div>
                                         <div class=" text-left gray-border-bottom col-md-6 date-block">
                                             <input type="date" type="text" class="form-control" id="end-date" placeholder="00 - 00 - 0000">
                                         </div>
                                     </div>
                                     <div class="gray-bg title-block">Step 02: Select formula: </div>
-                                    <div class="gray-border light-gray-bg info-block in-it-some-border overflow-auto">
-                                        <div class="hover-red text-left gray-border-bottom col-md-12">
-                                            Started
+                                    <div class="gray-border  info-block in-it-some-border overflow-auto">
+                                        <div class="text-left light-gray-bg gray-border-bottom">
+                                            <input id="row1" name="range" type="checkbox">
+                                            <label for="row1" class="red-block hover-red ">
+                                                <span>Average unit sales</span>
+                                            </label>
                                         </div>
-                                        <div class="hover-red text-left gray-border-bottom col-md-12">
-                                            Started
+                                        <div class="text-left gray-border-bottom">
+                                            <input id="row2" name="range" type="checkbox">
+                                            <label for="row2" class="red-block hover-red ">
+                                                <span>Average unit sales</span>
+                                            </label>
                                         </div>
-                                        <div class="hover-red text-left gray-border-bottom col-md-12">
-                                            Started
+                                        <div class="text-left gray-border-bottom">
+                                            <input id="row3" name="range" type="checkbox">
+                                            <label for="row3" class="red-block hover-red ">
+                                                <span>Average unit sales</span>
+                                            </label>
                                         </div>
-                                        <div class="hover-red text-left gray-border-bottom col-md-12">
-                                            Started
+                                        <div class="text-left gray-border-bottom">
+                                            <input id="row4" name="range" type="checkbox">
+                                            <label for="row4" class="red-block hover-red ">
+                                                <span>Average unit sales</span>
+                                            </label>
                                         </div>
-                                        <div class="hover-red text-left gray-border-bottom col-md-12">
-                                            Started
+                                        <div class="text-left gray-border-bottom">
+                                            <input id="row5" name="range" type="checkbox">
+                                            <label for="row5" class="red-block hover-red ">
+                                                <span>Average unit sales</span>
+                                            </label>
+                                        </div>
+                                        <div class="text-left gray-border-bottom">
+                                            <input id="row6" name="range" type="checkbox">
+                                            <label for="row6" class="red-block hover-red ">
+                                                <span>Average unit sales</span>
+                                            </label>
                                         </div>
                                     </div>
                                     <div class="group-btn-block">
@@ -371,7 +449,7 @@
                                         </div>
                                     </div>
                                 </section>
-                                <section id="result" class="result">
+                                <section id="result" class="result" hidden="hidden">
                                     <div class="gray-bg title-block">Legend for formula:  Average unit sale </div>
                                     <div class="scale-block gray-border">
                                         <img src="assets/images/scale.png">
