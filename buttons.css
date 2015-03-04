@@ -13,7 +13,6 @@
 
 
 .selection-btn{
-    padding: 4px;
     text-align: center;
     color:#000000;
     font-size: 12px;
@@ -22,6 +21,8 @@
     border: 1px #bebebe solid;
     height: 30px;
     width: 200px;
+    line-height: 30px;
+    vertical-align:middle ;
 }
 .selection-btn:hover{
     outline:none !important;
@@ -36,7 +37,6 @@
 }
 
 .action-btn{
-    padding: 4px;
     text-align: center;
     color: #ffffff;
     font-size: 12px;
@@ -45,6 +45,8 @@
     border:1px #4650dc solid;
     height: 30px;
     width: 200px;
+    line-height: 30px;
+    vertical-align:middle ;
 }
 .action-btn:hover{
     outline:none !important;
