@@ -1123,25 +1123,3 @@ input[type="date"] {
 
 
 
-.menu-still{
-    height: 485px;
-    width: 220px;
-    background-color: #ffffff;
-    border: 1px #e5e6e7 solid;
-    padding: 8px 8px 0px 8px;
-
-}
-.menu-still-string{
-    background-color: #f5f5f5;
-    width: 200px;
-    height: 25px;
-    margin-bottom: 5px;
-}
-.line  {
-    border-top: 1px dashed  #d9dbdc;
-    width: 200px;
-    height: 18px;
-    margin-top: 3px;
-}
-
-

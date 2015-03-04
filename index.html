@@ -8,6 +8,8 @@
     <link rel="stylesheet"  href="assets/lib/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="assets/lib/jquery.ui/jquery-ui.css">
     <link rel="stylesheet" href="second.css">
+    <link rel="stylesheet" href="new_css.css">
+    <link rel="stylesheet" href="buttons.css">
 
     <script src="assets/lib/jquery/jquery.min.js"></script>
     <script src="assets/lib/jquery.ui/jquery-ui.js"></script>
@@ -255,52 +257,34 @@
                         <li class="responsible-btn gray-border-right" id="btn-event">
                             <span onclick="showMenu('#menu-event', '#btn-event')" class="gray-text">Event</span>
                             <div id="menu-event" class="menu-event menu-common">
-                                <div>
-                                    <ul class="nav nav-tabs guide-tabs">
-                                        <li role="presentation" class="text-left">
-                                            <input id="activity1" name="activity" type="radio" checked>
-                                            <label for="activity1" class="red-block hover-red guide-tab gray-border no-border-bottom">
-                                                <!--light-gray-bg gray-border -->
-                                                <span>Event Activity</span>
-                                            </label>
-                                        </li>
-                                        <li role="presentation" class="text-right">
-                                            <input id="activity2" name="activity" type="radio">
-                                            <label for="activity2" class="red-block hover-red guide-tab  gray-border no-border-bottom">
-                                                <span>Event Status</span>
-                                            </label>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="gray-border light-gray-bg no-border-bottom overflow-hidden">
-                                    <div class="info-block in-it-some-border gray-border-right light-gray-bg overflow-hidden main-first-column">
-                                        <div class="text-left gray-border-right gray-border-bottom col-md-5">
-                                            <input id="started1" type="checkbox">
-                                            <label for="started1" class="yellow-block hover-yellow">
-                                                <span>Started</span>
-                                            </label>
-                                        </div>
-                                        <div class=" text-left gray-border-bottom col-md-7 date-block">
-                                            <input type="date" type="text" class="form-control" placeholder="00 - 00 - 0000">
-                                        </div>
-                                        <div class="text-left gray-border-right gray-border-bottom col-md-5">
-                                            <input id="ended2" type="checkbox">
-                                            <label for="ended2" class="green-block hover-green">
-                                                <span>Ended</span>
-                                            </label>
-                                        </div>
-                                        <div class=" text-left gray-border-bottom col-md-7 date-block">
-                                            <input type="date" type="text" class="form-control" placeholder="00 - 00 - 0000">
-                                        </div>
-                                        <div class=" light-gray-bg btn-block col-md-12 green-block">
-                                            <span class="">Search</span>
-                                        </div>
-                                    </div>
-                                    <div class="third-column">
-                                        sdgfc
-                                    </div>
-                                </div>
+                                <ul class="nav nav-tabs" role="tablist">
+                                    <li role="presentation" class="active text-center no-border-bottom"><span href="#tab1" role="tab" data-toggle="tab" class="">Event Activity</span></li>
+                                    <li role="presentation" class=" text-center no-border-bottom"><span href="#tab2" role="tab" data-toggle="tab" class=" ">Event Status</span></li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div role="tabpanel" class="tab-pane active overflow-hidden" id="tab1">
+                                        <div class="info-block overflow-hidden main-first-column">
+                                            <div class="selection-btn my-row">
+                                                <span class="">Started</span>
+                                                <input type="date" class="" placeholder="00 - 00 - 0000">
+                                            </div>
+                                            <div class="selection-btn my-row">
+                                                <span class="">Ended</span>
+                                                <input type="date" class="" placeholder="00 - 00 - 0000">
+                                            </div>
 
+                                            <div class="action-btn">
+                                                <span class="">Search</span>
+                                            </div>
+                                        </div>
+                                        <div class="third-column">
+                                            sdgfc
+                                        </div>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane" id="tab2">
+                                        2 sdlh
+                                    </div>
+                                </div>
                             </div>
                         </li>
                         <li class="responsible-btn gray-border-right" id="btn-depts"><span  onclick="showMenu('#menu-depts', '#btn-depts')" class="gray-text">Merch Depts</span>
@@ -547,13 +531,35 @@
     <div id="left-page-block" class="left-page-block">
         left block
 
+
+
+        <!------------------------------Still menu------------------------------------------------>
         <div id="menu-still" class="menu-common menu-still" >
             <div class="menu-still-string"></div>
             <div class="menu-still-string"></div>
             <div class="line"></div>
+            <div class="selection-btn still-btn">
+                <span>
+                    <img src="assets/images/photo.png">Add new image
+                </span>
+            </div>
+            <div class="menu-still-content">
+
+            </div>
+
+            <div class="still-foter">
+                <div class="menu-still-capture">
+
+                </div>
+                <div class="selection-btn still-btn-gl">
+                    <span class="glyphicon glyphicon-fullscreen"> </span>
+                </div>
+            </div>
+            <div class="line"></div>
+
 
         </div>
-
+        <!------------------------------------------------------------------------------------------>
 
 
     </div>
