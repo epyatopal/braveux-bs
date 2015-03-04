@@ -990,7 +990,7 @@ input[type=radio]:checked + label.guide-tab{
   overflow: hidden;
 }
 
-.info-block {
+.menu-heatmap .info-block {
   margin-bottom: 3px;
 }
 
@@ -1099,7 +1099,7 @@ input[type="date"] {
 .main-first-column{
   display: inline-block;
   float: left;
-  width: ;
+  width: 308px;
 }
 
 .first-column{
