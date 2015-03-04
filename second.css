@@ -321,6 +321,18 @@ body a:hover {
   font-size: 1.6em;
 }
 
+.big-cb-block input[type=checkbox]+label:before{
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 22px;
+  left: 19px;
+  border: 7px solid transparent;
+  border-left-color: inherit;
+  border-right: 0;
+}
+
 input[type=checkbox]+label{
   border-left-width: 10px;
   border-left-style: solid;
