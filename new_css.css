@@ -2,7 +2,7 @@
   border: 1px solid #bebebe;
   box-shadow: 0 5px 20px 1px #bebebe;
   background-color: #ffffff;
-  padding: 5px;
+  padding: 9px;
 }
 
 
@@ -16,7 +16,7 @@
 
 .active {
   background-color: #ffffff;
-  padding: 10px;
+  padding: 13px 10px 10px;
 }
 
 
@@ -43,7 +43,7 @@
 }
 
 .menu-event .nav>li {
-  width: 174px;
+  width: 170px;
   height: 40px;
   background-color: #ffffff;
   color: #5191ff;
@@ -64,9 +64,9 @@
 }
 
 .menu-event .nav>li:not(.active)>span {
-  width: 172px;
+  width: 168px;
   margin: 0 0px 2px 2px;
-  height: 38px;
+  height: 37px;
   display: block;
 }
 
@@ -74,6 +74,8 @@
   display: inline-block;
   float: left;
   width: 50%;
+  position: relative;
+  padding-right: 5px;
 }
 
 .tab-pane.active {
@@ -84,11 +86,11 @@
 
 .menu-event .my-row{
   width: 100%;
-  margin: 0;
+  margin-bottom: 5px;
 }
 
-.menu-event .my-row{
-  margin-bottom: 3px;
+.menu-event .info-block>div {
+  height: 30px;
 }
 
 .menu-event .my-row>span{
@@ -103,4 +105,25 @@
   width: calc(100% - 60px);
   height: 28px;
   border-left: 1px solid #bebebe;
+}
+
+.menu-event .action-btn {
+  width: 100%;
+  line-height: 29px;
+  color: #ffffff;
+  margin-top: 20px;
+}
+
+.dotted-row {
+  width: 43%;
+  position: absolute;
+  top: 47px;
+  border-bottom: 1px dotted #5191ff;
+  height: 1px !important;
+}
+
+.dotted-row.gray-color {
+  border-bottom: 1px dotted #bebebe;
+  width: 98%;
+  top: 74px;
 }
