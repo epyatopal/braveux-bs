@@ -63,9 +63,16 @@
   border-bottom: 1px solid #5191ff;
 }
 
+.menu-event .nav>li:not(.active):first-child>span{
+  margin: 0 2px 2px 0;
+}
+
+.menu-event .nav>li:not(.active):last-child>span{
+  margin: 0 0 2px 2px;
+}
+
 .menu-event .nav>li:not(.active)>span {
   width: 168px;
-  margin: 0 0px 2px 2px;
   height: 37px;
   display: block;
 }
