@@ -701,7 +701,7 @@ input.vertical {
 
 .block-with-bnt {
   padding-top: 8px;
-  border-top: 1px dashed #bebebe;
+  border-top: 1px dotted #bebebe;
 }
 
 .block-with-bnt > div {
@@ -728,7 +728,7 @@ input.vertical {
 
 .user-info-row {
   padding-top: 5px;
-  border-top: 1px dashed #bebebe;
+  border-top: 1px dotted #bebebe;
   padding-bottom: 3px;
 }
 
@@ -740,7 +740,8 @@ input.vertical {
 
 /*menu-sales*/
 .menu-sales {
-  width: 268px;
+  width: 270px;
+  height: 280px;
   right: calc(35px + 1%);
   left: auto;
   padding: 0;
@@ -762,8 +763,15 @@ input.vertical {
   width: 100%;
 }
 
+.table-block.first-block{
+  margin-bottom: 5px;
+  border-bottom: 1px solid #bebebe;
+  padding-bottom: 5px;
+}
+
 .table-block > .table-row:last-child > .table-cell {
   border-bottom: none;
+
 }
 
 .table-row {
@@ -772,19 +780,30 @@ input.vertical {
 }
 
 .table-row > .table-cell:first-child {
-  border-right: 1px #999999 solid;
-  background-color: #f0f0f0;
+  /*border-right: 1px #999999 solid;*/
+  /*background-color: #f0f0f0;*/
   text-align: right;
-  min-width: 140px;
+  width: 115px;
+}
+
+.table-border {
+  border-left: 1px  #bebebe solid;
+  margin: 0 5px;
+  display: inline-block;
+  width: 1px;
+  height: 31px;
+  float: left;
 }
 
 .table-cell {
-  display: table-cell;
-  width: 50%;
-  padding: 7px 6px;
+  display: inline-block;
+  width: 49%;
+  padding: 5px 6px;
   font-size: 1em;
-  border-bottom: 1px #999999 solid;
+  border-bottom: 1px dotted  #bebebe;
   min-width: 80px;
+  float: left;
+  font-family: HelveticaNeue-Light;
 }
 
 .black-small-div {
