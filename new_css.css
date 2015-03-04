@@ -95,7 +95,7 @@
     margin-bottom: 5px;
 }
 .line  {
-    border-top: 1px dashed  #d9dbdc;
+    border-top: 1px dotted  #d9dbdc;
     width: 200px;
     height: 18px;
     margin-top: 3px;
@@ -153,7 +153,7 @@
     margin-bottom: 5px;
 }
 .line  {
-    border-top: 1px dashed  #d9dbdc;
+    border-top: 1px dotted  #d9dbdc;
     width: 200px;
     height: 8px;
     margin-top: 8px;
@@ -360,12 +360,12 @@
   width: 43%;
   position: absolute;
   top: 47px;
-  border-bottom: 1px dashed #5191ff;
+  border-bottom: 1px dotted #5191ff;
   height: 1px !important;
 }
 
 .dashed-row.gray-color {
-  border-bottom: 1px dashed #bebebe;
+  border-bottom: 1px dotted #bebebe;
   width: 98%;
   top: 74px;
 }

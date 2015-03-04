@@ -225,18 +225,27 @@
     </div>
     <!------------------------------------------------------------------------------------------------->
     <div id="menu-user" class="menu-common menu-user" >
-        <div class="text-center gray-border padding-bottom-min">
+        <div class="text-center padding-bottom-min">
             <img src="assets/images/user.png" class="img-circle user-avatar">
-            <div class="text-center in-it-span-block">
+            <div class="text-center in-it-span-block user-info-row">
                 <span class="big-text">Giuseppe Di Franco</span>
                 <span class="medium-text">National Merchandising</span>
                 <span class="medium-text">TM iD: <strong>646170</strong></span>
             </div>
         </div>
         <div class="text-center block-with-bnt">
-            <a class="gray-bg gray-border menu-item-active">Account Settings</a>
-            <a class="gray-bg gray-border">Help</a>
-            <a class="gray-bg gray-border">Logout</a>
+            <div class="selection-btn">
+                <span>Account Settings</span>
+            </div>
+            <div class="selection-btn">
+                <span>Help</span>
+            </div>
+            <div class="selection-btn">
+                <span>Logout</span>
+            </div>
+            <!--<a class="gray-bg  menu-item-active">Account Settings</a>-->
+            <!--<a class="gray-bg ">Help</a>-->
+            <!--<a class="gray-bg ">Logout</a>-->
         </div>
     </div>
     <div class="header ">
@@ -326,59 +335,58 @@
                             <!--------------------------------Merch Depts-------------------------------------------->
                             <div id="menu-depts" class="menu-common menu-depts">
                                 <div class="menu-depts-container">
-                                    <div class="menu-depts-department">
+                                    <div class="menu-depts-department big-cb-block">
                                         <input id="color1" type="checkbox">
-                                        <label for="color1" class="red-block hover-red">
+                                        <label for="color1" class="blue-block">
                                             <span>Highlight All Departments</span>
                                         </label>
                                     </div>
                                     <div class="menu-depts-department">
                                         <input id="color2" type="checkbox">
-                                        <label for="color2" class="green-block hover-green">
-                                            <span>Grocery / GMA Departments</span>
+                                        <label for="color2" class="green-block">
+                                            <span>Grocery / GMA</span>
                                         </label>
                                     </div>
                                     <div class="menu-depts-department">
                                         <input id="color3" type="checkbox">
-                                        <label for="color3" class="mint-block hover-mint">
-                                            <span>Dairy Department</span>
+                                        <label for="color3" class="mint-block">
+                                            <span>Dairy</span>
                                         </label>
                                     </div>
                                     <div class="menu-depts-department">
                                         <input id="color4" type="checkbox">
-                                        <label for="color4" class="blue-block hover-blue">
-                                            <span>Fresh Produce Department</span>
+                                        <label for="color4" class="blue-block">
+                                            <span>Fresh Produce</span>
                                         </label>
                                     </div>
                                     <div class="menu-depts-department">
                                         <input id="color5" type="checkbox">
-                                        <label for="color5" class="lilac-block hover-lilac">
-                                            <span>Meat Department</span>
+                                        <label for="color5" class="lilac-block">
+                                            <span>Meat</span>
                                         </label>
                                     </div>
                                     <div class="menu-depts-department">
                                         <input id="color6" type="checkbox">
-                                        <label for="color6" class="red-block hover-red">
-                                            <span>Deli Department</span>
+                                        <label for="color6" class="red-block">
+                                            <span>Deli</span>
                                         </label>
                                     </div>
                                     <div class="menu-depts-department">
                                         <input id="color7" type="checkbox">
-                                        <label for="color7" class="orange-block hover-orange">
-                                            Bakery Department
+                                        <label for="color7" class="orange-block">
+                                            <span>Bakery</span>
                                         </label>
                                     </div>
                                     <div class="menu-depts-department">
                                         <input id="color8" type="checkbox">
-                                        <label for="color8" class="yellow-block hover-yellow">
-                                            <span>Customer Service Department</span>
+                                        <label for="color8" class="yellow-block">
+                                            <span>Customer Service</span>
                                         </label>
                                     </div>
                                 </div>
 
                             </div>
                             <!--------------------------------------------------------------------------------------->
-
                         </li>
                         <li class="responsible-btn gray-border-right"><span class="gray-text">Activity</span></li>
                         <li class="responsible-btn gray-border-right" id="btn-heatmap">
@@ -499,45 +507,52 @@
 
 
     <div class="menu-common menu-sales" id="menu-sales">
-        <div class="gray-border">
-            <div class="table-block">
+        <!--<div class="gray-border">-->
+            <div class="table-block first-block">
                 <div class="table-row">
                     <div class="table-cell">Bay Name</div>
+                    <div class="table-border"></div>
                     <div class="table-cell">Health Foods (9/20)</div>
                 </div>
                 <div class="table-row">
                     <div class="table-cell">Bay No.</div>
+                    <div class="table-border"></div>
                     <div class="table-cell">469</div>
                 </div>
                 <div class="table-row">
                     <div class="table-cell">Bay Length</div>
+                    <div class="table-border"></div>
                     <div class="table-cell">1m</div>
                 </div>
             </div>
-            <div class="black-small-div"> </div>
             <div class="table-block ">
                 <div class="table-row">
                     <div class="table-cell text-uppercase">sales</div>
-                    <div class="table-cell red-text">0</div>
+                    <div class="table-border"></div>
+                    <div class="table-cell blue-text">0</div>
                 </div>
                 <div class="table-row">
                     <div class="table-cell text-uppercase">cocges</div>
-                    <div class="table-cell red-text">0</div>
+                    <div class="table-border"></div>
+                    <div class="table-cell blue-text">0</div>
                 </div>
                 <div class="table-row">
                     <div class="table-cell text-uppercase">gp$</div>
-                    <div class="table-cell red-text">$0.00</div>
+                    <div class="table-border"></div>
+                    <div class="table-cell blue-text">$0.00</div>
                 </div>
                 <div class="table-row">
                     <div class="table-cell text-uppercase">gp%</div>
-                    <div class="table-cell red-text">%000</div>
+                    <div class="table-border"></div>
+                    <div class="table-cell blue-text">%000</div>
                 </div>
                 <div class="table-row">
                     <div class="table-cell text-uppercase">sales+gnros</div>
-                    <div class="table-cell red-text">$0.00</div>
+                    <div class="table-border"></div>
+                    <div class="table-cell blue-text">$0.00</div>
                 </div>
             </div>
-        </div>
+        <!--</div>-->
     </div>
 
     <div id="left-zoom" class="gray-border-right gray-border-bottom left-menu ">

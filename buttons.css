@@ -23,6 +23,7 @@
     /*width: 200px;*/
     line-height: 30px;
     vertical-align:middle ;
+  cursor: pointer;
 }
 .selection-btn:hover{
     outline:none !important;
