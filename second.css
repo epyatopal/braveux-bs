@@ -1012,7 +1012,7 @@ input.vertical {
   right: 50%;
 }
 
-.menu-heatmap .variant-block >.selection-btn.my-row > *{
+.menu-heatmap .variant-block >.selection-btn.my-row  > label > *{
   border-left: 1px solid;
   border-color: inherit;
 }
@@ -1021,7 +1021,7 @@ input.vertical {
   /*border-left: 1px #a8c7ff solid;*/
 /*}*/
 
-.menu-heatmap .variant-block >.selection-btn.my-row > *:first-child {
+.menu-heatmap .variant-block >.selection-btn.my-row  > label > *:first-child {
   border-left:none;
 }
 
@@ -1034,20 +1034,28 @@ input.vertical {
   text-align: center;
 }
 
-.menu-heatmap .variant-block >.selection-btn.my-row.range > span{
-  width: 57px;
+.menu-heatmap .variant-block >.selection-btn.my-row > label {
+  padding: 0;
+  /*border: 0;*/
+  height: 30px;
+  width: 100%;
 }
 
-.menu-heatmap .variant-block >.selection-btn.my-row > span {
+.menu-heatmap .variant-block >.selection-btn.my-row.range > label > span{
+  width: 57px;
+  padding-left: 5px;
+}
+
+.menu-heatmap .variant-block >.selection-btn.my-row > label > span {
   display: inline-block;
   float: left;
 }
 
-.menu-heatmap .variant-block >.selection-btn.my-row:not(.range) > span {
+.menu-heatmap .variant-block >.selection-btn.my-row:not(.range) > label > span {
   padding-left: 10px;
 }
 
-.menu-heatmap .variant-block >.selection-btn.my-row > input[type="date"]{
+.menu-heatmap .variant-block >.selection-btn.my-row > label > input[type="date"]{
   width: 82px;
   display: inline-block;
   float: left;
@@ -1068,10 +1076,21 @@ input.vertical {
 }
 
 .title-block {
-  padding: 10px 13%;
   text-align: left;
-  margin-bottom: 3px;
+  border-bottom: 1px #bebebe dotted;
+  margin-bottom: 7px;
   color: #4d4d4d;
+  padding: 7px 5px;
+  font-family: HelveticaNeue-Light;
+}
+
+.title-block.two-border{
+  margin-top: 7px;
+  border-top: 1px #bebebe dotted;
+}
+
+.title-block > span {
+  font-family: HelveticaNeue-Medium;
 }
 
 .guide-tabs {
@@ -1149,6 +1168,10 @@ input[type=radio]:checked + label.guide-tab{
   margin-bottom: 3px;
 }
 
+.menu-heatmap .info-block > div {
+  margin-bottom: 5px;
+}
+
 .info-block > div{
   padding: 0;
   height: 29px;
@@ -1172,6 +1195,9 @@ input[type=radio]:checked + label.guide-tab{
 
 .group-btn-block {
   overflow: hidden;
+  margin-top: 7px;
+  padding-top: 7px;
+  border-top: 1px #bebebe dotted;
 }
 
 .group-btn-block > button {

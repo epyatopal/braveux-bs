@@ -393,59 +393,66 @@
                             <span onclick="showMenu('#menu-heatmap', '#btn-heatmap')"class="gray-text">Heat Map</span>
                             <div id="menu-heatmap" class="menu-heatmap menu-common popup top">
                                 <section id="question" >
-                                    <div class="gray-bg title-block">Step 01: Select data range: </div>
+                                    <div class="title-block">Step 01: <span>Select data range: </span></div>
                                     <div class="variant-block">
-                                        <div class="selection-btn my-row range">
-                                            <span>Range</span>
-                                            <span class="">Started</span>
-                                            <input type="date" class="" placeholder="00 - 00 - 0000">
-                                            <span class="">Ended</span>
-                                            <input type="date" class="" placeholder="00 - 00 - 0000">
+                                        <div class="selection-btn my-row checkbox-row range">
+                                            <input id="range1" name="range" type="radio">
+                                            <label for="range1" class=" ">
+                                                <span>Range</span>
+                                                <span class="">Started</span>
+                                                <input type="date" class="" placeholder="00 - 00 - 0000">
+                                                <span class="">Ended</span>
+                                                <input type="date" class="" placeholder="00 - 00 - 0000">
+                                            </label>
                                         </div>
-
-                                        <div class="selection-btn my-row selection-btn-active">
-                                            <span>Last 7 Days</span>
+                                        <div class="selection-btn my-row checkbox-row">
+                                            <input id="range2" name="range" type="radio">
+                                            <label for="range2" class=" ">
+                                                <span>Last 7 Days</span>
+                                            </label>
                                         </div>
-
-                                        <div class="selection-btn my-row">
-                                            <span>Last Month</span>
+                                        <div class="selection-btn my-row checkbox-row">
+                                            <input id="range3" name="range" type="radio">
+                                            <label for="range3" class=" ">
+                                                <span>Last Month</span>
+                                            </label>
                                         </div>
                                     </div>
-                                    <div class="gray-bg title-block">Step 02: Select formula: </div>
-                                    <div class="gray-border  info-block in-it-some-border overflow-auto">
-                                        <div class="text-left light-gray-bg gray-border-bottom">
+                                    <div class="title-block two-border">Step 02: <span>Select formula:</span> </div>
+                                    <div class=" info-block in-it-some-border overflow-auto">
+                                        <div class="text-left selection-btn my-row checkbox-row">
                                             <input id="row1" name="range" type="checkbox">
-                                            <label for="row1" class="red-block hover-red ">
+                                            <label for="row1" class=" ">
                                                 <span>Average unit sales</span>
                                             </label>
                                         </div>
-                                        <div class="text-left gray-border-bottom">
+                                        <div class="text-left selection-btn my-row checkbox-row">
                                             <input id="row2" name="range" type="checkbox">
-                                            <label for="row2" class="red-block hover-red ">
+                                            <label for="row2" class="">
                                                 <span>Average unit sales</span>
                                             </label>
                                         </div>
-                                        <div class="text-left gray-border-bottom">
+                                        <div class="text-left selection-btn my-row checkbox-row">
                                             <input id="row3" name="range" type="checkbox">
-                                            <label for="row3" class="red-block hover-red ">
+                                            <label for="row3" class="">
                                                 <span>Average unit sales</span>
                                             </label>
                                         </div>
-                                        <div class="text-left gray-border-bottom">
+                                        <div class="text-left selection-btn my-row checkbox-row">
                                             <input id="row4" name="range" type="checkbox">
-                                            <label for="row4" class="red-block hover-red ">
+                                            <label for="row4" class="">
                                                 <span>Average unit sales</span>
                                             </label>
                                         </div>
-                                        <div class="text-left gray-border-bottom">
+                                        <div class="text-left selection-btn my-row checkbox-row">
                                             <input id="row5" name="range" type="checkbox">
-                                            <label for="row5" class="red-block hover-red ">
+                                            <label for="row5" class="">
                                                 <span>Average unit sales</span>
                                             </label>
                                         </div>
-                                        <div class="text-left gray-border-bottom">
+                                        <div class="text-left selection-btn my-row checkbox-row">
                                             <input id="row6" name="range" type="checkbox">
-                                            <label for="row6" class="red-block hover-red ">
+                                            <label for="row6" class="">
                                                 <span>Average unit sales</span>
                                             </label>
                                         </div>
