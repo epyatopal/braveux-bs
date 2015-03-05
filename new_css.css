@@ -376,4 +376,15 @@
   text-align: left;
   padding-left: 10px
 }
+.photo{
+    background-image: url("assets/images/photo.png");
+    background-repeat:no-repeat ;
+    background-position: 40px;
+}
+.photo-active{
+    background-image: url("assets/images/photoActive.png") !important;
+    background-color: #5191ff !important;
+    color: #ffffff !important;
+    border: 1px solid #4758e0 !important;
+}
 
