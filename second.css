@@ -1172,12 +1172,52 @@ input[type="date"] {
 /*menu-event*/
 
 .menu-event {
-  width: 443px;
+  width: 360px;
+  height: 200px;
   margin-top: 12px !important;
   left: 50%;
-  margin-left: -221px;
+  margin-left: -180px;
   background-color: #4d4d4d;
   display: none;
+}
+
+.menu-event .nav {
+  border-bottom: none;
+}
+
+.menu-event .nav>li {
+  width: 170px;
+  height: 40px;
+  background-color: #ffffff;
+  color: #5191ff;
+}
+
+.menu-event .nav>li.active {
+  border-left: 1px solid #5191ff;
+  border-top: 1px solid #5191ff;
+  border-right: 1px solid #5191ff;
+}
+
+.menu-event .nav>li.active > span {
+  color: #5191ff;
+}
+
+.menu-event .nav>li:not(.active) {
+  border-bottom: 1px solid #5191ff;
+}
+
+.menu-event .nav>li:not(.active):first-child>span{
+  margin: 0 2px 2px 0;
+}
+
+.menu-event .nav>li:not(.active):last-child>span{
+  margin: 0 0 2px 2px;
+}
+
+.menu-event .nav>li:not(.active)>span {
+  width: 168px;
+  height: 37px;
+  display: block;
 }
 
 .menu-event .guide-tabs > li{
@@ -1201,10 +1241,40 @@ input[type="date"] {
   width: 99%;
 }
 
+.menu-event .my-row{
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.menu-event .info-block>div {
+  height: 30px;
+  line-height: 30px;
+}
+
+.menu-event .my-row>span{
+  display: inline-block;
+  float: left;
+  line-height: 29px;
+  width: 60px;
+}
+
+.menu-event .my-row>input  {
+  float: right;
+  width: calc(100% - 60px);
+  height: 28px;
+  border-left: 1px solid #bebebe;
+}
+
 .main-first-column{
   display: inline-block;
   float: left;
-  width: 308px;
+  width: 50%;
+  position: relative;
+  padding-right: 5px;
+}
+
+.main-first-column + .main-first-column {
+  padding-right: 0;
 }
 
 .first-column{

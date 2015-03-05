@@ -32,61 +32,6 @@
   border: 1px solid #5191ff;
 }
 
-.menu-event {
-  width: 360px;
-  height: 200px;
-}
-
-.menu-event .nav {
-  border-bottom: none;
-}
-
-.menu-event .nav>li {
-  width: 170px;
-  height: 40px;
-  background-color: #ffffff;
-  color: #5191ff;
-}
-
-.menu-event .nav>li.active {
-  border-left: 1px solid #5191ff;
-  border-top: 1px solid #5191ff;
-  border-right: 1px solid #5191ff;
-}
-
-.menu-event .nav>li.active > span {
-  color: #5191ff;
-}
-
-.menu-event .nav>li:not(.active) {
-  border-bottom: 1px solid #5191ff;
-}
-
-.menu-event .nav>li:not(.active):first-child>span{
-  margin: 0 2px 2px 0;
-}
-
-.menu-event .nav>li:not(.active):last-child>span{
-  margin: 0 0 2px 2px;
-}
-
-.menu-event .nav>li:not(.active)>span {
-  width: 168px;
-  height: 37px;
-  display: block;
-}
-
-.main-first-column{
-  display: inline-block;
-  float: left;
-  width: 50%;
-  position: relative;
-  padding-right: 5px;
-}
-
-.main-first-column + .main-first-column {
-  padding-right: 0;
-}
 
 .menu-still-string{
     background-color: #f5f5f5;
@@ -116,30 +61,6 @@
   border-right: 1px solid #5191ff;
 }
 
-
-.menu-event .my-row{
-  width: 100%;
-  margin-bottom: 5px;
-}
-
-.menu-event .info-block>div {
-  height: 30px;
-  line-height: 30px;
-}
-
-.menu-event .my-row>span{
-  display: inline-block;
-  float: left;
-  line-height: 29px;
-  width: 60px;
-}
-
-.menu-event .my-row>input  {
-  float: right;
-  width: calc(100% - 60px);
-  height: 28px;
-  border-left: 1px solid #bebebe;
-}
 
 .menu-still-string{
     background-color: #f5f5f5;
@@ -287,24 +208,13 @@
 }
 
 
-
-
-
-
 .popup {
     position: absolute;
-
-
     border: 1px solid #bebebe;
     padding: 9px;
     background-color: #ffffff;
-
     box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
 }
-
-
-
-
 
 .popup:before, .popup:after {
     content: "";
@@ -313,7 +223,7 @@
 .popup.bottom:before {
     border-left: 10px solid rgba(113, 101, 58, 0);
     border-right: 10px solid rgba(113, 101, 58, 0);
-    border-top: 10px solid #e5e6e7;
+    border-top: 10px solid #bebebe;
     left: 100px;
     bottom: -10px;
 }
@@ -329,7 +239,7 @@
 .popup.top:before {
     border-left: 10px solid rgba(113, 101, 58, 0);
     border-right: 10px solid rgba(113, 101, 58, 0);
-    border-bottom: 10px solid #e5e6e7;
+    border-bottom: 10px solid #bebebe;
     /*left: 20px;*/
     top: -10px;
 }
@@ -354,8 +264,6 @@
 .menu-depts:after,.menu-depts:before{
     left: 90px !important;
 }
-
-
 
 .menu-event .action-btn {
   width: 100%;
