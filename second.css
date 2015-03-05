@@ -1058,6 +1058,10 @@ input.vertical {
   margin-bottom: 3px;
 }
 
+
+.menu-heatmap.popup.top:after{
+  right: 50%;
+}
 .result > .title-block {
   padding: 7px 6px;
   text-align: center;
@@ -1174,7 +1178,6 @@ input[type=radio]:checked + label.guide-tab{
   width: 168px;
   display: inline-block;
   text-align: center;
-  /*padding: 9px 6px;*/
 }
 
 .group-btn-block > button:first-child {
