@@ -1075,6 +1075,16 @@ input.vertical {
   text-align: center;
 }
 
+.result > .group-btn-block > button{
+  width: 100%;
+}
+
+.result > .group-btn-block >button > .glyphicon-chevron-left{
+  float: left;
+  top: 6px;
+  font-size: 11px;
+}
+
 .title-block {
   text-align: left;
   border-bottom: 1px #bebebe dotted;

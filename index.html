@@ -392,7 +392,7 @@
                         <li class="responsible-btn gray-border-right" id="btn-heatmap">
                             <span onclick="showMenu('#menu-heatmap', '#btn-heatmap')"class="gray-text">Heat Map</span>
                             <div id="menu-heatmap" class="menu-heatmap menu-common popup top">
-                                <section id="question" >
+                                <section id="question"  hidden="hidden">
                                     <div class="title-block">Step 01: <span>Select data range: </span></div>
                                     <div class="variant-block">
                                         <div class="selection-btn my-row checkbox-row range">
@@ -462,13 +462,13 @@
                                         <button class="action-btn">Search</button>
                                     </div>
                                 </section>
-                                <section id="result" class="result" hidden="hidden">
-                                    <div class="gray-bg title-block">Legend for formula:  Average unit sale </div>
-                                    <div class="scale-block gray-border">
+                                <section id="result" class="result">
+                                    <div class=" title-block">Legend for formula:  <span>Average unit sale </span> </div>
+                                    <div class="scale-block">
                                         <img src="assets/images/scale.png">
                                     </div>
-                                    <div class="gray-border light-gray-bg padding-common green-block">
-                                        <a class="">Back to search</a>
+                                    <div class="group-btn-block padding-common">
+                                        <button class="action-btn"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> Back to search</button>
                                     </div>
                                 </section>
                             </div></li>
