@@ -970,7 +970,7 @@ input.vertical {
   z-index: 100;
   margin-top: 11px !important;
   width: 200px;
-  height: 310px;
+  height: auto;
 }
 
 .menu-depts:before {
@@ -999,8 +999,8 @@ input.vertical {
   margin: auto;
   position: absolute;
   left: 50%;
-  margin-left: -184px;
-  width: 368px;
+  margin-left: -180px;
+  width: 360px;
   padding: 0;
   display: none;
   background-color: #4d4d4d;
@@ -1010,6 +1010,52 @@ input.vertical {
 
 .menu-heatmap:before {
   right: 50%;
+}
+
+.menu-heatmap .variant-block >.selection-btn.my-row > *{
+  border-left: 1px solid;
+  border-color: inherit;
+}
+
+/*.menu-heatmap .selection-btn.my-row:hover > *{*/
+  /*border-left: 1px #a8c7ff solid;*/
+/*}*/
+
+.menu-heatmap .variant-block >.selection-btn.my-row > *:first-child {
+  border-left:none;
+}
+
+.menu-heatmap .selection-btn.my-row > input[type=radio]:checked + label.guide-tab, .menu-heatmap .selection-btn.my-row > input[type=radio] + label.guide-tab{
+  width: 55px;
+  float: left;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  text-align: center;
+}
+
+.menu-heatmap .variant-block >.selection-btn.my-row.range > span{
+  width: 57px;
+}
+
+.menu-heatmap .variant-block >.selection-btn.my-row > span {
+  display: inline-block;
+  float: left;
+}
+
+.menu-heatmap .variant-block >.selection-btn.my-row:not(.range) > span {
+  padding-left: 10px;
+}
+
+.menu-heatmap .variant-block >.selection-btn.my-row > input[type="date"]{
+  width: 82px;
+  display: inline-block;
+  float: left;
+  height: 29px;
+}
+
+.menu-heatmap .variant-block >.selection-btn.my-row{
+  margin-bottom: 3px;
 }
 
 .result > .title-block {
@@ -1124,22 +1170,22 @@ input[type=radio]:checked + label.guide-tab{
   overflow: hidden;
 }
 
-.group-btn-block > div {
-  width: 180px;
+.group-btn-block > button {
+  width: 168px;
   display: inline-block;
   text-align: center;
-  padding: 9px 6px;
+  /*padding: 9px 6px;*/
 }
 
-.group-btn-block > div:first-child {
+.group-btn-block > button:first-child {
   float: left;
 }
 
-.group-btn-block > div:last-child {
+.group-btn-block > button:last-child {
   float: right;
 }
 
-.group-btn-block > div > a {
+.group-btn-block > button > a {
   color: #4d4d4d;
 }
 

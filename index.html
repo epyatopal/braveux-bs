@@ -394,47 +394,21 @@
                             <div id="menu-heatmap" class="menu-heatmap menu-common ">
                                 <section id="question" >
                                     <div class="gray-bg title-block">Step 01: Select data range: </div>
-                                    <div>
-                                        <ul class="nav nav-tabs guide-tabs">
-                                            <li role="presentation" class="text-left">
-                                                <input id="range1" name="range" type="radio" checked>
-                                                <label for="range1" class="red-block hover-red guide-tab gray-border no-border-bottom">
-                                                    <!--light-gray-bg gray-border -->
-                                                    <span>Range</span>
-                                                </label>
-                                            </li>
-                                            <li role="presentation" class="">
-                                                <input id="range2" name="range" type="radio">
-                                                <label for="range2" class="red-block hover-red guide-tab  gray-border no-border-bottom">
-                                                    <span>Last 7 Days</span>
-                                                </label>
-                                            </li>
-                                            <li role="presentation" class="text-right">
-                                                <input id="range3" name="range" type="radio">
-                                                <label for="range3" class="red-block hover-red guide-tab  gray-border no-border-bottom">
-                                                    <span>Last Month</span>
-                                                </label>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="gray-border light-gray-bg info-block no-border-bottom in-it-some-border overflow-hidden">
-                                        <div class="text-left gray-border-right gray-border-bottom col-md-6">
-                                            <input id="started" type="checkbox">
-                                            <label for="started" class="yellow-block hover-yellow">
-                                                <span>Started</span>
-                                            </label>
+                                    <div class="variant-block">
+                                        <div class="selection-btn my-row range">
+                                            <span>Range</span>
+                                            <span class="">Started</span>
+                                            <input type="date" class="" placeholder="00 - 00 - 0000">
+                                            <span class="">Ended</span>
+                                            <input type="date" class="" placeholder="00 - 00 - 0000">
                                         </div>
-                                        <div class=" text-left gray-border-bottom col-md-6 date-block">
-                                            <input type="date" type="text" class="form-control" id="start-date" placeholder="00 - 00 - 0000">
+
+                                        <div class="selection-btn my-row selection-btn-active">
+                                            <span>Last 7 Days</span>
                                         </div>
-                                        <div class="text-left gray-border-right gray-border-bottom col-md-6">
-                                            <input id="ended" type="checkbox">
-                                            <label for="ended" class="green-block hover-green">
-                                                <span>Ended</span>
-                                            </label>
-                                        </div>
-                                        <div class=" text-left gray-border-bottom col-md-6 date-block">
-                                            <input type="date" type="text" class="form-control" id="end-date" placeholder="00 - 00 - 0000">
+
+                                        <div class="selection-btn my-row">
+                                            <span>Last Month</span>
                                         </div>
                                     </div>
                                     <div class="gray-bg title-block">Step 02: Select formula: </div>
@@ -477,12 +451,8 @@
                                         </div>
                                     </div>
                                     <div class="group-btn-block">
-                                        <div class="gray-border light-gray-bg orange-block">
-                                            <a class="hover-orange">Reset</a>
-                                        </div>
-                                        <div class="gray-border light-gray-bg ">
-                                            <a class="hover-green">Search</a>
-                                        </div>
+                                        <button class="selection-btn">Reset</button>
+                                        <button class="action-btn">Search</button>
                                     </div>
                                 </section>
                                 <section id="result" class="result" hidden="hidden">
