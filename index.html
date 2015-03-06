@@ -153,68 +153,71 @@
 <a class="fixed-size fixed-btn btn-user gray-border-left gray-border-bottom" id="btn-user"
    onclick="showMenu('#menu-user', '#btn-user')"></a>
 <!---------Store Selector-------------------------------------------------------------------------->
-<div id="store" class="menu-common menu-store">
+<div id="store" class="popup top menu-common menu-store">
     <div class="store-caption">
-        <div class="store-frame">
-            <p>Select a store</p>
+        <!--<div class="store-frame">-->
+            <span>Select a store</span>
+        <!--</div>-->
+    </div>
+    <div class="div-with-search ">
+        <div class="store-search input-group row-fluid">
+        <span class="input-group-btn span2">
+            <button class="btn store-search-btn" type="button">
+                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+            </button>
+        </span>
+            <input type="text" class="form-control span10" placeholder="Search" onfocus="placeholder=''" onblur="placeholder='Search'">
+
         </div>
     </div>
-    <div class="store-search input-group row-fluid">
-            <span class="input-group-btn span2">
-                <button class="btn store-search-btn" type="button">
-                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                </button>
-            </span>
-        <input type="text" class="form-control span10" placeholder="Search" onfocus="placeholder=''"
-               onblur="placeholder='Search'">
-    </div>
+    <button class="selection-btn" type="button">
+        Search store
+    </button>
     <div class="store-name row-fluid ">
-        <span class="span1 menu-store-name hover-red">ACT</span>
-        <span class="span1 menu-store-name hover-red">NSW</span>
-        <span class="span1 menu-store-name hover-red">NT</span>
-        <span class="span1 menu-store-name hover-red">QLD</span>
-        <span class="span1 menu-store-name hover-red">SA</span>
-        <span class="span1 menu-store-name hover-red">TAS</span>
-        <span class="span1 menu-store-name hover-red">VIC</span>
-        <span class="span1 menu-store-name menu-store-name-wa hover-red">WA</span>
+        <span class="span1 menu-store-name selection-btn">ACT</span>
+        <span class="span1 menu-store-name selection-btn">NSW</span>
+        <span class="span1 menu-store-name selection-btn">NT</span>
+        <span class="span1 menu-store-name selection-btn">QLD</span>
+        <span class="span1 menu-store-name selection-btn">SA</span>
+        <span class="span1 menu-store-name selection-btn">TAS</span>
+        <span class="span1 menu-store-name selection-btn">VIC</span>
+        <span class="span1 menu-store-name selection-btn">WA</span>
     </div>
     <div class="store-table">
-        <table class="menu-store-table row-fluid">
-            <tr class="store-table-caption">
-                <td class="span8 menu-storeName">STORE NAME <span class="caret caret-red"></span></td>
-                <td class="span4 menu-storeSize">STORE SIZE <span class="caret caret-red"></span></td>
-            </tr>
-            <tr>
-                <td class="span8 menu-storeName"></td>
-                <td class="span4 menu-storeSize"></td>
-            </tr>
-            <tr>
-                <td class="span8 menu-storeName"></td>
-                <td class="span4 menu-storeSize"></td>
-            </tr>
-            <tr>
-                <td class="span8 menu-storeName"></td>
-                <td class="span4 menu-storeSize"></td>
-            </tr>
-            <tr>
-                <td class="span8 menu-storeName "></td>
-                <td class="span4 menu-storeSize"></td>
-            </tr>
-            <tr>
-                <td class="span8 menu-storeName"></td>
-                <td class="span4 menu-storeSize"></td>
-            </tr>
-            <tr>
-                <td class="span8 menu-storeName"></td>
-                <td class="span4 menu-storeSize"></td>
-            </tr>
+        <div class="store-table-caption">
+            <div class="span8 menu-storeName col-md-8">STORE NAME <span class="caret caret-blue"></span></div>
+            <div class="span4 menu-storeSize col-md-4">STORE SIZE <span class="caret caret-blue"></span></div>
+        </div>
+        <div class="selection-btn">
+            <div class="span8 menu-storeName"><span class="text-capitalize float-left">Balarat</span> <span class="float-right">VIC</span></div>
+            <div class="span4 menu-storeSize"><span>4000</span></div>
+        </div>
+        <div class="selection-btn">
+            <div class="span8 menu-storeName"><span class="text-capitalize float-left">Balarat</span> <span class="float-right">VIC</span></div>
+            <div class="span4 menu-storeSize"><span>4000</span></div>
+        </div>
+        <div class="selection-btn">
+            <div class="span8 menu-storeName"><span class="text-capitalize float-left">Balarat</span> <span class="float-right">VIC</span></div>
+            <div class="span4 menu-storeSize"><span>4000</span></div>
+        </div>
+        <div class="selection-btn">
+            <div class="span8 menu-storeName"><span class="text-capitalize float-left">Balarat</span> <span class="float-right">VIC</span></div>
+            <div class="span4 menu-storeSize"><span>4000</span></div>
+        </div>
+        <div class="selection-btn">
+            <div class="span8 menu-storeName"><span class="text-capitalize float-left">Balarat</span> <span class="float-right">VIC</span></div>
+            <div class="span4 menu-storeSize"><span>4000</span></div>
+        </div>
+    </div>
 
-        </table>
+    <div class="group-btn-block">
+        <button class="selection-btn">Reset</button>
+        <button class="selection-btn">Confirm</button>
     </div>
-    <div class="store-footer row-fluid">
-        <span class="span6 menu-storeReset">Reset</span>
-        <span class="span6 menu-storeConfirm">Confirm</span>
-    </div>
+    <!--<div class="store-footer row-fluid">-->
+        <!--<span class="span6 menu-storeReset">Reset</span>-->
+        <!--<span class="span6 menu-storeConfirm">Confirm</span>-->
+    <!--</div>-->
 </div>
 <!------------------------------------------------------------------------------------------------->
 <div id="menu-user" class="menu-common popup top menu-user">
