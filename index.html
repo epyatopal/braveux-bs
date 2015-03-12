@@ -31,6 +31,16 @@
             } else {
                 $(id_btn).removeClass("current");
             }
+
+            $(function() {
+                $( "#body-block").on('click',function(){
+                    $(".popup, .menu-shortcut-conteiner").hide();
+                    $(".nav.navbar-nav li", "div.header").removeClass("current");
+                    $(".nav.navbar-nav li", "div.header").removeClass("active-btn");
+
+                });
+            });
+
         }
         $(function () {
             var minH = $("#left-page-block").height();
@@ -83,24 +93,24 @@
 <a class="fixed-size fixed-btn btn-landing gray-border-right gray-border-bottom"></a>
 <a class="fixed-size fixed-btn btn-shortcut gray-border-right gray-border-bottom" onclick="showMenu('#shortcut')"></a>
 <!---------Module Shortcut------------------------------------------------------------------------->
-<div id="shortcut" class="dropdown-menu menu-shortcut-conteiner" role="menu" aria-labelledby="shortcut">
+<div id="shortcut" class="dropdown-menu menu-shortcut-conteiner"   role="menu" aria-labelledby="shortcut">
     <div class="menu-shortcut-main">
         <div class="row-fluid menu-shortcut-tr">
             <div class="menu-shortcut-td">
                 <a href="#" class="thumbnail span4 menu-shortcut">
-                    <img src="assets/images/Register.png">
+                    <div  class="icon icon-register"></div>
                     <span>Register</span>
                 </a>
             </div>
             <div class="menu-shortcut-td">
                 <a href="#" class="thumbnail span4 menu-shortcut">
-                    <img src="assets/images/Components.png">
+                    <div  class="icon icon-components"></div>
                     <span>Components </span>
                 </a>
             </div>
             <div class="menu-shortcut-td">
                 <a href="#" class="thumbnail span4 menu-shortcut">
-                    <img src="assets/images/Marketing.png">
+                    <div  class="icon icon-marketing"></div>
                     <span>Marketing </span>
                 </a>
             </div>
@@ -108,19 +118,19 @@
         <div class="row-fluid menu-shortcut-tr">
             <div class="menu-shortcut-td">
                 <a href="#" class="thumbnail span4 menu-shortcut">
-                    <img src="assets/images/Reporting.png">
+                    <div  class="icon icon-reporting"></div>
                     <span> Reporting</span>
                 </a>
             </div>
             <div class="menu-shortcut-td">
                 <a href="#" class="thumbnail span4 menu-shortcut">
-                    <img src="assets/images/Organiser.png">
+                    <div  class="icon icon-organiser"></div>
                     <span>Organiser </span>
                 </a>
             </div>
             <div class="menu-shortcut-td">
                 <a href="#" class="thumbnail span4 menu-shortcut">
-                    <img src="assets/images/Map.png">
+                    <div  class="icon icon-map"></div>
                     <span>Map </span>
                 </a>
             </div>
@@ -128,25 +138,26 @@
         <div class="row-fluid menu-shortcut-tr">
             <div class="menu-shortcut-td">
                 <a href="#" class="thumbnail span4 menu-shortcut">
-                    <img src="assets/images/PEC.png">
+                    <div class="icon icon-pec"></div>
                     <span> PEC</span>
                 </a>
             </div>
             <div class="menu-shortcut-td">
                 <a href="#" class="thumbnail span4 menu-shortcut">
-                    <img src="assets/images/Builder.png">
+                    <div class="icon icon-builder"></div>
                     <span> Builder</span>
                 </a>
             </div>
             <div class="menu-shortcut-td">
                 <a href="#" class="thumbnail span4 menu-shortcut">
-                    <img src="assets/images/Events.png">
+                    <div class="icon icon-events"></div>
                     <span>Events </span>
                 </a>
             </div>
         </div>
     </div>
 </div>
+
 <!------------------------------------------------------------------------------------------------->
 <a class="fixed-size fixed-btn btn-store gray-border-right gray-border-bottom" id="btn-store"
    onclick="showMenu('#store')"></a>
