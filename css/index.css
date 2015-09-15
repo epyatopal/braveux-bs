@@ -162,6 +162,8 @@ html, body {
     font-family: RobotoCondensed-Regular;
     width: calc(100% - 100px);
     color: #37474f;
+    background-color: transparent;
+    background: transparent;
 
 
 }
