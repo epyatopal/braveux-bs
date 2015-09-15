@@ -159,12 +159,12 @@ html, body {
     padding-left: 15px;
     font-size: 17px;
     font-family: RobotoCondensed-Regular;
-    width: calc(100% - 85px);
+    width: calc(100% - 100px);
     color: #37474f;
 
 }
 .login-control .password-input {
-    width: calc(100% - 120px);
+    width: calc(100% - 130px);
 }
 .login-control input:focus{
     outline: none;
@@ -179,6 +179,9 @@ html, body {
     border-radius: 5px;
     font-size: 20px;
     font-family: RobotoCondensed;
+    text-align: center;
+    display: inline-block;
+    float: left;
 }
 
 .show-password {
@@ -222,7 +225,7 @@ html, body {
     height: 70px;
     line-height: 70px;
     background-color: #ed1c24;
-    position: absolute;
+    position: fixed;
     top: 0px;
     width: 100%;
     left: 0;
@@ -230,6 +233,10 @@ html, body {
     padding-left: 45px;
     box-sizing: border-box;
     display: none;
+    z-index: 100;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 /* menu right*/

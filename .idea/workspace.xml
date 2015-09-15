@@ -4,6 +4,7 @@
     <list default="true" id="70b50636-020f-4169-8436-e001a2eccae1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/index.css" afterPath="$PROJECT_DIR$/css/index.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="epyatopal.bitbucket.org.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,21 +27,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="6" selection-start="629" selection-end="629" vertical-scroll-proportion="-0.5302267" vertical-offset="661" max-vertical-offset="1455">
-              <folding>
-                <element signature="tag#head#0;tag#html#0" expanded="false" />
-              </folding>
+            <state line="37" column="31" selection-start="1399" selection-end="1399" vertical-scroll-proportion="-23.125" vertical-offset="0" max-vertical-offset="1530">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="1" selection-start="520" selection-end="520" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4545">
+            <state line="183" column="16" selection-start="3522" selection-end="3522" vertical-scroll-proportion="0.668323" vertical-offset="2207" max-vertical-offset="4650">
               <folding />
             </state>
           </provider>
@@ -60,8 +59,8 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/css/index.css" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/css/index.css" />
       </list>
     </option>
   </component>
@@ -223,19 +222,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/index.css">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="1" selection-start="520" selection-end="520" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4545">
+        <state line="37" column="31" selection-start="1399" selection-end="1399" vertical-scroll-proportion="-23.125" vertical-offset="0" max-vertical-offset="1530">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="6" selection-start="629" selection-end="629" vertical-scroll-proportion="-0.5302267" vertical-offset="661" max-vertical-offset="1455">
-          <folding>
-            <element signature="tag#head#0;tag#html#0" expanded="false" />
-          </folding>
+        <state line="183" column="16" selection-start="3522" selection-end="3522" vertical-scroll-proportion="0.668323" vertical-offset="2207" max-vertical-offset="4650">
+          <folding />
         </state>
       </provider>
     </entry>
