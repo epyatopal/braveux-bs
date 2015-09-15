@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="70b50636-020f-4169-8436-e001a2eccae1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/index.css" afterPath="$PROJECT_DIR$/css/index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="epyatopal.bitbucket.org.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,7 +37,7 @@
       <file leaf-file-name="index.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="162" column="19" selection-start="3118" selection-end="3118" vertical-scroll-proportion="0.27701864" vertical-offset="2207" max-vertical-offset="4665">
+            <state line="152" column="21" selection-start="2917" selection-end="2917" vertical-scroll-proportion="0.37018633" vertical-offset="1982" max-vertical-offset="4680">
               <folding />
             </state>
           </provider>
@@ -231,7 +229,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="162" column="19" selection-start="3118" selection-end="3118" vertical-scroll-proportion="0.27701864" vertical-offset="2207" max-vertical-offset="4665">
+        <state line="152" column="21" selection-start="2917" selection-end="2917" vertical-scroll-proportion="0.37018633" vertical-offset="1982" max-vertical-offset="4680">
           <folding />
         </state>
       </provider>
