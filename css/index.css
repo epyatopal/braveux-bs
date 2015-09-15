@@ -13,6 +13,21 @@ body {
     margin: 0;
     font-family: RobotoCondensed;
 }
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.page-wrapper {
+    min-height: 100%;
+    margin-bottom: -50px;
+}
+* html .page-wrapper {
+    height: 100%;
+}
+.page-buffer {
+    height: 70px;
+}
 
 /*header block start*/
 .header {
@@ -69,6 +84,14 @@ body {
 
 /*header block finish*/
 
+.wrap {
+    height: 100%;
+
+}
+.push-div {
+    height: 205px;
+    width: 100%;
+}
 /*content block start*/
 .content {
     padding-top: 130px; /* padding eq menu height + 40px for padding from menu */
