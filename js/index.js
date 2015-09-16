@@ -16,26 +16,25 @@ function isClassExist(className, element){
 function checkPassword(inputtxt)
 {
   var decimal=  /^(?=.*[A-Z])(?=.*[!@#$%^&*]).{6,}$/;
-  return (inputtxt.value.match(decimal));
+  return (inputtxt.match(decimal));
 }
 
 /**
  * On menu button click, show/hide menu from right. Call for animation show/hide menu.
 */
 function showMenu() {
+  var menu = $('#menu'),
+    slidemenu = $('#slidemenu'),
+    menuWidth = menu.outerWidth(),
+    startMenuWidth = $('body').outerWidth() * 0.31082, /* start width menu div from header = 31.082% */
+    finishWidth = $('body').outerWidth() * 0.68693693694; /* finish width menu div from header = 68.693693694% */
 
-  var menu = document.getElementById('menu'),
-    slidemenu = document.getElementById('slidemenu'),
-    menuWidth = menu.clientWidth,
-    startMenuWidth = document.body.clientWidth * 0.31082, /* start width menu div from header = 31.082% */
-    finishWidth = document.body.clientWidth * 0.68693693694; /* finish width menu div from header = 68.693693694% */
-
-  if(!isClassExist('active', slidemenu)) { /* if slidemenu doesn't have active class, than menu hide and we call show function*/
-    slidemenu.className = slidemenu.className + " active";
-    animateShowMenuFirstPart(menuWidth, finishWidth);
+  if(!slidemenu.hasClass('active')) { /* if slidemenu doesn't have active class, than menu hide and we call show function*/
+    slidemenu.addClass('active');
+    animateShowMenu(menuWidth, finishWidth);
   } else {
-    slidemenu.className = slidemenu.className.replace("active", '');
-    animateShowMenuSecondPart(-1, menuWidth, finishWidth, 0, startMenuWidth);
+    slidemenu.removeClass('active');
+    animateHideMenu(startMenuWidth, finishWidth);
   }
 }
 
@@ -44,16 +43,17 @@ function showMenu() {
  * if one of fields no valid, call animateShowError
 */
 function login(){
-  var username = document.getElementById('username'),
-      password = document.getElementById('password'),
-      body = document.body;
-  if((username && !username.value) || (password && !checkPassword(password))) {
-    if(!isClassExist('error', body)) {
-      body.className = body.className + " error";
+  console.log('ghjghj')
+  var username = $('#username'),
+      password = $('#password'),
+      body = $('body');
+  if((username && !username.value) || (password && !checkPassword(password.val()))) {
+    if(!body.hasClass('error')) {
+      body.addClass('error');
       animateShowError()
     }
   } else {
-    body.className = body.className.replace('error', '');
+    body.removeClass('error');
   }
 }
 
@@ -61,15 +61,15 @@ function login(){
  * On Show password button click show/hide password value
 */
 function showPassword(){
-  var password = document.getElementById('password');
-  if(password.value) {
-    if (password.getAttribute('type') != 'text') {
-      password.setAttribute('type', 'text');
+  var password = $('#password');
+  if(password.val()) {
+    if (password.attr('type') != 'text') {
+      password.attr('type', 'text');
     } else {
-      password.setAttribute('type', 'password');
+      password.attr('type', 'password');
     }
   } else {
-    password.setAttribute('type', 'password');
+    password.attr('type', 'password');
   }
 }
 
@@ -77,77 +77,44 @@ function showPassword(){
  * For animated show error message
  */
 function animateShowError() {
-  var start = Date.now();
-
-  var timer = setInterval(function() {
-    var timePassed = Date.now() - start;
-    if (timePassed >= 1000) {
-      clearInterval(timer);
-      return;
-    }
-    var error = document.getElementById('error-message');
-    error.style.top = timePassed * 0.07 + 'px';
-
-  }, 2);
+  $( "#error-message" ).animate({
+    top: "+=70"
+  }, 1000, function() {
+  });
 }
 
 /**
- * For animated show right menu. Animated right menu block until top menu block
+ * For animated show right menu.
  * @param {number} menuWidth - width of header menu block
  * @param {number} finishWidth - finish right menu width
  */
-function animateShowMenuFirstPart(menuWidth, finishWidth) {
-  var start = Date.now();
-  var slidemenu = document.getElementById('slidemenu');
-
-  var timer = setInterval(function() {
-    var timePassed = Date.now() - start;
-
-    if(timePassed >= 500) {
-      clearInterval(timer);
-      animateShowMenuSecondPart(1, finishWidth, menuWidth, timePassed, menuWidth);
-      return;
-    }
-    slidemenu.style.right = -slidemenu.clientWidth + timePassed * (menuWidth/500) + 'px';
-  }, 2);
+function animateShowMenu(menuWidth, finishWidth) {
+  var slidemenu = $( "#slidemenu" )
+  slidemenu.animate({
+    right: "+=" + menuWidth
+  }, 500, function() {
+    slidemenu.css({'z-index': 10000});
+    slidemenu.animate({
+      right: "+=" + (finishWidth - menuWidth)
+    }, 1000, function() {
+    });
+  });
 }
 
 /**
- * For animated show/hide right menu. Animated right menu block after top menu block. And Hide right menu.
- * @param {number} index - 1 if show, -1 if hide
- * @param {number} finishWidth - finish right menu width
+ * For animated hide right menu.
  * @param {number} menuWidth - width of header menu block
- * @param {number} timePassedStart - the duration of the animation is already past
- * @param {number} startMenuWidth - start width of header menu block
+ * @param {number} finishWidth - finish right menu width
  */
-function animateShowMenuSecondPart(index, finishWidth, menuWidth, timePassedStart, startMenuWidth) {
-  if(!timePassedStart) {
-    timePassedStart = 0
-  }
-  var start = Date.now();
-  var slidemenu = document.getElementById('slidemenu');
-  slidemenu.style['z-index'] = 10000;
-  var timer2 = setInterval(function() {
-    var timePassed = Date.now() - start;
-
-    if((index == 1) && (timePassed >= 490)) {
-      clearInterval(timer2);
-      return;
-    }
-    if ((index == -1) &&(timePassed >= 1000)) {
-      clearInterval(timer2);
-      slidemenu.style['z-index'] = 100;
-      return;
-    }
-
-    if(index == -1) { /* hide menu */
-      if((slidemenu.clientWidth -(timePassedStart + timePassed) * (menuWidth/1000)) <= startMenuWidth){
-        slidemenu.style['z-index'] = 100;
-      }
-      slidemenu.style.right = -(timePassedStart + timePassed) * (menuWidth/1000) + 'px';
-    } else { /* open menu */
-      slidemenu.style.right = -slidemenu.clientWidth + (timePassedStart + timePassed) * (finishWidth/1000) + 'px';
-    }
-
-  }, 2);
+function animateHideMenu(menuWidth, finishWidth) {
+  var slidemenu = $( "#slidemenu" )
+  slidemenu.animate({
+    right: "-=" + (finishWidth - menuWidth)
+  }, 1000, function() {
+    slidemenu.css({'z-index': 100});
+    slidemenu.animate({
+      right: "-=" + menuWidth
+    }, 500, function() {
+    });
+  });
 }
