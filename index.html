@@ -5,71 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/index.css">
-    <!---->
+
     <script type="text/javascript" src="lib/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="lib/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
 
 </head>
 <body class="">
-<div class="header">
-    <div class="title">
-        <span>The Brave UX App</span>
-    </div>
-    <div id="menu" class="menu">
-        <span>Menu</span>
-        <a class="menu-btn" onclick="showMenu()">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </a>
-    </div>
-</div>
-<div class="page-wrapper">
-
-    <div class="content">
-        <div class="error-message" id="error-message">
-            Your username or password wasn't recognized.
+    <nav class="header">
+        <div class="title">
+            <span>The Brave UX App</span>
         </div>
-        <img class="for-img" src="assets/flag.png">
-        <p class="light-text">
-            Do NOT bookmark this page.
-        </p>
-        <p class="login-form">
-            <label>Login </label>
-        </p>
-        <p class="login-control"><span>Username</span><input id="username" name="username" type="text" class=""></p>
-        <p class="login-control "><span>Password</span><input id="password" name="password" type="password" class="password-input"><a onclick="showPassword()" class="show-password"></a></p>
-        <div class="login-btn" onclick="login()">Login</div>
-        <a href="" class="help-link" >Need help?</a>
-
+        <div id="menu" class="menu">
+            <span>Menu</span>
+            <a class="menu-btn" onclick="showMenu()">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+        </div>
+    </nav>
+    <div class="page-wrapper container-fluid">
+        <div class="content">
+            <div id="error" class="alert error-message" role="alert">
+                Your username or password wasn't recognized.
+            </div>
+            <img class="for-img" src="assets/flag.png">
+            <p class="light-text">
+                Do NOT bookmark this page.
+            </p>
+            <p class="login-form">
+                <label>Login </label>
+            </p>
+            <div class="input-group login-control">
+                <span class="input-group-addon" id="basic-addon1">Username</span>
+                <input id="username" name="username" type="text" class="form-control" placeholder="" aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group login-control">
+                <span class="input-group-addon">Password</span>
+                <input id="password" name="password" type="password" class="form-control" aria-label="Amount (to the nearest dollar)">
+                <span onclick="showPassword()" class="input-group-addon no-padding"><a class="show-password"></a></span>
+            </div>
+            <div class="login-btn" onclick="login()">Login</div>
+            <a href="" class="help-link" >Need help?</a>
+        </div>
+        <div class="page-buffer">
+        </div>
     </div>
-    <div class="page-buffer">
-
+    <div class="footer">
+        <span>Powered by Brave UX</span>
     </div>
-</div>
-<div class="footer">
-    <span>Powered by Brave UX</span>
-</div>
 
-<div id="slidemenu" class="slidemenu">
-    <div id="menu_2" class="menu">
-        <span>Menu</span>
-        <a class="menu-btn" onclick="showMenu()">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </a>
+    <div id="slidemenu" class="slidemenu">
+        <div id="menu_2" class="menu">
+            <span>Menu</span>
+            <a class="menu-btn" onclick="showMenu()">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+        </div>
+        <ul class="">
+            <li><a>Dashboard</a></li>
+            <li><a>My Profile</a></li>
+            <li><a>Settings</a></li>
+            <li class="dark-item"><a>Help</a></li>
+            <li class="dark-item"><a>About</a></li>
+            <li><a>Logout</a></li>
+        </ul>
     </div>
-    <ul class="">
-        <li><a>Dashboard</a></li>
-        <li><a>My Profile</a></li>
-        <li><a>Settings</a></li>
-        <li class="dark-item"><a>Help</a></li>
-        <li class="dark-item"><a>About</a></li>
-        <li><a>Logout</a></li>
-    </ul>
-
-</div>
 </body>
 </html>

@@ -73,6 +73,7 @@ html, body {
     margin-bottom: 8px;
     background-color: transparent;
     background-image: none;
+    cursor: pointer;
 }
 .icon-bar {
     display: block;
@@ -94,11 +95,15 @@ html, body {
     width: 100%;
 }
 /*content block start*/
+.container-fluid {
+    padding-left: 35px;
+    padding-right: 35px;
+}
 .content {
     padding-top: 130px; /* padding eq menu height + 40px for padding from menu */
     padding-bottom: 205px; /* padding eq footer height */
-    padding-left: 35px;
-    padding-right: 35px;
+    /*padding-left: 35px;*/
+    /*padding-right: 35px;*/
     background-color: #eceff1;
     height: 100%;
     box-sizing: border-box;
@@ -140,8 +145,8 @@ html, body {
     background: white;
     height: 40px;
     line-height: 33px;
-    padding-left: 15px;
-    display: block;
+    /*padding-left: 15px;*/
+    /*display: block;*/
     margin-bottom: 20px;
     width: 100%;
     font-size: 17px;
@@ -154,6 +159,18 @@ html, body {
     overflow: hidden;
 }
 
+.login-control span {
+    background: transparent;
+    border: none;
+    font-size: 17px;
+    font-family: RobotoCondensed-Regular;
+    color: #7e95a0;
+}
+
+.no-padding {
+    padding: 0;
+}
+
 .login-control input {
     border: none;
     height: 31px;
@@ -161,18 +178,17 @@ html, body {
     padding-left: 15px;
     font-size: 17px;
     font-family: RobotoCondensed-Regular;
-    width: calc(100% - 100px);
+    /*width: calc(100% - 100px);*/
     color: #37474f;
     background-color: transparent;
     background: transparent;
-
-
 }
 .login-control .password-input {
-    width: calc(100% - 130px);
+    /*width: calc(100% - 130px);*/
 }
 .login-control input:focus{
     outline: none;
+    box-shadow: none;
 }
 .login-btn {
     width: 140px;
@@ -196,6 +212,7 @@ html, body {
     height: 33px;
     width: 38px;
     background: url("../assets/eye.png") 50% 50% no-repeat;
+    cursor: pointer;
 }
 
 /*content block finish*/
@@ -243,6 +260,7 @@ html, body {
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+    padding: 0 0 0 45px;
 }
 
 /* menu right*/

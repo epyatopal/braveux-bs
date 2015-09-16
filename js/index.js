@@ -1,14 +1,4 @@
 /**
- * Check class exist in element
- * @param {string} className - name of checking class
- * @param {js <object>} html element
- * @return {boolean} true - element has class, false - element hasn't class
- */
-function isClassExist(className, element){
-  return (element && element.className.indexOf(className)> 0)
-}
-
-/**
  * Check Password: must be at least 6 characters and contain at least one capital letter and at least one non-alphanumeric character.
  * @param {string} inputtxt - password value
  * @return {boolean} true - password is valid, false -  password isn't valid
@@ -43,11 +33,10 @@ function showMenu() {
  * if one of fields no valid, call animateShowError
 */
 function login(){
-  console.log('ghjghj')
   var username = $('#username'),
       password = $('#password'),
       body = $('body');
-  if((username && !username.value) || (password && !checkPassword(password.val()))) {
+  if((username && !username.val()) || (password && !checkPassword(password.val()))) {
     if(!body.hasClass('error')) {
       body.addClass('error');
       animateShowError()
@@ -77,7 +66,7 @@ function showPassword(){
  * For animated show error message
  */
 function animateShowError() {
-  $( "#error-message" ).animate({
+  $( "#error" ).animate({
     top: "+=70"
   }, 1000, function() {
   });
