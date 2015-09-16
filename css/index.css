@@ -182,6 +182,7 @@ html, body {
     color: #37474f;
     background-color: transparent;
     background: transparent;
+    box-shadow: none;
 }
 .login-control .password-input {
     /*width: calc(100% - 130px);*/
