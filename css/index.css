@@ -187,6 +187,7 @@ html, body {
     text-align: center;
     display: inline-block;
     float: left;
+    cursor: pointer;
 }
 
 .show-password {
