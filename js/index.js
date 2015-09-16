@@ -20,7 +20,7 @@ function showMenu() {
     finishWidth = $('body').outerWidth() * 0.68693693694; /* finish width menu div from header = 68.693693694% */
 
   if(slidemenu.css('right').indexOf('%') > -1){
-    slidemenu.css('right',$('body').outerWidth() * slidemenu.css('right') / 100);
+    slidemenu.css('right',$('body').outerWidth() * slidemenu.css('right').split('%')[0] / 100);
   }
   if(!slidemenu.hasClass('active')) { /* if slidemenu doesn't have active class, than menu hide and we call show function*/
     slidemenu.addClass('active');
